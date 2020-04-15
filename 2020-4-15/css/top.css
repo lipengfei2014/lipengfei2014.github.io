@@ -1,0 +1,21 @@
+#top{
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    font-size: small;
+    display: flex;
+    cursor:pointer;
+    justify-content: space-around;
+}
+#top span{
+    display:inline-block;
+    height: 30px;
+}
+#topLeft{
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
