@@ -50,4 +50,19 @@ Object.keys($(" #topRight .foldUp")).forEach(index => {
         }
     }
 })
-
+$(window).scroll(function () {
+    console.log($("#movenav")[0].scrollTop, $(document).scrollTop())
+    if ($(document).scrollTop() >= 230) {
+        $("#movenav")[0].style = "width:100%;height:150px;position:fixed;top:0;left:0;"
+        $("main")[0].style="  position: relative; top:200px"
+        $("footer")[0].style="  position: relative; top:200px"
+    } else {
+        $("#movenav")[0].style = "height: 200px;position:none;"
+        $("main")[0].style="  position: none; top:0"
+        $("footer")[0].style="  position: none; top:0"
+    }  
+})
+$("#divInputSelct").change(function(e){
+    console.log(e.target.value,e.target.nextElementSibling.placeholder)
+    e.target.nextElementSibling.placeholder="请输入"+e.target.value+"名"
+})

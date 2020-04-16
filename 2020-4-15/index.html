@@ -7,31 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/icon.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/top.css">
+    <link rel="stylesheet" href="./css/nav.css">
 </head>
-<style>
-    #movenav {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        background-color: black;
-    }
-
-    #movenavcenter {
-        width: 760px;
-    }
-    #movenavleft img{
-        width: 250px;
-        height: 100px;
-    }
-    main {
-        width: 100%;
-        height: 500px;
-    }
-</style>
-
 <body>
     <nav>
         <div id="top">
@@ -69,8 +46,7 @@
                     <span>|</span></span>
                 <span>
                     <i class="iconfont">&#xe60b;</i>
-                    网站导航<span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span></span>
+                    网站导航<span class="foldUp"><i class="iconfont">&#xe664;</i></span></span>
             </div>
             <div id="conceal"></div>
         </div>
@@ -79,27 +55,21 @@
                 <img src="./img/logoSmall.gif" alt="">
             </div>
             <div id="movenavcenter">
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">产品<span class="caret"></span></button>
-                            <ul class="dropdown-menu" id="dropdown-menunav" >
-                                <li value="产品"><a href="#">产品</a></li>
-                                <li value="企业"><a href="#">企业</a></li>
-                                <li value="采购"><a href="#">采购</a></li>
-                            </ul>
-                        </div>
-                        <input type="text" class="form-control" placeholder="请输入产品名称">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"aria-hidden="true"></span></button>
-                        </span>
-                    </div>
+                <div id="divInput">
+                    <select name="" id="divInputSelct">
+                        <option value="产品"> 产品 </option>
+                        <option value="企业"> 企业 </option>
+                        <option value="采购"> 采购 </option>
+                    </select>
+                    <input type="text" id="divInputinput" placeholder="请输入产品名">
+                    <button id="divInputbutton"> <i class="iconfont">&#xe600;</i> </button>
                 </div>
-
             </div>
             <div id="movenavright">
-                
+                <div>
+                    <p>企汇网手机站</p>
+                    <img src="img/Appdown.jpg" alt="">
+                </div>
             </div>
         </div>
     </nav>
@@ -112,16 +82,9 @@
 </body>
 <script src="./js/jQuery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/top.js"></script>
+<script src="./js/nav.js"></script>
 <script>
-    $(window).scroll(function () {
-        console.log($("#movenav")[0].scrollTop, $(document).scrollTop())
-        if ($(document).scrollTop() >= 30) {
-            $("#movenav")[0].style = "width:100%;height:30px;position:fixed;top:0;left:0;"
-        } else {
-            $("#movenav")[0].style = "width:100%;height:50px;position:none;"
-        }
-    })
+
 </script>
 
 </html>
