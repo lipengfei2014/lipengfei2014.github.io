@@ -73,10 +73,99 @@
         background-color: rgb(241, 241, 241);
     }
 
+    #registerbodytext {
+        position: relative;
+        top: 30px;
+        width: 60%;
+        height: 710px;
+        margin: 30px auto;
+    }
+
     #registerfooter {
         width: 100%;
         height: 210px;
         background-color: black;
+        color: rgb(87, 87, 87);
+        text-align: center;
+    }
+
+    #registerfooter div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+    }
+
+    #registerfooter div:nth-child(1) p {
+        padding-top: 20px;
+        margin-right: 5px;
+    }
+
+    #registerfooter div:nth-child(1) p:hover {
+        cursor: pointer;
+        color: rgb(159, 159, 159);
+    }
+
+    #registerfooter div:nth-child(3) {
+        margin: 20px 0px;
+    }
+
+    #registerfooter div:nth-child(3) p {
+        width: 840px;
+        margin: 0 auto;
+    }
+
+    #registerfooter div:nth-child(3) p:hover {
+        color: rgb(159, 159, 159);
+        cursor: pointer;
+    }
+
+    #registerfooter div:nth-child(4) {
+        display: flex;
+        justify-content: center;
+    }
+
+    #registerfooter div:nth-child(4)>div {
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 0 3px;
+    }
+
+    #progress {
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    #processName {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px auto;
+        width: 90%;
+    }
+
+    #processName div:nth-child(1) {
+        color: red;
+    }
+
+    #registerdivform{
+        background-color: rgb(255, 255, 255);
+        height: 570px;
+    }
+
+    .registerForm {
+        padding-top: 110px;
+        
+    }
+    #form-group-btn{
+      position: relative;
+      left: 14%;
+    }
+    #form-group-btn button{
+       width: 300px;
+       height: 50px;
+       background-color: rgb(135, 135, 135);
+       color: white;
+    }
+    .form-control{
+        width:500px;
     }
 </style>
 
@@ -143,17 +232,120 @@
             </div>
         </div>
         <div id="registerbody">
-
+            <div id="registerbodytext">
+                <div id="processName">
+                    <div>
+                        验证手机号
+                    </div>
+                    <div>
+                        填写账号信息
+                    </div>
+                    <div>
+                        注册成功
+                    </div>
+                </div>
+                <!-- 引用 bootstrap -->
+                <div id="progress" style="width: 90%;" class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
+                        aria-valuenow="45" aria-valuemin="0" aria-valuemax="90" style="width: 30% ;">
+                    </div>
+                </div>
+                <div id="registerdivform" >
+                    <form class="form-horizontal registerForm ">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">*请输入手机号</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">*验证码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="输入验证码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword4" class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="用户名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword5" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword5" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword6" class="col-sm-2 control-label">再次输入密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword6" placeholder="再次输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="checkboxbtn" checked="" type="checkbox"> 我已阅读并同意<span style="color:rgb(234, 36, 69 );">《企汇网服务条款》</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10" id="form-group-btn" >
+                                <button type="submit"  class="btn btn-default">下一步</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
     <footer id="registerfooter">
+        <div>
+            <p>网站首页| </p>
+            <p>关于我们| </p>
+            <p>联系我们| </p>
+            <p>使用协议| </p>
+            <p>版权隐私| </p>
+            <p>维权通道| </p>
+            <p>网站导航| </p>
+            <p>用户反馈 </p>
+        </div>
+        <div>客服咨询热线：400-6677-369(免长途费) 工作时间：900-18:00(周一至周五)在线客服：<i
+                style="color: red; display: inline-block; width: 15px;height: 15px;" class="iconfont">&#xe6db;</i>
+            关注我们：<i style="color: red; display: inline-block; width: 15px;height: 15px;" class="iconfont">&#xe609;</i>
+        </div>
+        <div>
+            <p>版权所有2009-2020 河南企汇网信息技术股份有限公司 保留所有权利 经营许可证编号：豫B2-20140075 豫公网安备 41019702002055号</p>
+        </div>
+        <div>
+            <div> <img src="./img/footer1.png" alt=""> </div>
+            <div> <img src="./img/footer2.png" alt=""> </div>
+            <div> <img src="./img/footer3.png" alt=""> </div>
+            <div> <img src="./img/footer4.png" alt=""> </div>
+            <div> <img src="./img/footer5.png" alt=""> </div>
+            <div> <img src="./img/footer6.png" alt=""> </div>
+        </div>
     </footer>
 </body>
 <script src="./js/jQuery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/span.js"></script>
 <script>
-
+console.log($("#checkboxbtn")[0])
+$("#checkboxbtn").click(function(e){
+    console.log(e.target.checked)
+    if(e.target.checked){
+        console.log("1")
+        $("#form-group-btn>button").css({"background": "rgb(234, 36, 69)" });
+        console.log($("#form-group-btn>button")[0])
+    }else{
+        console.log("2")
+        $("#form-group-btn>button").css({"background": "rgb(135, 135, 135)"});
+    }
+})
 </script>
 
 </html>
