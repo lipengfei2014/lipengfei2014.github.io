@@ -1,0 +1,184 @@
+#Loginhead {
+    height: 100px;
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Loginheadlight {
+    display: flex;
+    width: 30%;
+    margin: auto 0;
+
+}
+
+#Loginheadright {
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+}
+
+#Loginheadlight img {
+    width: 156px;
+    height: 60px;
+    margin-right: 20px;
+    border-right: solid 1px rgb(241, 241, 241);
+}
+#Loginheadrightone{
+    line-height: 160px;
+}
+#Loginheadrighttwo{
+    margin-top: 40px;
+}
+#Loginheadrightone>i {
+    display: block;
+    font-size: 50px;
+    height: 50px;
+    color: gray;
+    margin: 15px auto;
+}
+
+#Loginheadrighttwo>div {
+    position: relative;
+    top: 20px;
+}
+
+#Loginheadrighttwo h1 {
+    margin: 0;
+    color: red;
+}
+
+#Loginheadrighttwo p {
+    margin: 0;
+}
+
+#Loginbody {
+    background-image: url(../img/Login.jpg);
+    background-size: 100% 580px;
+    width: 100%;
+    height: 580px;
+}
+
+#Logindiv {
+    padding: 20px 20px;
+    width: 30%;
+    height: 350px;
+    position: relative;
+    background-color: white;
+    top: 90px;
+    left: 66%;
+    box-shadow: 0 0 20px grey;
+}
+
+#Logindiv h3 {
+    margin-bottom: 30px;
+}
+
+.logininput {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.logininput div:nth-child(1) {
+    background-color: rgb(221, 221, 221);
+    width: 40px;
+    height: 40px;
+    color: white !important;
+    text-align: center;
+    line-height: 40px;
+}
+
+.logininput div:nth-child(2) {
+    width: 400px;
+    height: 40px;
+}
+
+.logininput input {
+    height: 40px;
+    width: 100%;
+    border: solid 0.5px rgb(221, 221, 221);
+}
+
+.logininput i {
+    font-size: 30px !important;
+}
+
+#rememb {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Loginbutton {
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(224, 36, 63);
+}
+
+#Loginbotton {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    line-height: 50px;
+
+}
+span{
+    cursor: pointer !important;
+}
+#loginfooter{
+    width: 100%;
+    height: 200px;
+    padding: 30px 50px;
+}
+#footerlogin{
+
+    height: 140px;
+    display: flex;
+}
+#footerloginLeft{
+    width: 80%;
+    height: 140px;
+    border-right: solid 1px rgb(221, 221, 221);
+}
+#footerloginLeft >div{
+    margin: 5px;
+}
+#footerloginLeft button{
+
+}
+#footerloginLeft >div:nth-child(3){
+    display: flex;
+    margin: 0;;
+}
+#footerloginLeft >div:nth-child(3) >div{
+    margin-left: 5px ;
+}
+#footerloginLeft >div:nth-child(3) >div :hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px gray;
+}
+#footerloginright{
+    width: 20%;
+    height: 140px;
+    padding: 0 50px;
+}
+#footerloginright >div {
+    display: flex;
+}
+.rotatelongin{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border: solid 1px rgb(221, 221, 221) ;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 1s;
+}
+.rotatelongin:hover{
+    color: rgb(224, 36, 69);
+    cursor: pointer;
+    transform: rotate(360deg);
+}
