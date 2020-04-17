@@ -12,6 +12,7 @@
 <style>
     #head {
         height: 100px;
+        height: 160px;
         display: flex;
         justify-content: space-around;
     }
@@ -35,7 +36,12 @@
         margin-right: 20px;
         border-right: solid 1px rgb(241, 241, 241);
     }
-
+    #headrightone{
+        line-height: 160px;
+    }
+    #headrighttwo{
+        margin-top: 40px;
+    }
     #headrightone>i {
         display: block;
         font-size: 50px;
@@ -76,9 +82,13 @@
         box-shadow: 0 0 20px grey;
     }
 
+    #Logindiv h3 {
+        margin-bottom: 30px;
+    }
+
     .logininput {
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .logininput div:nth-child(1) {
@@ -98,10 +108,91 @@
     .logininput input {
         height: 40px;
         width: 100%;
+        border: solid 0.5px rgb(221, 221, 221);
     }
 
     .logininput i {
         font-size: 30px !important;
+    }
+
+    #rememb {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #Loginbutton {
+        width: 100%;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        background-color: rgb(224, 36, 63);
+    }
+
+    #Loginbotton {
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        line-height: 50px;
+ 
+    }
+    span{
+        cursor: pointer !important;
+    }
+    #loginfooter{
+        width: 100%;
+        height: 200px;
+        padding: 30px 50px;
+    }
+    #footerlogin{
+
+        height: 140px;
+        display: flex;
+    }
+    #footerloginLeft{
+        width: 80%;
+        height: 140px;
+        border-right: solid 1px rgb(221, 221, 221);
+    }
+    #footerloginLeft >div{
+        margin: 5px;
+    }
+    #footerloginLeft button{
+
+    }
+    #footerloginLeft >div:nth-child(3){
+        display: flex;
+        margin: 0;;
+    }
+    #footerloginLeft >div:nth-child(3) >div{
+        margin-left: 5px ;
+    }
+    #footerloginLeft >div:nth-child(3) >div :hover{
+        cursor: pointer;
+        box-shadow: 0 0 5px gray;
+    }
+    #footerloginright{
+        width: 20%;
+        height: 140px;
+        padding: 0 50px;
+    }
+    #footerloginright >div {
+        display: flex;
+    }
+    .rotatelongin{
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        border: solid 1px rgb(221, 221, 221) ;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: transform 1s;
+    }
+    .rotatelongin:hover{
+        color: rgb(224, 36, 69);
+        cursor: pointer;
+        transform: rotate(360deg);
     }
 </style>
 
@@ -177,15 +268,59 @@
                     <div><i class="iconfont">&#xe601;</i></div>
                     <div><input type="text" placeholder="密码"></div>
                 </div>
-                <div  ></div>
-                <div></div>
-                <div></div>
+                <div id="rememb">
+                    <div id="remembleft"><input type="checkbox" name="remembinput"><label for="remembinput"> 记住密码
+                        </label>
+                    </div>
+                    <div id="remembright">
+                        <span>免费注册 </span>
+                        <span> | </span>
+                        <span> 忘记密码？</span> </div>
+                </div>
+                <div id="Loginbutton"> 登陆 </div>
+                <div id="Loginbotton"> <span>黄白钻会员登录 ></span> </div>
             </div>
         </div>
     </main>
+    <footer id="loginfooter" >
+        <div id="footerlogin" >
+            <div id="footerloginLeft" >
+                <div>
+                    <span> 网站首页</span>
+                    <span>| 关于我们</span>
+                    <span>| 联系我们</span>
+                    <span>| 使用协议</span>
+                    <span>| 版权隐私</span>
+                    <span>| 维权通道</span>
+                    <span>| 网站导航</span>
+                    <span>| 用户反馈</span>
+                </div>
+                <div>
+                    <p>Copyright 2009-2020 河南企汇网信息技术股份有限公司  保留所有权利    经营许可证编号：豫B2-20140075</p>
+                </div>
+                <div>
+                    <div> <img src="./img/footer1.png" alt=""> </div>
+                    <div> <img src="./img/footer2.png" alt=""> </div>
+                    <div> <img src="./img/footer3.png" alt=""> </div>
+                    <div> <img src="./img/footer4.png" alt=""> </div>
+                    <div> <img src="./img/footer5.png" alt=""> </div>
+                    <div> <img src="./img/footer6.png" alt=""> </div>
+                </div>
+            </div>
+            <div id="footerloginright">
+                <h4>关注我们</h4>
+                <div>
+                    <div class="rotatelongin" ><i style=" display: block; width: 30px;height: 30px; font-size: 28px;margin: 5px 10px;" class="iconfont">&#xe6db;</i> </div>
+                    <div class="rotatelongin" ><i style=" display: block; width: 30px;height: 30px; font-size: 28px;margin: 5px 10px;"  class="iconfont">&#xe609;</i> </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="./js/jQuery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/nav.js"></script>
-
+<script src="./js/span.js"></script>
+<script>
+    
+</script>
 </html>

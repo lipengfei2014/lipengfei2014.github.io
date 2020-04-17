@@ -1,22 +1,4 @@
 
-$("span").mouseenter(function (e) {
-    e.target.style = "color:rgb(220, 67, 68);"
-    Object.keys(e.target.children).forEach(function (index) {
-        if (e.target.children[index].href) {
-            e.target.children[index].style = "color:rgb(220, 67, 68);"
-        }
-    })
-})
-$("span").mouseleave(function (e) {
-
-    e.target.style = "color:rgb(0,0,0);"
-    Object.keys(e.target.children).forEach(function (index) {
-        if (e.target.children[index].href) {
-            e.target.children[index].style = "color:rgb(0,0,0);"
-        }
-
-    })
-})
 Object.keys($(" #topLeft .foldUp")).forEach(index => {
     if (index < index.length) {
         $(" #topLeft .foldUp")[0].index = index * 1
@@ -51,7 +33,6 @@ Object.keys($(" #topRight .foldUp")).forEach(index => {
     }
 })
 $(window).scroll(function () {
-    console.log($("#movenav")[0].scrollTop, $(document).scrollTop())
     if ($(document).scrollTop() >= 230) {
         $("#movenav")[0].style = "width:100%;height:150px;position:fixed;top:0;left:0;"
         $("main")[0].style="  position: relative; top:200px"
