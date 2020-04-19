@@ -23,10 +23,9 @@ Object.keys($(" #topRight .foldUp")).forEach(index => {
         $(" #topRight .foldUp").eq(index)[0].index = index * 1
         $(" #topRight .foldUp").eq(index)[0].onmouseenter = function (e) {
             console.log(e.target)
-            $("#conceal").css({ "height": "200PX" })
             e.target.style = "transform: rotate(180deg);transition: all 1s;"
         }
-        $(" #topLeft .foldUp")[0].onmouseleave = function (e) {
+        $(" #topRightt .foldUp")[0].onmouseleave = function (e) {
             $("#conceal").css({ "height": "0" })
             e.target.style = "transform: rotate(0deg);transition: all 1s;"
         }
