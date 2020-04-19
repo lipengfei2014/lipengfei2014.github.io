@@ -22,13 +22,12 @@ Object.keys($(" #topRight .foldUp")).forEach(index => {
     if (index < $(" #topRight .foldUp").length) {
         $(" #topRight .foldUp").eq(index)[0].index = index * 1
         $(" #topRight .foldUp").eq(index)[0].onmouseenter = function (e) {
-            console.log(e.target)
             e.target.style = "transform: rotate(180deg);transition: all 1s;"
         }
-        $(" #topRightt .foldUp")[0].onmouseleave = function (e) {
-            $("#conceal").css({ "height": "0" })
+        $(" #topRight .foldUp").eq(index)[0].onmouseleave=function(e){
             e.target.style = "transform: rotate(0deg);transition: all 1s;"
         }
+       console.log( $(" #topRight .foldUp").eq(index)[0])
     }
 })
 $(window).scroll(function () {
