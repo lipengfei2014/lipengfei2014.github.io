@@ -1,73 +1,431 @@
-.topBar {height: 29px; line-height: 29px; border-bottom: 1px solid #e8e8e8; background: #f1f1f1; font-size:12px}
-.topMain{width:1200px;margin:0 auto;position:relative;color:#525252;z-index:8}
-.topMain .line{padding:0 10px;color:#d9d9d9}
-.topMain .topLogin{padding:0 8px;color:#767676}
-.topMain .iconfont{font-size:15px;margin:0 3px 0 0;color:#dc2a49;display:inline-block;height:16px;line-height:14px}
-.topMain .welcome{ float:left;}
-.topMain .userName{color:#e02445; float:left; margin:0 8px 0 15px}
-.topMain .userNews{ float:left;}
-.topMain .userNews img{ margin:0 2px 0 5px;}
-.topMain code{ float:left; color:#d9d9d9; margin-right:3px;}
-.topMain .quit{ margin-left:8px;}
-.topMain .topReg{color:#ff4e00}
-.noLogin a,.dorpTel{float:left;padding:0 12px;position:relative;color:#525252}
-.topRt .dorpDown:after{content:"";float:right;width:1px;height:12px;border-right:1px solid #d9d9d9;position:absolute;right:-1px;top:8px}
-.dorpTel{padding:0px}
-.noLogin .dorpTel .arr{color:#a1a0a7;width:10px;margin:0 0 0 2px;transition:transform .3s;-webkit-transition:transform .3s;-moz-transition:transform .3s}
-.noLogin .on{background:#fff;border:1px solid #e0e0e0;border-width:0 1px;padding:0}
-.noLogin .on a{padding:0 11px;position:relative;z-index:30;border-bottom:1px solid #fff;height:29px}
-.noLogin a.topTel:after{content:"";float:right;width:1px;height:12px;border-right:1px solid #d9d9d9;position:absolute;right:-1px;top:8px}
-.noLogin .on a:after{display:none}
-.noLogin .on .arr{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transform-origin:70% 45%;-webkit-transform-origin:70% 45%;-moz-transform-origin:70% 45%}
-.noLogin .dorpDownLayer{display:none;position:absolute;left:-1px;top:29px;z-index:29;background:#fff;border:1px solid #e0e0e0;width:150px; text-align:center; border-bottom:none}
-.noLogin .dorpDownLayer dl dt{width:122px; height:145px; float: left; border-bottom:1px solid #e0e0e0; padding:16px 14px; color:#666; line-height:35px;}
-.noLogin .dorpDownLayer dl dt img{ display:block}
-.noLogin .dorpDownLayer dl dd{float:left;padding-top:12px;width:107px;}
-.noLogin .dorpDownLayer dl dd p{margin-bottom:7px;}
-.noLogin .dorpDownLayer dl dd p span{color:#5a5a5a;display:block;line-height:20px;}
-.noLogin .dorpDownLayer dl dd a{display:block;}
-.noLogin .dorpDownLayer a.phone,.noLogin .dorpDownLayer a.android{ display:block; width:90px; height:22px; margin-bottom:6px; background:url(../images/copyright.png) no-repeat; overflow:hidden; padding:0}
-.noLogin .dorpDownLayer a.phone{ background-position:0 -65px}
-.noLogin .dorpDownLayer a.android{ background-position:-92px -65px}
-/*----topBar左右分割线----*/
-.topRt{position:absolute;right:0px;top:0px;z-index:2}
-.topRt a,.dorpDown{float:left;padding:0 12px;position:relative;color:#525252}
-.topRt a:after,.topRt .dorpDown:after{content:"";float:right;width:1px;height:12px;border-right:1px solid #d9d9d9;position:absolute;right:-1px;top:8px}
-.dorpDown{padding:0px}
-.topRt .dorpDown .arr{color:#a1a0a7;width:10px;margin:0 0 0 2px;transition:transform .3s;-webkit-transition:transform .3s;-moz-transition:transform .3s}
-.topRt .dorpDown .arrRed{ color:#dc2a49}
-.topRt .on{background:#fff;border:1px solid #e0e0e0;border-width:0 1px;padding:0}
-.topRt .on a{padding:0 11px;position:relative;z-index:30;border-bottom:1px solid #fff;height:29px}
-.topRt .on a:after{display:none}
-.topRt .on .arr{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transform-origin:70% 45%;-webkit-transform-origin:70% 45%;-moz-transform-origin:70% 45%}
-.topRt .dorpDownLayer{display:none;position:absolute;left:-1px;top:29px;z-index:29;background:#fff;border:1px solid #e0e0e0;width:100%;padding:0 0 10px}
-.topRt .dorpDownLayer a{border:0px;line-height:24px;color:#888;float:none}
-.topRt .dorpDownLayer a:hover,.topMain a:hover{color:#f60}
-.topRt .dorpDownLayer a:after{border:0;}
-.topRt .dorpDownLayer,.topRt .dorpDownLayer a{line-height:24px;padding:0;text-align:center;}
-.topRt .dorpDownLayer a{display:block}
-.topRt .dorpDownLayer .iconfont{color:#db2242;font-size: 14px;display:inline-block;margin:0 4px 0 0}
-.topRt .dorpDownLayer.dorpNav{ width:276px; left:-207px; padding:0 15px; text-align:left}
-.topRt .dorpDownLayer.dorpNav dl{ border-bottom:1px solid #ededed; padding:10px 0;}
-.topRt .dorpDownLayer.dorpNav dl:last-child{ border:none;}
-.topRt .dorpDownLayer.dorpNav dl dt{ font-weight:bold; color:#4d4d4d}
-.topRt .dorpDownLayer.dorpNav dl dd{ display:inline-block; width:66px; height:20px; line-height:20px; overflow:hidden}
-.topRt .dorpDownLayer.dorpNav a,.topRt .dorpDownLayer.fuwuNav a{ display:inline-block; color:#707070}
-.topRt .dorpDownLayer.dorpNav a:hover,.topRt .dorpDownLayer.fuwuNav a:hover,.topRt .dorpDownLayer.fuwuNav a.more:hover{ color:#f60}
-.topRt .dorpDownLayer.fuwuNav{ width:176px;padding:0 15px; text-align:left}
-.topRt .dorpDownLayer.fuwuNav dl{ border-bottom:1px solid #ededed; padding:10px 0;}
-.topRt .dorpDownLayer.fuwuNav dl:last-child{ border:none;}
-.topRt .dorpDownLayer.fuwuNav dl dt{ font-weight:bold; color:#4d4d4d}
-.topRt .dorpDownLayer.fuwuNav dl dd{ display:inline-block; width:86px; height:20px; line-height:20px; overflow:hidden}
-.topRt .dorpDownLayer.dorpNav a{ display:inline-block; color:#707070}
-.topRt .dorpDownLayer.dorpNav a:hover{ color:#e02445}
-.topRt .dorpDownLayer.fuwuNav a.more {color:#999}
-@font-face {
-  font-family: 'iconfont';  /* project id 563245 */
-  src: url('//at.alicdn.com/t/font_563245_retk1192yaps0pb9.eot');
-  src: url('//at.alicdn.com/t/font_563245_retk1192yaps0pb9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_563245_retk1192yaps0pb9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_563245_retk1192yaps0pb9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_563245_retk1192yaps0pb9.svg#iconfont') format('svg');
+@charset "utf-8";
+body{
+  margin: 0;
 }
-.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}
+.topBar {
+  height: 29px;
+  line-height: 29px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #f1f1f1;
+  font-size: 12px
+}
+
+.topMain {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  color: #525252;
+  z-index: 8
+}
+
+.topMain .line {
+  padding: 0 10px;
+  color: #d9d9d9
+}
+
+.topMain .topLogin {
+  padding: 0 8px;
+  color: #767676
+}
+
+.topMain .iconfont {
+  font-size: 15px;
+  margin: 0 3px 0 0;
+  color: #dc2a49;
+  display: inline-block;
+  height: 16px;
+  line-height: 14px
+}
+
+.topMain .welcome {
+  float: left;
+}
+
+.topMain .userName {
+  color: #e02445;
+  float: left;
+  margin: 0 8px 0 15px
+}
+
+.topMain .userNews {
+  float: left;
+}
+
+.topMain .userNews img {
+  margin: 0 2px 0 5px;
+}
+
+.topMain code {
+  float: left;
+  color: #d9d9d9;
+  margin-right: 3px;
+}
+
+.topMain .quit {
+  margin-left: 8px;
+}
+
+.topMain .topReg {
+  color: #ff4e00
+}
+
+.noLogin a, .dorpTel {
+  float: left;
+  padding: 0 12px;
+  position: relative;
+  color: #525252
+}
+
+.topRt .dorpDown:after {
+  content: "";
+  float: right;
+  width: 1px;
+  height: 12px;
+  border-right: 1px solid #d9d9d9;
+  position: absolute;
+  right: -1px;
+  top: 8px
+}
+
+.dorpTel {
+  padding: 0px
+}
+
+.noLogin .dorpTel .arr {
+  color: #a1a0a7;
+  width: 10px;
+  margin: 0 0 0 2px;
+  transition: transform .3s;
+  -webkit-transition: transform .3s;
+  -moz-transition: transform .3s
+}
+
+.noLogin .on {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-width: 0 1px;
+  padding: 0
+}
+
+.noLogin .on a {
+  padding: 0 11px;
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid #fff;
+  height: 29px
+}
+
+.noLogin a.topTel:after {
+  content: "";
+  float: right;
+  width: 1px;
+  height: 12px;
+  border-right: 1px solid #d9d9d9;
+  position: absolute;
+  right: -1px;
+  top: 8px
+}
+
+.noLogin .on a:after {
+  display: none
+}
+
+.noLogin .on .arr {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform-origin: 70% 45%;
+  -webkit-transform-origin: 70% 45%;
+  -moz-transform-origin: 70% 45%
+}
+
+.noLogin .dorpDownLayer {
+  display: none;
+  position: absolute;
+  left: -1px;
+  top: 29px;
+  z-index: 29;
+  background: #fff;
+  border: solid 1px #e02445;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius:  5px;
+
+  width: 150px;
+  text-align: center;
+
+}
+
+.noLogin .dorpDownLayer dl dt {
+  width: 122px;
+  height: 145px;
+  float: left;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 14px;
+  color: #666;
+  line-height: 35px;
+}
+
+.noLogin .dorpDownLayer dl dt img {
+  display: block
+}
+
+.noLogin .dorpDownLayer dl dd {
+  float: left;
+  padding-top: 12px;
+  width: 107px;
+}
+
+.noLogin .dorpDownLayer dl dd p {
+  margin-bottom: 7px;
+}
+
+.noLogin .dorpDownLayer dl dd p span {
+  color: #5a5a5a;
+  display: block;
+  line-height: 20px;
+}
+
+.noLogin .dorpDownLayer dl dd a {
+  display: block;
+}
+
+.noLogin .dorpDownLayer a.phone, .noLogin .dorpDownLayer a.android {
+  display: block;
+  width: 90px;
+  height: 22px;
+  margin-bottom: 6px;
+  background: url(../images/copyright.png) no-repeat;
+  overflow: hidden;
+  padding: 0
+}
+
+.noLogin .dorpDownLayer a.phone {
+  background-position: 0 -65px
+}
+
+.noLogin .dorpDownLayer a.android {
+  background-position: -92px -65px
+}
+
+/*----topBar左右分割线----*/
+
+.topRt {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 2
+}
+
+.topRt a, .dorpDown {
+  float: left;
+  padding: 0 12px;
+  position: relative;
+  color: #525252
+}
+
+.topRt a:after, .topRt .dorpDown:after {
+  content: "";
+  float: right;
+  width: 1px;
+  height: 12px;
+  border-right: 1px solid #d9d9d9;
+  position: absolute;
+  right: -1px;
+  top: 8px
+}
+
+.dorpDown {
+  padding: 0px
+}
+
+.topRt .dorpDown .arr {
+  color: #a1a0a7;
+  width: 10px;
+  margin: 0 0 0 2px;
+  transition: transform .3s;
+  -webkit-transition: transform .3s;
+  -moz-transition: transform .3s
+}
+
+.topRt .dorpDown .arrRed {
+  color: #dc2a49
+}
+
+.topRt .on {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-width: 0 1px;
+  padding: 0
+}
+
+.topRt .on a {
+  padding: 0 11px;
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid #fff;
+  height: 29px
+}
+
+.topRt .on a:after {
+  display: none
+}
+
+.topRt .on .arr {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform-origin: 70% 45%;
+  -webkit-transform-origin: 70% 45%;
+  -moz-transform-origin: 70% 45%
+}
+
+.topRt .dorpDownLayer {
+  display: none;
+  position: absolute;
+  left: -1px;
+  top: 29px;
+  z-index: 29;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 0 0 10px
+}
+
+.topRt .dorpDownLayer a {
+  border: 0px;
+  line-height: 24px;
+  color: #888;
+  float: none
+}
+
+.topRt .dorpDownLayer a:hover, .topMain a:hover {
+  color: #f60
+}
+
+.topRt .dorpDownLayer a:after {
+  border: 0;
+}
+
+.topRt .dorpDownLayer, .topRt .dorpDownLayer a {
+  line-height: 24px;
+  padding: 0;
+  text-align: center;
+}
+
+.topRt .dorpDownLayer a {
+  display: block
+}
+
+.topRt .dorpDownLayer .iconfont {
+  color: #db2242;
+  font-size: 14px;
+  display: inline-block;
+  margin: 0 4px 0 0
+}
+
+.topRt .dorpDownLayer.dorpNav {
+  width: 276px;
+  left: -207px;
+  padding: 0 15px;
+  text-align: left
+}
+
+.topRt .dorpDownLayer.dorpNav dl {
+  border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+}
+
+.topRt .dorpDownLayer.dorpNav dl:last-child {
+  border: none;
+}
+
+.topRt .dorpDownLayer.dorpNav dl dt {
+  font-weight: bold;
+  color: #4d4d4d
+}
+
+.topRt .dorpDownLayer.dorpNav dl dd {
+  display: inline-block;
+  width: 66px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden
+}
+
+.topRt .dorpDownLayer.dorpNav a, .topRt .dorpDownLayer.fuwuNav a {
+  display: inline-block;
+  color: #707070
+}
+
+.topRt .dorpDownLayer.dorpNav a:hover, .topRt .dorpDownLayer.fuwuNav a:hover, .topRt .dorpDownLayer.fuwuNav a.more:hover {
+  color: #f60
+}
+
+.topRt .dorpDownLayer.fuwuNav {
+  width: 176px;
+  padding: 0 15px;
+  text-align: left
+}
+
+.topRt .dorpDownLayer.fuwuNav dl {
+  border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+}
+
+.topRt .dorpDownLayer.fuwuNav dl:last-child {
+  border: none;
+}
+
+.topRt .dorpDownLayer.fuwuNav dl dt {
+  font-weight: bold;
+  color: #4d4d4d
+}
+
+.topRt .dorpDownLayer.fuwuNav dl dd {
+  display: inline-block;
+  width: 86px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden
+}
+
+.topRt .dorpDownLayer.dorpNav a {
+  display: inline-block;
+  color: #707070
+}
+
+.topRt .dorpDownLayer.dorpNav a:hover {
+  color: #e02445
+}
+
+.topRt .dorpDownLayer.fuwuNav a.more {
+  color: #999
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1755880 */
+  src: url('https://at.alicdn.com/t/font_1755880_i0a7em5yfcq.eot');
+  src: url('https://at.alicdn.com/t/font_1755880_i0a7em5yfcq.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1755880_i0a7em5yfcq.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1755880_i0a7em5yfcq.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1755880_i0a7em5yfcq.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1755880_i0a7em5yfcq.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: iconfont!important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale
+}
+.dorpDownLayer:nth-child(1) img {
+  display: block;
+  width:122px;
+  height: 122px;
+  
+} 
+a{
+  text-decoration: none !important;
+}
