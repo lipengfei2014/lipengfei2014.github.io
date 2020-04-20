@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+}
+main{
+    width: 80%;
+    height: auto;
+    margin: 0 auto ;
+
+}
+#StarsList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.StarList{
+    width: 200px;
+    height: 220px;
+    margin: 0  10px 0 10px ;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.StarList img{
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+}
+.StarList p{
+    margin: 0 auto;
+ 
+}

@@ -1,0 +1,7 @@
+.text-webkit-box {
+    display: -webkit-box;
+    width: 80px;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
