@@ -52,7 +52,7 @@
         }
     }
     function fun(params) {
-        axios({ url: "https://www.vebcoder.cn:9090/artist/artistInfo", params, method: "GET" }).then(response => {
+        axios({ url: "http://www.vebcoder.cn:9090/artist/artistInfo", params, method: "GET" }).then(response => {
             console.log(response.data)
             StarsListdata = response.data.data.artistList
             console.log(StarsListdata)
