@@ -145,70 +145,182 @@
         color: red;
     }
 
-    #registerdivform{
+    #registerdivform {
         background-color: rgb(255, 255, 255);
         height: 570px;
     }
 
     .registerForm {
         padding-top: 110px;
-        
+
     }
-    #form-group-btn{
-      position: relative;
-      left: 14%;
+
+    #form-group-btn {
+        position: relative;
+        left: 14%;
     }
-    #form-group-btn button{
-       width: 300px;
-       height: 50px;
-       background-color: rgb(135, 135, 135);
-       color: white;
+
+    #form-group-btn button {
+        width: 300px;
+        height: 50px;
+        background-color: rgb(135, 135, 135);
+        color: white;
     }
-    .form-control{
-        width:500px;
+
+    .form-control {
+        width: 500px;
     }
 </style>
 
 <body>
     <nav>
-        <div id="top">
-            <div id="topLeft">
-                <span>
-                    <i class="iconfont">&#xe663;</i>
-                    手机站
-                    <span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span>
-                </span>
-                <span>
-                    欢迎来到企汇网&nbsp; &nbsp; &nbsp;
-                    <a href="http://u.qihuiwang.com/member/login.html">
-                        <i class="iconfont">&#xe634;</i>
-                        登陆
-                    </a>
-                    <span>|</span>
-                </span>
-                <span><a href="">免费注册</a></span>
+        <link href="http://static.qihuiwang.com/css/top.css?v=100" rel="stylesheet" />
+        <div class="topBar">
+            <div class="topMain">
+                <div class="noLogin">
+                    <div class="dorpTel">
+                        <a href="http://m.qihuiwang.com" target="_blank" class="topTel"><i
+                                class="iconfont">&#xe66c;</i>手机站<i class="iconfont arr">&#xe6d1;</i></a>
+                        <div class="dorpDownLayer">
+                            <dl>
+                                <dt><img src="http://static.qihuiwang.com/images/oneCode.jpg" width="122"
+                                        height="122" />手机站</dt>
+                                <dt><img src="http://static.qihuiwang.com/images/xiaochengxu.jpg" width="122"
+                                        height="122" />小程序</dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <span class="topLogin welcome">欢迎来到企汇网</span>
+                    <a class="topLogin topTel" href="http://u.qihuiwang.com/member/login.html" target="_self"><i
+                            class="iconfont">&#xe601;</i>登录</a><a href="http://u.qihuiwang.com/member/register.html"
+                        target="_self" class="topLogin">免费注册</a>
+                </div>
+                <div class="login" style="display: none">
+                    <div class="welcome ">欢迎来到企汇网!</div>
+                    <a class="userName" href="http://u.qihuiwang.com" target="_blank" rel="nofollow"></a>
+                    <code>丨</code>
+                    <a href="http://u.qihuiwang.com/message" target="_blank" rel="nofollow" class="userNews">消息<img
+                            id="top_new_msg" style="display: none"
+                            src="http://static.qihuiwang.com/images/news.gif" /></a>
+                    <a href="javascript:;" onclick="quit()" target="_self" class="quit" rel="nofollow">退出</a>
+                </div>
+                <div class="topRt">
+                    <a href="http://www.qihuiwang.com" target="_blank">企汇网首页</a>
+                    <!--收藏夹-->
+                    <div class="dorpDown">
+                        <a href="http://u.qihuiwang.com/collect/company" target="_blank"
+                            rel="nofollow">&nbsp;收藏夹&nbsp;<i class="iconfont arr">&#xe6d1;</i></a>
+                        <div class="dorpDownLayer">
+                            <a href="http://u.qihuiwang.com/collect/product" target="_blank" rel="nofollow">收藏的产品</a>
+                            <a href="http://u.qihuiwang.com/collect/company" target="_blank" rel="nofollow">收藏的店铺</a>
+                        </div>
+                    </div>
+                    <!--我是采购商-->
+                    <div class="dorpDown">
+                        <a href="http://u.qihuiwang.com/buyer" target="_blank" rel="nofollow">我是采购商<i
+                                class="iconfont arr">&#xe6d1;</i></a>
+                        <div id="" class="dorpDownLayer">
+                            <a href="http://u.qihuiwang.com/buyer" target="_blank">采购商中心</a>
+                            <a href="http://u.qihuiwang.com/purchase/pub" target="_blank">发布采购单</a>
+                            <a href="http://u.qihuiwang.com/purchase/list" target="_blank" rel="nofollow">采购管理</a>
+                        </div>
+                    </div>
+                    <!--我是供应商-->
+                    <div class="dorpDown">
+                        <a href="http://u.qihuiwang.com/provider" target="_blank" rel="nofollow">我是供应商<i
+                                class="iconfont arr">&#xe6d1;</i></a>
+                        <div class="dorpDownLayer">
+                            <a href="http://u.qihuiwang.com/provider" target="_blank" rel="nofollow">供应商中心</a>
+                            <a href="http://u.qihuiwang.com/product/step1" target="_blank" rel="nofollow">发布产品</a>
+                            <a href="http://u.qihuiwang.com/product/list" target="_blank" rel="nofollow">产品管理</a>
+                            <a href="http://u.qihuiwang.com/shop/meta" target="_blank" rel="nofollow">店铺管理</a>
+                        </div>
+                    </div>
+                    <a href="http://qihuiguanjia.qihuiwang.com" target="_blank">企汇管家</a>
+                    <!--企汇服务-->
+                    <div class="dorpDown">
+                        <a href="http://www.qihuiwang.com/service" target="_blank">企汇服务<i
+                                class="iconfont arr">&#xe6d1;</i></a>
+                        <div class="dorpDownLayer fuwuNav">
+                            <dl>
+                                <dt>热门服务</dt>
+                                <dd><a href="http://www.qihuiwang.com/service/42.html" target="_blank"
+                                        rel="nofollow">标王</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/94.html" target="_blank"
+                                        rel="nofollow">黄金展位</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/41.html" target="_blank"
+                                        rel="nofollow">热门推荐广告位</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/53.html" target="_blank"
+                                        rel="nofollow">图片空间</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/24.html" target="_blank"
+                                        rel="nofollow">信息包</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/51.html" target="_blank"
+                                        rel="nofollow">企汇金铺</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/52.html" target="_blank"
+                                        rel="nofollow">金铺装修</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/service/index" target="_blank"
+                                        rel="nofollow">更多服务</a></dd>
+
+                            </dl>
+                        </div>
+                    </div>
+                    <!--客服中心-->
+                    <div class="dorpDown">
+                        <a href="http://help.qihuiwang.com" title="客服中心" target="_blank">&nbsp;客服中心&nbsp;<i
+                                class="iconfont arr">&#xe6d1;</i></a>
+                        <div class="dorpDownLayer">
+                            <a href="http://help.qihuiwang.com/help/ques_list.html" target="_blank">常见问题</a>
+                            <a href="javascript:;" class="qqChat" rel="nofollow">在线客服</a>
+                        </div>
+                    </div>
+                    <!--网站导航-->
+                    <div class="dorpDown">
+                        <a href="http://www.qihuiwang.com/sitemap.html" title="网站导航" target="_blank"><i
+                                class="iconfont arrRed">&#xe60c;</i>网站导航<i class="iconfont arr">&#xe6d1;</i></a>
+                        <div class="dorpDownLayer dorpNav">
+                            <dl>
+                                <dt>特色服务</dt>
+                                <dd><a href="http://www.qihuiwang.com" target="_blank" rel="nofollow">首页</a></dd>
+                                <dd><a href="http://news.qihuiwang.com/" target="_blank" rel="nofollow">资讯</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/exhibition/" target="_blank" rel="nofollow">展会</a>
+                                </dd>
+                                <dd><a href="http://qihuiguanjia.qihuiwang.com/" target="_blank" rel="nofollow">企汇管家</a>
+                                </dd>
+                                <dd><a href="http://sms.qihuiwang.com/" target="_blank" rel="nofollow">企汇云信</a></dd>
+                                <dd><a href="http://www.tiantis.com/cn/" target="_blank" rel="nofollow">天梯建站</a></dd>
+                                <dd><a href="http://company.qihuiwang.com" target="_blank" rel="nofollow">企业库</a></dd>
+                                <dd><a href="http://product.qihuiwang.com" target="_blank" rel="nofollow">产品库</a></dd>
+                                <dd><a href="http://zhengzhou.qihuiwang.com/" target="_blank" rel="nofollow">郑州站</a>
+                                </dd>
+                                <dd><a href="http://pingdingshan.qihuiwang.com/" target="_blank" rel="nofollow">平顶山站</a>
+                                </dd>
+                                <dd><a href="http://m.qihuiwang.com" target="_blank" rel="nofollow">手机站</a></dd>
+                                <dd><a href="http://s.qihuiwang.com/" target="_blank" rel="nofollow">搜索</a></dd>
+                                <dd><a href="http://hot.qihuiwang.com/zt/rwt/" target="_blank" rel="nofollow">企汇软文通</a>
+                                </dd>
+                                <dd><a href="http://www.qihuiwang.com/AiCaiGou/introPage.html" target="_blank"
+                                        rel="nofollow">百度爱采购</a></dd>
+                                <dd><a href="http://app.tiantis.com/app/tiantisxcx" target="_blank"
+                                        rel="nofollow">小程序</a></dd>
+                                <dd><a href="http://www.qihuiwang.com/zhitongche" target="_blank"
+                                        rel="nofollow">企业直通车</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>采购服务</dt>
+                                <dd><a href=" http://buy.qihuiwang.com/" target="_blank" rel="nofollow">采购中心</a></dd>
+                                <dd><a href="http://buy.qihuiwang.com/pub" target="_blank" rel="nofollow">发布采购单</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>行业市场</dt>
+                                <dd><a href="http://jiancai.qihuiwang.com/" target="_blank" rel="nofollow">建材频道 </a>
+                                </dd>
+                                <dd><a href="http://jixie.qihuiwang.com/" target="_blank" rel="nofollow">机械频道</a></dd>
+                                <dd><a href=" http://nongye.qihuiwang.com/" target="_blank" rel="nofollow">农林频道</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="topRight">
-                <span>企汇网首页
-                    <span>|</span></span>
-                <span>收藏夹<span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span></span>
-                <span>我是采购商<span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span></span>
-                <span>我是供应商<span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span></span>
-                <span>企汇管家
-                    <span>|</span></span>
-                <span>企汇服务<span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span></span>
-                <span>客服中心<span class="foldUp"><i class="iconfont">&#xe664;</i></span>
-                    <span>|</span></span>
-                <span>
-                    <i class="iconfont">&#xe60b;</i>
-                    网站导航<span class="foldUp"><i class="iconfont">&#xe664;</i></span></span>
-            </div>
-            <div id="conceal"></div>
         </div>
     </nav>
     <main>
@@ -250,7 +362,7 @@
                         aria-valuenow="45" aria-valuemin="0" aria-valuemax="90" style="width: 30% ;">
                     </div>
                 </div>
-                <div id="registerdivform" >
+                <div id="registerdivform">
                     <form class="form-horizontal registerForm ">
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">*请输入手机号</label>
@@ -286,15 +398,16 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input id="checkboxbtn"  type="checkbox"> 我已阅读并同意<span style="color:rgb(234, 36, 69 );">《企汇网服务条款》</span>
+                                        <input id="checkboxbtn" type="checkbox"> 我已阅读并同意<span
+                                            style="color:rgb(234, 36, 69 );">《企汇网服务条款》</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10" id="form-group-btn" >
-                                <button type="submit"  class="btn btn-default">下一步</button>
+                            <div class="col-sm-offset-2 col-sm-10" id="form-group-btn">
+                                <button type="submit" class="btn btn-default">下一步</button>
                             </div>
                         </div>
                     </form>
@@ -332,20 +445,20 @@
 </body>
 <script src="./js/jQuery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/span.js"></script>
+<script src="./js/index.js"></script>
 <script>
-console.log($("#checkboxbtn")[0])
-$("#checkboxbtn").click(function(e){
-    console.log(e.target.checked)
-    if(e.target.checked){
-        console.log("1")
-        $("#form-group-btn>button").css({"background": "rgb(234, 36, 69)" });
-        console.log($("#form-group-btn>button")[0])
-    }else{
-        console.log("2")
-        $("#form-group-btn>button").css({"background": "rgb(135, 135, 135)"});
-    }
-})
+    console.log($("#checkboxbtn")[0])
+    $("#checkboxbtn").click(function (e) {
+        console.log(e.target.checked)
+        if (e.target.checked) {
+            console.log("1")
+            $("#form-group-btn>button").css({ "background": "rgb(234, 36, 69)" });
+            console.log($("#form-group-btn>button")[0])
+        } else {
+            console.log("2")
+            $("#form-group-btn>button").css({ "background": "rgb(135, 135, 135)" });
+        }
+    })
 </script>
 
 </html>
