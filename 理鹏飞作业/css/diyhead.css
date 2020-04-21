@@ -1,0 +1,89 @@
+#diyhead {
+    width: 100%;
+    height: 700px;
+}
+
+#diyheadTop {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#diyheadTop ul {
+    display: flex;
+    justify-content: start;
+    padding-left: 0px;
+    margin: 0;
+}
+
+#diyheadTop ul li {
+    list-style: none;
+    width: 9%;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+#diyheadTop ul li:hover{
+    cursor: pointer;
+    color: rgb(243, 50, 70);
+}
+#diyheadTop ul li:nth-child(1) {
+    width: 14% !important;
+    background: linear-gradient(to right, rgb(243, 100, 70), rgb(243, 50, 70));
+    color: white;
+    display: inline-block;
+    text-align: left;
+}
+#diyheadBottom{
+    width: 100%;
+    height: 510px;
+    background: url(http://static.qihuiwang.com/images/acg_banner.jpg);
+}
+#diyheadBottomText{
+    width: 80%;
+    height: 490px;
+    margin: 0 auto;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: space-between;
+}
+#diyheadBottomTextone{
+    width: 13%;
+    height: 490px;
+    background-color: white;
+    display: flex;
+}
+#diyheadBottomTexttwo{
+    width: 65%;
+    background-color: blue;
+    height: 490px;
+}
+#diyheadBottomTextthree{
+    width: 18%;
+    background-color: red;
+    height: 490px;
+}
+#diyheadBottomTextoneleft{
+    width: 95%;
+    height: 490px;
+    margin: 0 auto;
+}
+#diyheadBottomTextoneleft ul{
+    padding-left: 0px;
+    margin: 0;
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    text-align: left;
+    font-size: 13px;
+}
+#diyheadBottomTextoneleft li:hover{
+    cursor: pointer;
+    color: rgb(243, 50, 70);
+}
+#diyheadBottomTextoneright{
+    height: 490px;
+    background-color: white;
+}

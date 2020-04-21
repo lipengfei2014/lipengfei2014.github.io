@@ -1,5 +1,5 @@
 $(function () {
-    //头部下拉菜单
+
     $(".dorpDown,.msg,.dorpTel").hover(function () {
         $(this).addClass("on").children(".dorpDownLayer").slideDown(200);
     }, function () {
@@ -19,7 +19,7 @@ $(function () {
                 $('.login').find('.userName').text(json.UserName);
                 $('.login').show();
 
-                //检测是否有新消息
+
                 hasNewMessage();
                 setInterval(function () {
                     hasNewMessage();
@@ -27,7 +27,7 @@ $(function () {
             }
         }
     });
-    //搜索框模糊过滤
+
     $("#searchKey").keyup(function (event) {
         event = event || window.event;
         if (event.keyCode == 13) {
@@ -91,5 +91,21 @@ $(function () {
         }
     });
 });
+$(window).scroll(function () {
+    if (document.documentElement.scrollTop * 1 >= 176) {
+        $("#topinput").css({ "display": "none"})
+        $("#navinput").css({ "display": "flex" })
+        $("main").css({"top":"196px"})
+        $("footer").css({"top":"196px"})
+        $("#diyhead").css({"top":"196px"})
+    } else {
+        $("#topinput").css({ "display":  "block" })
+        $("#navinput").css({ "display": "none" })
+        $("main").css({"top":"0"})
+        $("footer").css({"top":"0"})
+        $("#diyhead").css({"top":"0"})
+    }
+})
+
 
 
