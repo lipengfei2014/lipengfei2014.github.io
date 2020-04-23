@@ -95,17 +95,39 @@ $(window).scroll(function () {
     if (document.documentElement.scrollTop * 1 >= 176) {
         $("#topinput").css({ "display": "none"})
         $("#navinput").css({ "display": "flex" })
-        $("main").css({"top":"196px"})
-        $("footer").css({"top":"196px"})
-        $("#diyhead").css({"top":"196px"})
+        $("main").css({"top":"50px"})
+        $("footer").css({"top":"50px"})
+        $("#diyhead").css({"top":"50px"})
     } else {
         $("#topinput").css({ "display":  "block" })
         $("#navinput").css({ "display": "none" })
-        $("main").css({"top":"0"})
-        $("footer").css({"top":"0"})
         $("#diyhead").css({"top":"0"})
+        $("main").css({"top":"0px"})
+        $("footer").css({"top":"0px"})
     }
 })
-
+Object.keys($("#diyheadBottomTextoneleft li")).forEach((index,item)=>{
+    if(index*1||index*1==0){
+        $("#diyheadBottomTextoneleft li")[index].liindex=index*1
+    }
+})
+$("#diyheadBottomTextoneleft li").mouseenter(function(e){
+    $("#diyheadBottomTextoneright").css({"width":"780px"}).html("<h1>"+e.target.liindex+"</h1>")
+})
+$("#diyheadBottomTextone").mouseleave(function(){
+    $("#diyheadBottomTextoneright").css({"width":"0px"}).html("")
+})
+Object.keys($("#diyheadBottomTextthreemain >div:nth-child(1) a")).forEach((index,item)=>{
+    if(index*1||index*1==0){
+       $("#diyheadBottomTextthreemain >div:nth-child(1) a")[index].aindex=index*1
+    }    
+})
+$("#diyheadBottomTextthreemain >div:nth-child(1) a").mouseenter(function(e){
+    $(".showUl").eq(0).removeClass("showUl")
+    $("#diyheadBottomTextthreemain >div:nth-child(1) a").css({"color": "black","borderBottom":" solid 1px black"})
+    $("#diyheadBottomTextthreemain >div:nth-child(1) a").eq(e.target.aindex).css({"color": "rgb(243, 50, 70)","borderBottom":" solid 1px rgb(243, 50, 70)"})
+    $("#diyheadBottomTextthreemain >div:nth-child(2) ul").eq(e.target.aindex).addClass("showUl")
+    console.log(e.target,$("#diyheadBottomTextthreemain >div:nth-child(2) ul")[e.target.aindex],$(".showUl"))
+})
 
 

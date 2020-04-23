@@ -1,8 +1,14 @@
 #diyhead {
     width: 100%;
-    height: 700px;
+    height: auto;
 }
-
+.text-webkit-box {
+    display: -webkit-box;
+    width: 160px;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
 #diyheadTop {
     width: 80%;
     height: 50px;
@@ -25,10 +31,11 @@
     text-align: center;
 }
 
-#diyheadTop ul li:hover{
+#diyheadTop ul li:hover {
     cursor: pointer;
     color: rgb(243, 50, 70);
 }
+
 #diyheadTop ul li:nth-child(1) {
     width: 14% !important;
     background: linear-gradient(to right, rgb(243, 100, 70), rgb(243, 50, 70));
@@ -36,12 +43,14 @@
     display: inline-block;
     text-align: left;
 }
-#diyheadBottom{
+
+#diyheadBottom {
     width: 100%;
     height: 510px;
     background: url(http://static.qihuiwang.com/images/acg_banner.jpg);
 }
-#diyheadBottomText{
+
+#diyheadBottomText {
     width: 80%;
     height: 490px;
     margin: 0 auto;
@@ -49,28 +58,33 @@
     display: flex;
     justify-content: space-between;
 }
-#diyheadBottomTextone{
+
+#diyheadBottomTextone {
     width: 13%;
     height: 490px;
     background-color: white;
     display: flex;
+    position: relative;
 }
-#diyheadBottomTexttwo{
+
+#diyheadBottomTexttwo {
     width: 65%;
-    background-color: blue;
     height: 490px;
 }
-#diyheadBottomTextthree{
-    width: 18%;
-    background-color: red;
+
+#diyheadBottomTextthree {
+    width: 20%;
+    background-color: white;
     height: 490px;
 }
-#diyheadBottomTextoneleft{
+
+#diyheadBottomTextoneleft {
     width: 95%;
     height: 490px;
     margin: 0 auto;
 }
-#diyheadBottomTextoneleft ul{
+
+#diyheadBottomTextoneleft ul {
     padding-left: 0px;
     margin: 0;
     list-style: none;
@@ -79,11 +93,212 @@
     text-align: left;
     font-size: 13px;
 }
-#diyheadBottomTextoneleft li:hover{
+
+#diyheadBottomTextoneleft li:hover {
     cursor: pointer;
     color: rgb(243, 50, 70);
 }
-#diyheadBottomTextoneright{
+
+#diyheadBottomTextoneright {
     height: 490px;
+    position: absolute;
+    left: 100%;
+    transition: width 1s;
     background-color: white;
+    overflow: hidden;
+    z-index: 56;
+}
+
+#diyheadBottomTexttwo {
+    padding-top: 10px;
+}
+
+.swiper-container {
+    width: 740px;
+    height: 305px;
+}
+
+#diyheadBottomTexttwoBotton {
+    width: 740px;
+    height: 160px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.diyheadBottomTexttwoBottonImg {
+    width: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.diyheadBottomTexttwoBottonImg img {
+    display: block;
+    width: 180px;
+    height: 160px;
+    margin: 0 auto;
+    transition: transform 0.6s;
+}
+
+.diyheadBottomTexttwoBottonImg img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.diyheadBottomTexttwoBottonText {
+    width: 180px;
+    position: absolute;
+    top: 100px;
+}
+
+.diyheadBottomTexttwoBottonText p {
+    margin: 0;
+    text-align: center;
+}
+
+.diyheadBottomTexttwoBottonText span {
+    display: inline-block;
+    width: 180px;
+    margin: 0;
+    font-size: small;
+    color: orangered;
+    text-align: center;
+}
+
+#diyheadBottomTextthreeTop {
+    width: 100%;
+    height: 130px;
+}
+
+#diyheadBottomTextthreeTopOne {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#diyheadBottomTextthreeTopOne div:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#diyheadBottomTextthreeTopOne div:nth-child(1) img {
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+#diyheadBottomTextthreeTopOne div:nth-child(2) {
+    padding-top: 10px;
+}
+
+#diyheadBottomTextthreeTopOne div:nth-child(2) p {
+    margin: 0;
+    color: red;
+}
+
+#diyheadBottomTextthreeTopTwo {
+    margin-top: 10px;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#diyheadBottomTextthreeTopTwo a {
+    width: 100px;
+    height: 30px;
+    color: rgb(243, 50, 70);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    border: solid 1px rgb(243, 50, 70);
+}
+
+#diyheadBottomTextthreeTopTwo a:hover {
+    background-color: rgb(243, 50, 70);
+    color: white;
+}
+
+#diyheadBottomTextthreemain {
+    width: 100%;
+    height: 175px;
+}
+
+#diyheadBottomTextthreemain>div:nth-child(1) {
+    width: 210px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#diyheadBottomTextthreemain>div:nth-child(1) a{
+    font-size: small;
+    border-bottom: solid 1px rgb(200, 200, 200);
+}
+#diyheadBottomTextthreemain>div:nth-child(1) a:nth-child(1){
+    color: rgb(243, 50, 70);
+    border-bottom: solid 1px rgb(243, 50, 70);
+}
+#diyheadBottomTextthreemain>div:nth-child(2){
+    width: 100%;
+    height: 140px;
+}
+#diyheadBottomTextthreemain>div:nth-child(2) ul {
+    display: none;
+    list-style: none;
+    padding-left: 0px;
+    font-size: small;
+    color: rgb(29, 32, 32);
+    height: 140px;
+    width: 100%;
+    
+}
+#diyheadBottomTextthreemain>div:nth-child(2) ul li{
+    margin: 15px 0px 15px 0px;
+}
+#diyheadBottomTextthreemain>div:nth-child(2) ul li a{
+    padding-left: 15px;
+}
+#diyheadBottomTextthreemain>div:nth-child(2) ul em{
+    color: rgb(200, 200, 200);
+}
+.showUl {
+    display: block !important  ;
+}
+#diyheadBottomTextthree dl {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+#diyheadBottomTextthree dt{
+    display: block;
+    width: 70px;
+    height: 60px;
+    background: url(http://static.qihuiwang.com/images/sprite_global.png);
+    background-size: 323px 500px;
+    background-position: -25px -270px;
+    border-right: solid 3px rgb(216, 214, 214);
+    margin: auto 0;
+}
+#diyheadBottomTextthree dd{
+    width: 100px;
+    height: 50px;
+    margin: 0;
+}
+#diyheadBottomTextthree div{
+    margin: auto 0;
+  
+}
+#diyheadBottomTextthree dd p{
+    margin: 0;
+    font-size: small;
+}
+#diyheadBottomTextthree dd em a{
+    color: rgb(243, 100, 70);
 }
