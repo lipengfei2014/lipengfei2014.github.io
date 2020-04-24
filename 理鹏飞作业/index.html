@@ -9,8 +9,100 @@
     <link rel="stylesheet" href="./css/icon.css">
     <link rel="stylesheet" href="./css/diyhead.css">
     <link rel="stylesheet" href="./css/floornumber.css">
-</head>
+    <link rel="stylesheet" href="./css/top.css">
 
+</head>
+<style>
+    #registerfooter {
+        width: 100%;
+        height: 210px;
+        background-color: black;
+        color: rgb(87, 87, 87);
+        text-align: center;
+    }
+
+    #registerfooter div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+    }
+
+    #registerfooter div:nth-child(1) p {
+        padding-top: 20px;
+        margin-right: 5px;
+    }
+
+    #registerfooter div:nth-child(1) p:hover {
+        cursor: pointer;
+        color: rgb(159, 159, 159);
+    }
+
+    #registerfooter div:nth-child(3) {
+        margin: 10px 0px;
+    }
+
+    #registerfooter div:nth-child(3) p {
+        width: 840px;
+        margin: 0 auto;
+    }
+
+    #registerfooter div:nth-child(3) p:hover {
+        color: rgb(159, 159, 159);
+        cursor: pointer;
+    }
+
+    #registerfooter div:nth-child(4) {
+        display: flex;
+        justify-content: center;
+    }
+
+    #registerfooter div:nth-child(4)>div {
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 0 3px;
+    }
+
+    #progress {
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    #processName {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px auto;
+        width: 90%;
+    }
+
+    #processName div:nth-child(1) {
+        color: red;
+    }
+
+    #registerdivform {
+        background-color: rgb(255, 255, 255);
+        height: 570px;
+    }
+
+    .registerForm {
+        padding-top: 110px;
+
+    }
+
+    #form-group-btn {
+        position: relative;
+        left: 14%;
+    }
+
+    #form-group-btn button {
+        width: 300px;
+        height: 50px;
+        background-color: rgb(135, 135, 135);
+        color: white;
+    }
+
+    .form-control {
+        width: 500px;
+    }
+</style>
 <body>
     <nav>
         <div class="topBar">
@@ -349,10 +441,10 @@
                     </div>
                 </div>
                 <div id="streamerRight">
-                    <h2><em>品牌</em>供应商  <i class="iconfont">&#xe603;</i>  </h2>
+                    <h2><em>品牌</em>供应商 <i class="iconfont">&#xe603;</i> </h2>
                     <div>
-                        <div class="text-webkit-box" >郑州经济技术开发区江海制伞礼品厂</div>
-                        <div class="text-webkit-box" >惠州市弘祥防水工程有限公司</div>
+                        <div class="text-webkit-box">郑州经济技术开发区江海制伞礼品厂</div>
+                        <div class="text-webkit-box">惠州市弘祥防水工程有限公司</div>
                         <div class="text-webkit-box">招远鲁鑫线轴有限公司</div>
                         <div class="text-webkit-box">惠州市华春隆实业有限公司</div>
                         <div class="text-webkit-box">曲阜六九重工机械制造有限公司</div>
@@ -363,11 +455,1314 @@
             <img src="http://img1.qihuiwang.com/86ec60991608962012c944becf1c32da_jpg.jpg" alt="">
         </div>
         <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em>1F</em>机械设备
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>VIP商机群</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>封口机械</em></a>
+                    <a><em>制动器</em></a>
+                    <a><em>吊钩</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
 
+                <div class="floornumberTextMian classimg">
+                    <img src="http://image.qihuiwang.com/05/7/779/05D7B1F0BAA8707BBB3D7DC67CFC086F.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>机械设备专场</h4>
+                        <p>制造好货，共享优品</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>排风设备</h5>
+                        <a>通风机</a>
+                        <a>鼓风机</a>
+                        <a>工业风扇</a>
+                        <a>风机、排风设备配件</a>
+                    </div>
+                    <div>
+                        <h5>化工机械</h5>
+                        <a>石墨</a>
+                        <a>玻璃钢管</a>
+                        <a>控制系统</a>
+                        <a>化工设备配件</a>
+                    </div>
+                    <div>
+                        <h5>工控系统</h5>
+                        <a>阀门</a>
+                        <a>轴承</a>
+                        <a>机器视觉</a>
+                        <a>工控机</a>
+                        <a>人机界面</a>
+                    </div>
+                    <div>
+                        <h5>焊接紧固</h5>
+                        <a>螺母</a>
+                        <a>螺钉</a>
+                        <a>螺栓</a>
+                        <a>切割设备</a>
+                        <a>焊机</a>
+                    </div>
+                    <div>
+                        <h5>模具刀具</h5>
+                        <a>成型模</a>
+                        <a>刀片</a>
+                        <a>模具设计</a>
+                        <a>模具加工</a>
+                        <a>切刀</a>
+                    </div>
+                    <div>
+                        <h5>道路养护</h5>
+                        <a>灌缝机械</a>
+                        <a> 除雪机械</a>
+                        <a>划线设备</a>
+                        <a>水泥路面</a>
+                    </div>
+                    <div>
+                        <h5>包装印刷</h5>
+                        <a>贴标机械</a>
+                        <a>封口机械</a>
+                        <a>防伪设备</a>
+                        <a>装订设备</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>锅炉</a>
+                        <a>真空设备</a>
+                        <a>行业设备</a>
+                        <a>二手设备</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/9E/A/1001/9E9A4C7E97582F9E3A1F4B6F6776A940.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>地面整平机</h4>
+                            <span>整平机</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/37/6/565/377699235C25F6281042B97F490026CD.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>泡沫造粒机</h4>
+                            <span>造粒机</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/F7/0/229/F710924E5233126D2F7860DDCC3FEFE9.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>螺旋提升机</h4>
+                            <span>提升机</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>曲阜市都用输送机械厂</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>皮带输送机,斗式提升机,螺旋提升机</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 15562358278</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">郑州赛格机械设备有限公司</div>
+                        <div class="text-webkit-box">开封市大方预应力有限公司</div>
+                        <div class="text-webkit-box">南阳金冠过电压保护设备有限公司</div>
+                        <div class="text-webkit-box">漯河市汇达铸造机械有限公司</div>
+                        <div class="text-webkit-box">郑州大华面业机械设备厂</div>
+                        <div class="text-webkit-box">河南三联科技工程有限公司</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/54/2/790/5442F17166300EE450241298E1D8F1C8.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/63/F/984/639FF83D85C34F52D4238299D5055580.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/FB/0/392/FBE0AED8857320CE6FC59A5E3F293DAB.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/C4/F/820/C4DFD7F34351B8FC4778F3C232F86C04.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img style="display: block;width: 1215px;"
+                    src="http://image.qihuiwang.com/81/D/238/81FD184EE2AABB19A452745E28AD7DEF.jpg">
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: rgb(250,160,25);">2F</em>农林牧副
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>企汇软文通限时买二送一</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>苹果</em></a>
+                    <a><em>花卉</em></a>
+                    <a><em>竹类植物</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img src="http://img3.qihuiwang.com/4128bb43f9b5693b1b3de6fe93d060a4_jpg.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>农林牧副专场</h4>
+                        <p>制造好货，共享优品</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>粮食油类</h5>
+                        <a>稻谷</a>
+                        <a>薯类</a>
+                        <a>其他粮食</a>
+                        <a>玉米油</a>
+                    </div>
+                    <div>
+                        <h5>生鲜水果</h5>
+                        <a>苹果</a>
+                        <a>葡萄</a>
+                        <a>柑桔、橙、柚</a>
+                        <a>枣</a>
+                        <a>草莓</a>
+                    </div>
+                    <div>
+                        <h5>畜牧种苗</h5>
+                        <a>猪</a>
+                        <a>兔</a>
+                        <a>鸡</a>
+                        <a>鹅</a>
+                        <a>鹌鹑</a>
+                    </div>
+                    <div>
+                        <h5>草菇</h5>
+                        <a>鱼类</a>
+                        <a>平菇</a>
+                        <a>虾类</a>
+                        <a>木耳</a>
+                        <a>蟹类</a>
+                    </div>
+                    <div>
+                        <h5>绿化盆景</h5>
+                        <a>竹类植物</a>
+                        <a>微型盆景</a>
+                        <a>草坪</a>
+                        <a>家庭园艺用种苗</a>
+                    </div>
+                    <div>
+                        <h5>农药化肥</h5>
+                        <a>复合肥料</a>
+                        <a> 生物肥料</a>
+                        <a>粉剂</a>
+                        <a>其它化肥</a>
+                    </div>
+                    <div>
+                        <h5>坚果类</h5>
+                        <a>杏仁</a>
+                        <a>花生</a>
+                        <a>其他坚果、果仁</a>
+                        <a>生核桃</a>
+                        <a>板栗</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>鲜花</a>
+                        <a>室内观叶植物</a>
+                        <a>小狗</a>
+                        <a>宠物</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/4F/C/135/4FBCC48870BE369F6D3F00EB150888B9.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>肉鸡苗批发</h4>
+                            <span>鸡苗</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/3B/8/188/3B28718BC13BFC9B7A118D457630D065.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>花卉种子行情</h4>
+                            <span>花种</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/6B/E/102/6BAE96C66011BC6AD97BC76D07FC22E5.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>杜高犬养殖</h4>
+                            <span>杜高犬</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>巩义市鲁庄嵩山林果园</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>苗圃,核桃苗,蟠桃苗,花椒,铁篱寨,柏树,生态园</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 13673372728</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">郓城县友联养殖有限公司</div>
+                        <div class="text-webkit-box">河南鑫宇红心火龙果种植基地</div>
+                        <div class="text-webkit-box">南阳树状月季开发中心</div>
+                        <div class="text-webkit-box">广西佳兴绿化草场</div>
+                        <div class="text-webkit-box">夏邑县惠农果树专业合作社</div>
+                        <div class="text-webkit-box">江苏省绿洲花卉苗木种业</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/16/B/557/16FB23A2DE4BEB10AC1FAED73E1D9CC6.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/F4/0/60/F4309243CDA87B01C5A06C7F91751447.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/EB/F/749/EB6F90EED02C23EFD5BA7FDBA114DAD6.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/2E/2/934/2E2242FA669BDB6EB3369671661E268A.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img style="display: block;width: 1215px;"
+                    src="http://image.qihuiwang.com/63/D/846/635D41F4E919C024F7347E2DC426E078.jpg">
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: rgb(24, 117, 217);">3F</em>建筑建材
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>注册送10M空间</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>建筑玻璃</em></a>
+                    <a><em>水泥</em></a>
+                    <a><em>地漏</em></a>
+                    <a><em>暖气片</em> </a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img src="http://image.qihuiwang.com/67/B/937/675B727A999B6771CF77B46EAE7B070F.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>建筑建材专场</h4>
+                        <p>品类齐全，优商优价</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>水暖五金</h5>
+                        <a>地漏</a>
+                        <a>冲洗阀</a>
+                        <a>快开阀芯</a>
+                        <a>暖气散热</a>
+                        <a>水龙头</a>
+                    </div>
+                    <div>
+                        <h5>家居装修</h5>
+                        <a>地板</a>
+                        <a>墙面砖</a>
+                        <a>抛光砖</a>
+                        <a>吊顶</a>
+                        <a>卫浴电器</a>
+                        <a href="">门</a>
+                    </div>
+                    <div>
+                        <h5>施工材料</h5>
+                        <a>砂浆</a>
+                        <a>止水钢板</a>
+                        <a>脚手架</a>>
+                        <a href="">钢筋</a>
+                    </div>
+                    <div>
+                        <h5>楼宇设施</h5>
+                        <a>防盗报警</a>
+                        <a>货梯</a>
+                        <a>电梯配件</a>
+                        <a>扶梯</a>
+                        <a href="">安全监控</a>
+                    </div>
+                    <div>
+                        <h5>防水保温</h5>
+                        <a>防水涂料</a>
+                        <a>密封材料</a>
+                        <a>防水卷材</a>
+                        <a>灌浆材料</a>
+                    </div>
+                    <div>
+                        <h5>金属建材</h5>
+                        <a>金属板材</a>
+                        <a> 金属型材</a>
+                        <a>金属管件</a>
+                        <a>金属丝网</a>
+                    </div>
+                    <div>
+                        <h5>橡胶塑料</h5>
+                        <a>塑料建材</a>
+                        <a>泡沫塑料</a>
+                        <a>橡胶地板</a>
+                        <a>防火材料</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>沥青混凝土</a>
+                        <a>幕墙</a>
+                        <a>隔音吸声</a>
+                        <a>硅藻泥</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/34/8/188/3458AA0BC27FA16522EF105B2F92CC1D.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>40CrNiMoA钢板材</h4>
+                            <span>钢板材</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/47/3/118/47D3F64768F2841BB3686CC0965BEB3C.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>邢台彩钢板</h4>
+                            <span>彩钢板</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://img3.qihuiwang.com/34999b75d9011d9eef6e60cfa61d26d2_jpg.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>防水补漏施工工艺</h4>
+                            <span>防水补漏</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>广东德普龙建材有限公司</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>铝单板,铝窗花,铝方通</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 13798561887</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">登封市奥凯喷砂磨料有限公司</div>
+                        <div class="text-webkit-box">南召县石全石美矿业有限公司</div>
+                        <div class="text-webkit-box">义乌市启顺膜结构工程有限公司</div>
+                        <div class="text-webkit-box">郑州科威耐火材料有限公司</div>
+                        <div class="text-webkit-box">河南山源装饰装修工程有限公司</div>
+                        <div class="text-webkit-box">聊城市龙泽钢材有限公司</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/8C/B/922/8C2BF379AF90FB03BAD192E5F257D22A.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/B2/A/981/B22A78BD59592BF367762BC0A766F317.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/D5/3/554/D5E34262A26719B7CCDDBCEF8E25F6A0.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/5F/8/889/5F6879379FDA6BB1C3D9F6BEA48CDBDB.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img style="display: block;width: 1215px;"
+                    src="http://image.qihuiwang.com/81/D/238/81FD184EE2AABB19A452745E28AD7DEF.jpg">
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: rgb(54, 173, 149);">4F</em>能源矿产
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>关注有礼</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>沥青</em></a>
+                    <a><em>车用润滑油</em></a>
+                    <a><em>汽油</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img src="http://image.qihuiwang.com/AE/E/112/AEDEC987069D5A50ECB78FE4769E3293.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>能源矿产专场</h4>
+                        <p>好商来袭，“值”等您来</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>能源产品</h5>
+                        <a>燃料油</a>
+                        <a>柴油</a>
+                        <a>沥青</a>
+                        <a>汽油</a>
+                        <a href="">航空煤油</a>
+                    </div>
+                    <div>
+                        <h5>金属矿产</h5>
+                        <a>铜</a>
+                        <a>锌</a>
+                        <a>镍</a>
+                        <a>铝</a>
+                        <a href="">铅</a>
+                        <a href="">铁</a>
+                    </div>
+                    <div>
+                        <h5>非金属矿产</h5>
+                        <a>石墨</a>
+                        <a>麦饭石</a>
+                        <a>珍珠岩</a>
+                        <a>电气石</a>
+                    </div>
+                    <div>
+                        <h5>板材卷材</h5>
+                        <a>冷轧板</a>
+                        <a>硅钢片</a>
+                        <a>合金板</a>
+                        <a>花纹板</a>
+                        <a>普通圆钢</a>
+                    </div>
+                    <div>
+                        <h5>不锈钢板</h5>
+                        <a>不锈钢角钢</a>
+                        <a>不锈钢圆钢</a>
+                        <a>不锈钢棒材</a>
+                    </div>
+                    <div>
+                        <h5>工业润滑油</h5>
+                        <a>导轨油</a>
+                        <a> 液压油</a>
+                        <a>工具油</a>
+                        <a>变压器油</a>
+                        <a href="">切削油</a>
+                    </div>
+                    <div>
+                        <h5>有色金属</h5>
+                        <a>钛合金</a>
+                        <a>铝合金</a>
+                        <a>锌合金</a>
+                        <a>硬质合金</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>太阳能设备</a>
+                        <a>生物能源</a>
+                        <a>其他石油燃料</a>
+                        <a>石油焦</a>
+                        <a href="">其他太阳能设备</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/B1/B/696/B19B3D2B87545D362359B2544BA5518B.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>膨胀石墨</h4>
+                            <span>石墨</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/32/4/866/325489F62B8E7089869426012E97B4D3.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>20Mn2合金钢板耐</h4>
+                            <span>钢板</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/54/0/116/54A07A474144F30C4074D8418043BC22.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>美孚齿轮油</h4>
+                            <span>齿轮油</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>江苏优华达环保材料科技有限公司</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>椰壳活性炭,酸洗椰壳活性炭,空气净化活性炭</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 0523-82299286</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">无锡新明星特钢有限公司</div>
+                        <div class="text-webkit-box">上海隆进特殊钢有限公司</div>
+                        <div class="text-webkit-box">苏州泰克森机械有限公司</div>
+                        <div class="text-webkit-box">漳州市鑫富润商贸有限公司</div>
+                        <div class="text-webkit-box">深圳市粤深孚润滑油有限公司</div>
+                        <div class="text-webkit-box">深圳市康杰润滑油有限公司</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/78/A/425/783AA55A9B518F93F965757CC481A079.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/4A/7/272/4AC7F2D10460A38680BE4293C08438C5.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/1C/D/444/1C7D4F9BC4D2A4FAFEC9FC168A73DE36.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/03/2/702/0382D6ABE183823DB11AEB2FE81B3D67.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: royalblue;">5F</em>电工电气
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>送敏感词提示</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>开关</em></a>
+                    <a><em>电动机</em></a>
+                    <a><em>电线电缆</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img style="display: block;width: 218px;height: 448px;"
+                        src="http://image.qihuiwang.com/B2/F/790/B25F54F1678725ADCB689E319D18D843.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>电工电气专场</h4>
+                        <p>一站购 大聚惠</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>电工器材</h5>
+                        <a>插座</a>
+                        <a>电源</a>
+                        <a>低压电器</a>
+                        <a>插头</a>
+                        <a href="">电池</a>
+                        <a href="">开关</a>
+                    </div>
+                    <div>
+                        <h5>配电输电</h5>
+                        <a>线槽</a>
+                        <a>箱式变电站</a>
+                        <a>配电变压器</a>
+                        <a>配电箱</a>
+                    </div>
+                    <div>
+                        <h5>电气设备</h5>
+                        <a>电工工具</a>
+                        <a>母线加工设备</a>
+                        <a>操作机构</a>
+                        <a>其它电气设备附件</a>
+                    </div>
+                    <div>
+                        <h5>发电机组</h5>
+                        <a>柴油发电机组</a>
+                        <a>汽油发电机组</a>
+                        <a>水力发电机组</a>
+                        <a>风力发电机组</a>
+                    </div>
+                    <div>
+                        <h5>高压电器</h5>
+                        <a>防雷避雷产品</a>
+                        <a>高压开关柜</a>
+                        <a>高压熔断器</a>
+                        <a>电缆分接箱</a>
+                    </div>
+                    <div>
+                        <h5>低压电器</h5>
+                        <a>电磁铁</a>
+                        <a> 起动器</a>
+                        <a>调速器</a>
+                        <a>低压控制器</a>
+                    </div>
+                    <div>
+                        <h5>电动机</h5>
+                        <a>电动机保护器</a>
+                        <a>伺服电机</a>
+                        <a>防爆电机</a>
+                        <a>步进电机</a>
+                        <a href="">特殊电机</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>低压电器</a>
+                        <a>应急充电器</a>
+                        <a>电工电气</a>
+                        <a>起动器</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/81/D/845/812D1EF4D7C50B70F33BCBA309CC6E03.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>行灯变压器</h4>
+                            <span>低压电器</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/41/4/959/4114117BF171A60AC62144D5C18EAAB4.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>西普软起动器</h4>
+                            <span>起动器</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/40/B/198/408B228C6269422DF6A8780AA243097E.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>输电线路避雷器</h4>
+                            <span>防雷避雷产品</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>郑州微能机电设备有限公司</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>高中低压变频器,软起动,PLC,人机界面,微小型电机</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 13526433603</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">河南睿派电子有限公司</div>
+                        <div class="text-webkit-box">河南恒光发电设备有限公司</div>
+                        <div class="text-webkit-box">山西中凯佳能科技有限公司</div>
+                        <div class="text-webkit-box">范县新区万理达制冷设备工程部</div>
+                        <div class="text-webkit-box">招远鲁鑫线轴有限公司</div>
+                        <div class="text-webkit-box">厦门仲鑫达自动化设备有限公司</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/92/6/230/92B6450E663D74E3674F32837FD88487.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/0F/3/921/0F7367F99F76F2BA1A61F805B0949F1E.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/62/9/458/62D9D29CA967D2F3D8E6D37C14D0E5F2.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/6B/A/944/6BFA293B09AE40D53209DB142312E65F.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: rgb(203, 137, 44);">6F</em>工艺礼品
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>100条信息包限时免费</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>屏风</em></a>
+                    <a><em>字画</em></a>
+                    <a><em>古玩</em></a>
+                    <a><em>钱币</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img style="display: block;width: 218px;height: 448px;"
+                        src="http://image.qihuiwang.com/43/D/973/432D887CD730B55FD8D5E0A149776D31.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>工艺礼品专场</h4>
+                        <p>礼约盛典，安心之选</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>工艺饰品</h5>
+                        <a>字画</a>
+                        <a>铜艺品</a>
+                        <a>多功能匙扣</a>
+                        <a>玉器</a>
+                    </div>
+                    <div>
+                        <h5>节庆用品</h5>
+                        <a>首饰盒</a>
+                        <a>圣诞用品</a>
+                        <a>情人节用品</a>
+                    </div>
+                    <div>
+                        <h5>婚庆用品</h5>
+                        <a>红包</a>
+                        <a>场地布置道具</a>
+                        <a>婚庆服饰道具</a>
+                    </div>
+                    <div>
+                        <h5>民间工艺</h5>
+                        <a>水晶工艺品</a>
+                        <a>木制工艺品</a>
+                        <a>漆器工艺品</a>
+                        <a>陶瓷工艺品</a>
+                    </div>
+                    <div>
+                        <h5>数码礼品</h5>
+                        <a>礼品U盘</a>
+                        <a>礼品鼠标垫</a>
+                        <a>礼品音箱</a>
+                    </div>
+                    <div>
+                        <h5>金银珠宝</h5>
+                        <a>纯银首饰</a>
+                        <a> 钻石首饰</a>
+                        <a>黄金首饰</a>
+                    </div>
+                    <div>
+                        <h5>纪念收藏</h5>
+                        <a>古玩</a>
+                        <a>邮票</a>
+                        <a>印玺、印章</a>
+                        <a>徽章、纪念章</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>库存工艺品</a>
+                        <a>工艺礼品项目合作</a>
+                        <a>工艺礼品代理加盟</a>
+                        <a>铜艺品</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/B4/B/497/B47B571F1B49D4D7389C36B7ADA7E433.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>金属钥匙扣制作</h4>
+                            <span>多功能匙扣</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/9A/9/284/9A490BD1C66F5382A7662793A578F74B.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>艺术品展览</h4>
+                            <span>古玩</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/63/5/75/6355F284B3987629BFEF4C4702C9D00A.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>黄花梨圈椅</h4>
+                            <span>工艺家具</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>深圳市观古国际艺术品展览有限公司</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>艺术品鉴定,艺术品拍卖</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 17304494215</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">江海制伞礼品厂</div>
+                        <div class="text-webkit-box">河南普林园艺用品有限公司</div>
+                        <div class="text-webkit-box">广东鼎瀚艺术品展览有限公司</div>
+                        <div class="text-webkit-box">郑州市二七区阳阳工艺品商行</div>
+                        <div class="text-webkit-box">云南翡翠王朝文化传播有限公司</div>
+                        <div class="text-webkit-box">郑州市中原区三禾联丰框画装饰商行</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/2F/1/199/2F211DCC77189B6B0308FEF13B83DB45.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/BE/1/362/BEC19296AB078B02B5BA0CEF79A07108.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/CC/B/770/CC9B03702FAF5AE2181BF8D23DE44E92.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/44/A/964/44DA93BC4682B7D398D6C86462F4B44C.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img style="display: block;width: 1215px;"
+                    src="http://image.qihuiwang.com/8E/A/81/8EDAEA451EB5ACD60F74D78C2D0E11A0.jpg">
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: rgb(54, 179, 163);">7F</em>汽车工业
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>更多活动</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>汽车改装</em></a>
+                    <a><em>摩托车配件</em></a>
+                    <a><em>二手汽车</em></a>
+                    <a><em>货车</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img src="http://image.qihuiwang.com/60/9/66/60B9E94429FFC18336197662E799988B.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>汽车工业专场</h4>
+                        <p>闪耀出众，任性购</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>汽车配件</h5>
+                        <a>维修设备</a>
+                        <a>行走系统</a>
+                        <a>转向系统</a>
+                    </div>
+                    <div>
+                        <h5>维护工具</h5>
+                        <a>洗车工具</a>
+                        <a>胎压计</a>
+                        <a>清洗机</a>
+                        <a>扳手</a>
+                    </div>
+                    <div>
+                        <h5>汽车改装</h5>
+                        <a>大包围</a>
+                        <a>定风翼</a>
+                        <a>汽车天窗</a>
+                    </div>
+                    <div>
+                        <h5>汽车附件</h5>
+                        <a>汽车玻璃</a>
+                        <a>车门车壳</a>
+                        <a>雨刮器</a>
+                        <a>保险杠</a>
+                        <a>车镜</a>
+                        <a href="">离合器</a>
+                    </div>
+                    <div>
+                        <h5>汽车电器</h5>
+                        <a>汽车空调</a>
+                        <a>车载冰箱</a>
+                        <a>车载吸尘器</a>
+                    </div>
+                    <div>
+                        <h5>汽车内饰</h5>
+                        <a>靠枕坐垫</a>
+                        <a> 头枕腰枕</a>
+                        <a>座垫座套</a>
+                        <a>方向盘套</a>
+                        <a href="">汽车脚垫</a>
+                        <a href="">遮阳用品</a>
+                    </div>
+                    <div>
+                        <h5>制动系统</h5>
+                        <a>刹车片</a>
+                        <a>汽车离合器</a>
+                        <a>摩擦片</a>
+                        <a>防抱死系统</a>
+                        <a href="">变速箱配件</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>专用车</a>
+                        <a>汽车配件</a>
+                        <a>二手汽车</a>
+                        <a>扒胎机</a>
+                        <a href="">定位导航</a>
+                        <a href="">汽配城</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/DC/5/979/DC25313D3DEC9A85977A8C1248156D50.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>高空作业车</h4>
+                            <span>作业车</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/DC/5/979/DC25313D3DEC9A85977A8C1248156D50.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>汽车方向盘套</h4>
+                            <span>汽车内饰</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/7C/8/641/7CF8732814B71D79044C790B713EFEDD.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>5方后装式垃圾车</h4>
+                            <span>垃圾车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>程力专用汽车股份有限公司</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>随车吊,起重运输汽车</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 18871127098</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">湖北宏宇专用汽车有限公司</div>
+                        <div class="text-webkit-box">周口市开发区豫达汽车租赁服务部</div>
+                        <div class="text-webkit-box">辽宁锦程专用汽车销售有限公司</div>
+                        <div class="text-webkit-box">湖北江南专用特种汽车有限公司</div>
+                        <div class="text-webkit-box">西安景翔越商贸有限公司</div>
+                        <div class="text-webkit-box">厦工楚胜（湖北）专用汽车制造有限公司</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/FE/2/98/FE62724626EBC72907058D4312AA563C.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/12/B/622/123BF6E6E74E5104C5BEFD6044D20D5E.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/B4/6/200/B4E63E4C8A1ED796B1AAC256F5AC1403.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/63/7/118/63E7D7C76C80CC8F96DB2C0A010125DD.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--8 -->
+        <div class="floornumber">
+            <div class="floornumberTextTop">
+                <h2><em style="color: rgb(142, 75, 177);">8F</em>交通运输
+                    <i class="iconfont">&#xe602;</i>
+                    <span>
+                        今日活动：
+                        <a>行业活动</a>
+                    </span>
+                </h2>
+                <div class="floornumberTextTopRight">
+                    热门搜索：
+                    <a><em>LED广告车</em></a>
+                    <a><em>电动车</em></a>
+                    <a><em>拖拉机</em></a>
+                </div>
+            </div>
+            <div class="floornumberText">
+
+                <div class="floornumberTextMian classimg">
+                    <img src="http://image.qihuiwang.com/5B/8/813/5B68BDF2D3166FD3B02ECA49DDCEAE91.jpg">
+                    <div class="floornumberTextMianText">
+                        <h4>交通运输专场</h4>
+                        <p>物流运输，专业优质</p><span>点击进入</span>
+                    </div>
+                </div>
+                <div class="floornumberTextTwo">
+                    <div>
+                        <h5>车辆分类</h5>
+                        <a>摩托车</a>
+                        <a>拖拉机</a>
+                        <a>载货车</a>
+                        <a>电动车</a>
+                    </div>
+                    <div>
+                        <h5>仓储设备</h5>
+                        <a>粮油仓储</a>
+                        <a>仓储货架</a>
+                        <a>仓储笼</a>
+                    </div>
+                    <div>
+                        <h5>安全用品</h5>
+                        <a>汽车锁</a>
+                        <a>防滑链</a>
+                        <a>雷达测速器</a>
+                    </div>
+                    <div>
+                        <h5>物流辅助器材</h5>
+                        <a>设备托盘</a>
+                        <a>护角</a>
+                        <a>充气袋</a>
+                        <a>地磅</a>
+                    </div>
+                    <div>
+                        <h5>运输搬运设备</h5>
+                        <a>叉车</a>
+                        <a>物流货车</a>
+                        <a>物流手推车</a>
+                        <a>堆高车</a>
+                        <a>堆垛搬运</a>
+                    </div>
+                    <div>
+                        <h5>起重装卸设备</h5>
+                        <a>高空平台</a>
+                        <a> 升降平台</a>
+                        <a>架桥机</a>
+                        <a>液压登车桥</a>
+                    </div>
+                    <div>
+                        <h5>起重设备工具</h5>
+                        <a>贴标机吊滑车械</a>
+                        <a>钢丝绳</a>
+                        <a>起重滑车</a>
+                    </div>
+                    <div>
+                        <h5>其他</h5>
+                        <a>其他电动车</a>
+                        <a>其他拖拉机</a>
+                        <a>其他搬运</a>
+                        <a>轨道器材</a>
+                    </div>
+                </div>
+                <div class="floornumberTextThree">
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/DD/E/654/DD1E8D68E1704516C0831A97445D0B8E.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>二手电动叉车</h4>
+                            <span>电动叉车</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/C9/D/532/C9AD73A1423B011A1E223B2B443B2B74.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>大朗到兰州物流</h4>
+                            <span>物流</span>
+                        </div>
+                    </div>
+                    <div class=" classimg">
+                        <img src="http://image.qihuiwang.com/1B/B/862/1B3B9F35E544E39E33EB2D5AA2EC123F.jpg">
+                        <div class="floornumberTextThreeText">
+                            <h4>隧道清洗车生产</h4>
+                            <span>清洗车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floornumberTextFour">
+                    <h3>深圳市正华物流有限公司</h3>
+                    <div class="floornumberTextFourDiv"><span>经营范围</span>物流运输,回程车出租</div>
+                    <div class="floornumberTextFourDiv"><span>联系电话</span> 18675575215</div>
+                    <div class="floornumberTextFourcompany">
+                        <div class="text-webkit-box">神州龙物流集团有限公司</div>
+                        <div class="text-webkit-box">梁山凯元货运服务有限公司</div>
+                        <div class="text-webkit-box">郑州鑫汇货物运输有限公司</div>
+                        <div class="text-webkit-box">漯河大成汽车租赁有限公司</div>
+                        <div class="text-webkit-box">深圳市鑫神州物流有限公司</div>
+                        <div class="text-webkit-box">东莞市文邦物流有限公司</div>
+                    </div>
+                    <div class="floornumberTextFourImg">
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/EB/5/36/EB5503824DF788E2A57E42A64695384E.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/E0/3/617/E0233AA69C45FAB000A199481FB39613.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/BE/D/790/BE7D88716FB55BC9F478F97B255C8381.jpg"></div>
+                        <div class="classimg"><img
+                                src="http://image.qihuiwang.com/61/4/246/61C44E0F60CE573CF353F8C8FD9AC1E5.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainbutton">
+            <div id="mainbuttonLeft">
+                <h2>
+                    <span><em style="color: red;">会展</em>信息</span>
+                    <a href="">更多</a>
+                </h2>
+                <div id="mainbuttonLeftText">
+                    <div class="swiper-container"
+                        style="width: 344px;height:170px;margin-top: 20px;margin-bottom: 20px;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="http://image.qihuiwang.com/60/D/557/606DC6E2D93E99B5517C5BA20181E776.jpg"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="http://image.qihuiwang.com/29/7/261/29775210577416E2059CF6C9FB785973.jpg"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="http://image.qihuiwang.com/5A/1/130/5A11BBC821F207C5FD0E625FE7FC30CB.jpg"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="http://image.qihuiwang.com/04/7/748/04977C2ECF79D419D4B31FF79C11320E.jpg"
+                                    alt=""></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <ul class="messgage">
+                        <li> <span>【致富经】</span>2018上海第十三届海外置业投资移民留学（秋季）展 </li>
+                        <li><span>【展会资讯】</span>2018上海第十三届海外置业投资移民留学（秋季）展</li>
+                        <li><span>【水果】</span>2018上海第十三届海外置业投资移民留学（秋季）展</li>
+                        <li><span>【政策法规】</span>迪拜国际建材五大行业展览会</li>
+                        <li><span>【国际展会】</span>迪拜国际建材五大行业展览会</li>
+                        <li><span>【玉米】</span>迪拜国际建材五大行业展览会</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mainbuttonCenter">
+                <h2>
+                    <span><em style="color: red;">热点</em>资讯</span>
+                    <a href="">更多</a>
+                </h2>
+                <div id="mainbuttonCenterText">
+                    <div id="mainbuttonCenterTextTop">
+                        <div id="mainbuttonCenterTextTopLeft">
+                            <img src="http://i2.qihuiwang.com/collect/201812/2019022831.jpg" alt="">
+                        </div>
+                        <div id="mainbuttonCenterTextTopright">
+                            <p>抖音国际版TikTok收集儿童信息 在美被罚570万美元应用</p>
+                            <span> 抖音国际版TikTok收集儿童信息 在美被罚570万美元应用,Bianews
+                                2月28日消息，据TechCrunch报道，美国联邦贸易委员会（FTC）今天发布了一项重要裁决，抖音国际版TikTok因违反了美国《儿童隐私法》，处以570万美元的罚款，并将影响该应用在13岁
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="messgage">
+                        <li> <span>[焦点聚焦]</span>苹果确认自动驾驶团队裁员，工程职位受影响最大San</li>
+                        <li><span>[焦点聚焦]</span>热点丨360金融或入局社交电商 孵化“360金融电商”项目招商</li>
+                        <li><span>[焦点聚焦]</span>热点丨人人车回应&amp;#34;成都40亿融资&amp;#34;：是政府搭台协助 没说直投资金</li>
+                        <li><span>[焦点聚焦]</span>舞台剧《三体II：黑暗森林》将于今年首演演出</li>
+                        <li><span>[焦点聚焦]</span>市场机会｜5G推动万物互联，关注物联网龙头发展</li>
+                        <li><span>[焦点聚焦]</span>AI工业视觉公司“阿丘科技”完成千万美元A+轮融资 君联资本领投检测</li>
+                        <li><span>[焦点聚焦]</span>高频焊H型钢在建筑方面的优势钢材</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mainbuttonRlight">
+                <h2>
+                    <span><em style="color: red;">营销</em>指南</span>
+                    <a href="">更多</a>
+                </h2>
+                <div id="mainbuttonRlightText">
+                    <div class="messagedIV">
+                        <div class="messagedIVleft">
+                            <img src="http://i2.qihuiwang.com/web/2018-12-17/041817270b1b164ab5.jpg" alt="">
+                        </div>
+                        <div class="messagedIVright">
+                            <p>景区对华为手机用户免票</p>
+                            <span>
+                                近日，河南沁阳神农山风景区出台新政策，从 12 月 16 日到年底，景区对华为手机用户免门票。有人质疑，神农山景区这是在蹭华为的热点，尤其公告中“用华为手机，到神农山拍出大片。
+                            </span>
+                        </div>
+                    </div>
+                    <div class="messagedIV">
+                        <div class="messagedIVleft">
+                            <img src="http://i2.qihuiwang.com/web/2018-12-14/045001d928d4f97c5c.jpg" alt="">
+                        </div>
+                        <div class="messagedIVright">
+                            <p>“尴尬”的双十二</p>
+                            <span>
+                                淘宝双十二之所以缺乏存在感，原因还是与阿里的区别对待有着很大的关系。
+                            </span>
+                        </div>
+                    </div>
+                    <div class="messagedIV">
+                        <div class="messagedIVleft">
+                            <img src="http://i2.qihuiwang.com/web/2018-12-13/045651c3aef998d769.jpg" alt="">
+                        </div>
+                        <div class="messagedIVright">
+                            <p>淘宝双12大数据：近1亿用户加购商品超15件</p>
+                            <span>
+                                12月11日消息，淘宝双12即将来临，有近1亿消费者在双12预热期间加购商品超过15件。
+                            </span>
+                        </div>
+                    </div>
+                    <div class="messagedIV">
+                        <div class="messagedIVleft">
+                            <img src="http://i2.qihuiwang.com/web/2018-12-11/0446183cd4f33cd1b0.jpg" alt="">
+                        </div>
+                        <div class="messagedIVright">
+                            <p>三星A8s发布！骁龙710+挖孔屏！</p>
+                            <span>
+                                三星A8s发布！骁龙710+挖孔屏！网友吐槽很扎心！华为要赢了！
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
-
+    <!-- 侧边导航 -->
+    <div id="floortop">
+        <div>
+            <p>快捷</p>
+            <p>导航</p>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>机械</p>
+                <p>设备</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>农林</p>
+                <p>牧副</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>建筑</p>
+                <p>建材</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>能源</p>
+                <p>矿产</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>电工</p>
+                <p>电气</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>工艺</p>
+                <p>礼品</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>汽车</p>
+                <p>工业</p>
+            </div>
+        </div>
+        <div class="floorbutton">
+            <i class="iconfont ">&#xe602;</i>
+            <div class="none">
+                <p>交通</p>
+                <p>运输</p>
+            </div>
+        </div>
+        <div>
+            <p>资讯</p>
+        </div>
+    </div>
+    <div id="windowtop" class="moveTop">
+        <div>
+            <span>
+                <<< /span>
+                    <span>Top</span>
+        </div>
+    </div>
+    <footer id="registerfooter">
+        <div>
+            <p>网站首页| </p>
+            <p>关于我们| </p>
+            <p>联系我们| </p>
+            <p>使用协议| </p>
+            <p>版权隐私| </p>
+            <p>维权通道| </p>
+            <p>网站导航| </p>
+            <p>用户反馈 </p>
+        </div>
+        <div>客服咨询热线：400-6677-369(免长途费) 工作时间：900-18:00(周一至周五)在线客服：<i
+                style="color: red; display: inline-block; width: 15px;height: 15px;" class="iconfont">&#xe6db;</i>
+            关注我们：<i style="color: red; display: inline-block; width: 15px;height: 15px;" class="iconfont">&#xe609;</i>
+        </div>
+        <div>
+            <p>版权所有2009-2020 河南企汇网信息技术股份有限公司 保留所有权利 经营许可证编号：豫B2-20140075 豫公网安备 41019702002055号</p>
+        </div>
+        <div>
+            <div> <img src="./img/footer1.png" alt=""> </div>
+            <div> <img src="./img/footer2.png" alt=""> </div>
+            <div> <img src="./img/footer3.png" alt=""> </div>
+            <div> <img src="./img/footer4.png" alt=""> </div>
+            <div> <img src="./img/footer5.png" alt=""> </div>
+            <div> <img src="./img/footer6.png" alt=""> </div>
+        </div>
     </footer>
 </body>
 <script src="./js/jQuery.min.js"></script>

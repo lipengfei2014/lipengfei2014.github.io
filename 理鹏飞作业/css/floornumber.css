@@ -1,23 +1,24 @@
 main {
     width: 80%;
     margin: 0 auto;
-    height: 1000px;
+    height: auto;
 }
 
-#streamerOne{
+#streamerOne {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#streamerLeft,#streamerRight{
+
+#streamerLeft, #streamerRight {
     width: 600px;
     height: auto;
     border: solid 1px grey;
-
     padding-top: 50px;
 }
-#streamerLeft>div{
+
+#streamerLeft>div {
     padding-top: 30px;
     width: 600px;
     height: auto;
@@ -25,17 +26,20 @@ main {
     flex-wrap: wrap;
     margin: auto 0;
 }
-#streamerLeft>div div{
+
+#streamerLeft>div div {
     width: auto;
     height: 20px;
     margin: 10px 10px 10px 10px;
     font-size: small;
 }
-#streamerLeft>div div:hover{
+
+#streamerLeft>div div:hover {
     color: rgb(231, 36, 67);
     cursor: pointer;
 }
-#streamerRight>div{
+
+#streamerRight>div {
     padding-top: 20px;
     width: 600px;
     height: auto;
@@ -43,24 +47,261 @@ main {
     flex-wrap: wrap;
     margin: auto 0;
 }
-#streamerRight>div div{
+
+#streamerRight>div div {
     width: 120px;
     height: 20px;
     margin: 10px 10px 10px 10px;
     font-size: small;
-    
 }
-#streamerRight>div div:hover{
+
+#streamerRight>div div:hover {
     color: rgb(231, 36, 67);
     cursor: pointer;
 }
+
 #streamer h2 {
     margin: 0;
 }
-#streamer em{
+
+#streamer em {
     color: orange;
 }
+
 #streamer img {
     display: block;
     margin: 0 auto;
+    width: 1215px;
+}
+
+.floornumber {
+    width: 100%;
+    height: auto;
+}
+
+.floornumberText {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #efefef;
+}
+
+.floornumberTextTop {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.floornumberTextTop>h2>em {
+    margin-right: 10px;
+    color: rgb(239, 36, 69);
+}
+
+.floornumberTextTop>h2>i {
+    font-size: small;
+    color: rgb(255, 114, 51);
+}
+
+.floornumberTextTop span {
+    font-size: small;
+}
+
+.floornumberTextTop span a {
+    color: rgb(255, 114, 51);
+}
+
+.floornumberTextTopRight {
+    width: 500px;
+    line-height: 57px;
+    font-size: 15px;
+    text-align: right;
+    color: rgb(137, 137, 137);
+}
+
+.floornumberTextTopRight a:hover {
+    color: rgb(231, 36, 67);
+    border-bottom: rgb(231, 36, 67) solid 2px;
+    cursor: pointer;
+}
+
+.classimg {
+    position: relative;
+    overflow: hidden;
+}
+
+.classimg img {
+    width: inherit;
+    height: inherit;
+    transition: transform 0.6s;
+}
+
+.classimg img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.floornumberTextMian {
+    width: 218px;
+    height: 448px;
+}
+
+.floornumberTextMianText {
+    position: absolute;
+    top: 10px;
+    padding-left: 20px;
+}
+
+.floornumberTextMianText h4 {
+    font-size: 20px;
+}
+
+.floornumberTextMianText p, .floornumberTextMianText span {
+    font-size: small;
+}
+
+.floornumberTextMianText span {
+    color: orange;
+    border: solid 1px orange;
+    width: 80px;
+    display: block;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.floornumberTextTwo {
+    width: 425px;
+    height: 418px;
+    border-right: 1px solid #efefef;
+    padding: 15px 31px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.floornumberTextTwo>div {
+    width: 212px;
+    height: 95px;
+    margin-bottom: 5px;
+}
+
+.floornumberTextTwo div h5 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fe500b;
+    line-height: 40px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.floornumberTextThree {
+    width: 262px;
+    height: 448px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.floornumberTextThree div:nth-child(1) {
+    border-right: 1px solid #efefef;
+}
+
+.floornumberTextThree div:nth-child(1) img, .floornumberTextThree div:nth-child(2) img {
+    width: 130px;
+    height: 185px;
+}
+
+.floornumberTextThree div:nth-child(3) {
+    border-right: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+}
+
+.floornumberTextThree div:nth-child(3) img {
+    width: 262px;
+    height: 185px;
+    border-right: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+}
+
+.floornumberTextThreeText {
+    position: absolute;
+    top: 20px;
+    width: 130px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 99;
+    left: 0px;
+}
+
+.floornumberTextThreeText span {
+    display: block;
+    width: 80px;
+    height: 30px;
+    font-size: small;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+.floornumberTextThree>div:nth-child(3) div {
+    left: 25% !important;
+}
+
+.floornumberTextFour {
+    width: 219px;
+    height: 422px;
+    border-right: 1px solid #efefef;
+    float: left;
+    background: #f9f9f9;
+    padding: 13px 0px 13px 10px;
+}
+
+.floornumberTextFour h3 {
+    width: 206px;
+    height: 25px;
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.floornumberTextFour span {
+    background: #ededed;
+    padding: 0 5px;
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 6px;
+    color: #4b4b4b;
+}
+
+.floornumberTextFourDiv {
+    line-height: 24px;
+    color: #6e6e6e;
+    margin-bottom: 10px;
+    width: 206px;
+    padding-right: 10px;
+}
+
+.floornumberTextFourcompany {
+    width: 206px;
+    height: 192px;
+    background: url(http://static.qihuiwang.com/images/sprite_global.png) -296px -247px no-repeat;
+}
+
+.floornumberTextFourcompany div {
+    font-size: small;
+    width: 181px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 25px;
+}
+.floornumberTextFourImg{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10px;
+}
+.floornumberTextFourImg div{
+    width: 100px;
+    height: 38px;
 }
