@@ -1,0 +1,682 @@
+body {
+    margin: 0;
+    position: relative;
+}
+
+/* top */
+
+#navTop {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+}
+
+h2, ul {
+    margin: 0;
+    line-height: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: inherit;
+}
+
+.navTop_list li {
+    color: rgb(255, 255, 255);
+}
+
+#navTop>ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+
+.navTop_list {
+    display: none;
+}
+
+.navTophead {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+nav, main {
+    width: 100%;
+}
+
+/* 轮播图 */
+
+.moveImg {
+    position: relative;
+}
+
+.moveImgTxt {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 400px;
+    color: white;
+    z-index: 100;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.moveImg img {
+    display: block;
+    width: 100%;
+    height: 525px;
+}
+
+.btn-class {
+    top: 90%;
+    color: white;
+    border: solid 2px white;
+    width: 50px;
+    height: 50px;
+}
+
+nav .swiper-button-prev {
+    left: 80%;
+}
+
+nav .swiper-button-next {
+    right: 5%;
+}
+
+.btn-class:hover {
+    color: rgba(0, 0, 0, 0.5);
+    border: rgba(0, 0, 0, 0.5) solid 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+/*  No.1 我们的特色*/
+
+#foolerOne {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+#foolerOne>h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.foolerText {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    width: 21%;
+    height: 130px;
+    padding: 20px;
+}
+
+.product>h1 {
+    display: flex;
+    margin: 0;
+}
+
+.product>p {
+    color: rgb(171, 169, 169);
+}
+
+.product>h1>div>p {
+    font-size: 20px;
+    font-family: fantasy;
+    margin: 0;
+}
+
+.product>h1>div>span {
+    font-size: 15px;
+    font-family: fantasy;
+    margin: 0;
+    color: rgb(171, 169, 169);
+}
+
+.product>h1>img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+/*No.2 那里产品系列  */
+
+main>div:nth-child(2) {
+    width: 100%;
+    background-color: rgb(61, 51, 49);
+}
+
+#foolerTwo {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+#foolerTwo>h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#foolerTwoText {
+    width: 100%;
+    height: 234px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.foolerTwoTextImg>img {
+    display: block;
+    width: 240px;
+    height: 180px;
+}
+
+.foolerTwoTextImgTop{
+    width: 240px;
+    height: 180px;
+    position: relative;
+}
+.foolerTwoTextImgTop>img{
+    display: block;
+    width: 240px;
+    height: 180px;
+}
+.foolerTwoTextImgTop i{
+    position: absolute;
+    display: none;
+    width: 240px;
+    height: 180px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 185px;
+    font-size: 50px;
+}
+.foolerTwoTextImg>h4 {
+    margin-bottom: 0;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*  No.3 那里的初衷*/
+
+main>div:nth-child(3) {
+    width: 100%;
+    background: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/bg-2.gif);
+    height: 375px;
+}
+
+#foolerThree {
+    width: 80%;
+    height: 250px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+#foolerThree h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#foolerThreeText {
+    display: flex;
+    justify-content: space-around;
+}
+
+.foolerThreeoption {
+    width: 137px;
+    height: 137px;
+    text-align: center;
+    border: solid 1px #69afde;
+    border-right-color: springgreen;
+    border-bottom-color: springgreen;
+    border-radius: 50%;
+    transition: transform 2.5s;
+}
+
+.foolerThreeoption:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.foolerThreeoption>div:nth-child(1) {
+    margin-top: 50px;
+}
+
+.foolerThreeoption>span {
+    display: none;
+    color: rgb(130, 161, 120);
+}
+
+/* No.4  那里家居特色服务 */
+
+main>div:nth-child(4) {
+    width: 100%;
+    padding-top: 60px;
+    background-color: rgb(13, 13, 13);
+    height: 670px;
+}
+
+#foolerFour {
+    width: 80%;
+    height: 590px;
+    margin: 0 auto;
+}
+
+#foolerFour h1 {
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(229, 229, 229);
+}
+
+.foolerFourmoveimg {
+    width: 100%;
+    height: 426px;
+}
+
+.foolerFourmoveimg img {
+    display: block;
+    margin: 0 auto;
+}
+
+.foolerFourmovetext {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.foolerFourmovetext h3 {
+    margin-top: 40px;
+}
+
+.foolerFourmovetext h3, .foolerFourmovetext p {
+    margin-bottom: 10px;
+}
+
+#foolerFourtext .btn-class {
+    top: 35%;
+}
+
+/* No.5 客户案例 */
+
+main>div:nth-child(5) {
+    width: 100%;
+    padding: 60px 0 50px 0;
+    background-color: rgb(250, 250, 250);
+    height: 686.3px;
+}
+
+#foolerFive {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#foolerFive h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#foolerFiveText {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#foolerFiveText>div {
+    width: 23%;
+    height: 282px;
+    margin: 10px;
+}
+
+#foolerFiveText div img {
+    display: block;
+    width: 254px;
+    height: 185px;
+}
+.foolerFiveTextImg{
+    width: 254px;
+    height: 185px;
+    position: relative;
+}
+.foolerFiveTextImg i{
+    position: absolute;
+    display: none;
+    width: 254px;
+    height: 185px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 185px;
+    font-size: 50px;
+}
+#foolerFiveText div p {
+    text-align: center;
+}
+
+#foolerFiveText div p:hover {
+    color: rgb(102, 153, 204);
+    cursor: pointer;
+}
+
+#foolerFive>p {
+    color: #3d3331;
+    background-color: #FFF;
+    border: 2px solid #3d3331;
+    padding: 12px 30px;
+    width: 116px;
+    height: 20px;
+    margin: 0 auto;
+    font-size: small;
+}
+
+#foolerFive>p:hover {
+    color: #FFF;
+    background-color: #3d3331;
+    cursor: pointer;
+}
+
+/* No.6 关于我们  */
+
+main>div:nth-child(6) {
+    width: 100%;
+    background-color: #302b28;
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/about-bg.png);
+    background-repeat: no-repeat;
+    background-position: center 12px;
+    height: 167px;
+    padding: 60px 0 50px 0;
+}
+
+#foolerSex {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#foolerSex h1 {
+    text-align: center;
+    margin-top: 0;
+    color: rgb(250, 250, 250);
+}
+
+#foolerSexText {
+    font-family: "Hiragino Sans GB", "microsoft yahei", "lvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.70);
+    text-align: left;
+    text-indent: 30px;
+}
+
+/* No.7行业资讯 */
+
+main>div:nth-child(7) {
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    height: 625px;
+    padding: 60px 0 50px 0;
+}
+
+#foolerSeven {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#foolerSeven h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#foolerSevenText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.foolerSevenItem {
+    width: 45%;
+    height: 224px;
+    border-bottom: solid 1px rgb(204, 204, 204);
+    margin-bottom: 10px;
+}
+
+.foolerSevenItemTop {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.foolerSevenItemTopImg {
+    position: relative;
+    width: 200px;
+    height: 127px;
+    text-align: center;
+    line-height: 127px;
+}
+
+.foolerSevenItemTopImg:hover {
+    cursor: pointer;
+}
+
+.foolerSevenItemTopImg img {
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+
+.foolerSevenItemTopImg i {
+    position: absolute;
+    display: none;
+    width: inherit;
+    height: inherit;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.foolerSevenItemTopText {
+    margin-left: 5px;
+}
+
+.foolerSevenItemTopText h4, .foolerSevenItemTopText p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: rgb(71, 68, 68);
+}
+
+.foolerSevenItem p i {
+    margin-left: 10px;
+}
+
+main>div:nth-child(7)>p {
+    color: #3d3331;
+    background-color: #FFF;
+    border: 2px solid #3d3331;
+    padding: 12px 30px;
+    width: 116px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: small;
+}
+
+main>div:nth-child(7)>p:hover {
+    color: #FFF;
+    background-color: #3d3331;
+    cursor: pointer;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 410px;
+    color: rgb(167, 167, 167);
+    background: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/bg-8.png);
+}
+
+footer p, footer a, footer li {
+    color: rgb(167, 167, 167);
+}
+
+#footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 80%;
+    height: 380px;
+    margin: 0 auto;
+}
+
+#footer>div:nth-child(2) {
+    text-align: center;
+}
+
+#footerTop {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footerTopRight img {
+    display: block;
+    width: 118px;
+    height: 118px;
+}
+
+#footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#footerTopleft input {
+    height: 40px;
+    width: 263px;
+    background-color: #FFF;
+    color: #666;
+    border-width: 0px;
+    margin-bottom: 12px;
+    vertical-align: middle;
+    border-radius: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-image: url(http://www.nalijiaju.com.cn/skin/nalijiaju/style/images/input-bg.png);
+    background-repeat: no-repeat;
+    background-position: right 0px;
+    margin: 20px auto;
+}
+
+#submitinput {
+    height: 40px;
+    color: white !important;
+    width: 283px !important;
+    background-image: none !important;
+    background-color: rgb(61, 51, 49) !important;
+}
+
+#submitinput:hover {
+    background-color: rgb(102, 153, 204) !important;
+    cursor: pointer;
+}
+
+#footerTopCenter {
+    width: 44%;
+    text-align: left;
+    padding-left: 50px;
+}
+
+#footerTopRight {
+    width: 33%;
+    padding-top: 40px;
+}
+
+#footerTopRight ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footerTopRight p {
+    text-align: center;
+}
+
+#BackTop {
+    width: 50px;
+    height: 200px;
+    position: fixed;
+    right: 0;
+    top: 40%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.BackTopitem {
+    width: 110px;
+    height: 50px;
+    border-bottom: solid 1px rgb(71, 68, 68);
+    position: relative;
+    color: white;
+    transition: transform 1s;
+    text-align: center;
+    line-height: 50px;
+    font-size: small;
+}
+
+.BackTopitem i {
+    display: inline-block;
+    width: 40px;
+    height: 50px;
+    font-size:30px;
+    padding-right: 10px;
+}
+.BackTopitem:hover {
+    transform: translateX(-60px);
+}
+
+.BackTopitemTOP {
+    width: 50px;
+    height: 50px;
+}
+
+#BackTop>div:hover {
+    cursor: pointer;
+    background-color: red;
+}
+#BackTopitemTOP{
+    width: 50px;
+    height: 50px;
+    font-size:30px;
+    color: rgb(250, 250, 250);
+}
+#BackTopitemTOP i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size:30px;
+    text-align: center;
+    line-height: 50px;
+}

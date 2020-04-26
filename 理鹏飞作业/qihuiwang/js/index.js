@@ -125,7 +125,7 @@ $(".floornumberTextThree>div").mouseleave(function (e) {
 var time = null
 function floorFun() {
     time = setInterval(function () {
-        document.documentElement.scrollTop--
+        document.documentElement.scrollTop-=10
         console.log(document.documentElement.scrollTop)
     }, 1)
 }
