@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 13.33vw
+        }
+
+        nav {
+            width: 7.5rem;
+            height: 0.5rem;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        #navRight {
+            width: 1rem;
+            height: 0.5rem;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 0.5rem;
+            color: rgb(255, 111, 111);
+        }
+
+        #navLeft {
+            width: 1rem;
+            height: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #navLeft img {
+            display: block;
+            font-size: 0.3rem;
+        }
+
+        #navConter {
+            width: 5rem;
+            height: 0.5rem;
+            background-color: rgb(231, 231, 231);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            display: flex;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 0.5rem;
+            color: rgb(199, 198, 198);
+        }
+
+        main {
+            width: 7.5rem;
+            height: 10rem;
+        }
+
+        #mainImg {
+            display: block;
+            width: 7.5rem;
+            height: 3.4rem;
+        }
+
+        #mainImg img {
+            display: block;
+            width: 7.5rem;
+            height: 3.4rem;
+        }
+
+        #mainList {
+            width: 7.5rem;
+            height: 1.7rem;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0.5rem;
+        }
+
+        .mainListItem {
+            width: 1.8rem;
+            height: 1.7rem;
+        }
+
+        .mainListItem img {
+            display: block;
+            width: 1.3rem;
+            height: 1.12rem;
+            margin: 0 auto;
+        }
+
+        .mainListItem p {
+            font-size: 0.25rem;
+            text-align: center;
+        }
+
+        #mainshopping {
+            width: 7.5rem;
+            height: 3rem;
+            background-color: rgb(231, 231, 231);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #mainshopping p {
+            color: rgb(199, 198, 198);
+        }
+
+        #mainshoppingLeft {
+            margin-top: 0.075rem;
+            width: 3.73rem;
+            height: 2.85rem;
+            background: url(./img/1-o2.png);
+            background-size: 3.73rem 2.85rem;
+        }
+
+        #mainshoppingLeft p {
+            padding-left: 0.5rem;
+            margin-top: 0.075rem;
+            font-size: 0.3rem;
+
+        }
+
+        #mainshoppingLeft p:nth-child(1) {
+            color: rgb(255, 111, 111) !important;
+        }
+
+        #mainshoppingRight {
+            margin-top: 0.075rem;
+            width: 3.73rem;
+            height: 2.85rem;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .mainshoppingRightImg {
+            display: flex;
+        }
+
+        .mainshoppingRightImg {
+            display: flex;
+            justify-content: space-around;
+            width: 3.73rem;
+            height: 1.41rem;
+        }
+
+        .mainshoppingRightImg img {
+            display: block;
+            width: 1.51rem;
+            height: 1.41rem;
+        }
+
+        .mainshoppingRightText {
+            padding-top: 0.3rem;
+            ;
+            width: 2.21rem;
+            height: 1.41rem;
+        }
+
+        .mainshoppingRightImg p {
+            font-size: 0.26rem;
+        }
+
+        .hengfu {
+            width: 7.5rem;
+            height: 2rem;
+        }
+
+        .hengfu img {
+            display: block;
+            width: 7.3rem;
+            height: 1.8rem;
+            margin: 0.1rem 0.1rem;
+        }
+
+        /*  work*/
+        .work {
+            width: 7.5rem;
+        }
+
+        .work p {
+            font-size: 0.3rem;
+        }
+
+        .work span {
+            font-size: 0.25rem;
+        }
+
+        .workTop {
+            width: 7.5rem;
+            height: 0.62rem;
+            display: flex;
+            justify-content: space-around;
+            line-height: 0.62rem;
+            overflow: hidden;
+        }
+
+        .workTopLeft {
+            display: flex;
+            width: 6rem;
+        }
+
+        .workTopLeft p {
+            width: 3rem;
+            text-align: left;
+        }
+
+        .workTopLeft span {
+            margin-top: 0.1rem;
+            height: 0.4rem;
+            border: solid 0.01rem rgb(255, 92, 92);
+            border-radius: 0.05rem;
+            background-color: rgb(255, 92, 92);
+            color: white;
+            line-height: 0.4rem;
+        }
+
+        .workTopLeft img {
+            display: block;
+            width: 0.6rem;
+            height: 0.62rem;
+            padding-left: 0.2rem;
+        }
+
+        .workTopRight p {
+            border: solid 0.01rem rgb(255, 92, 92);
+            color: rgb(255, 92, 92);
+            height: 0.4rem;
+            width: 1.5rem;
+            text-align: center;
+            line-height: 0.4rem;
+            border-radius: 0.15rem;
+        }
+
+        .workTopRight {
+            padding-top: 0.1rem;
+            padding-right: 0.1rem;
+        }
+
+        .workSpan {
+            width: 7.5rem;
+            margin-top: 0.1rem;
+            color: rgb(199, 198, 198);
+        }
+
+        .workhengfu {
+            width: 7.5rem;
+            height: 2rem;
+        }
+
+        .workhengfu img {
+            display: block;
+            width: 7.3rem;
+            height: 1.85rem;
+            margin: 0.05rem;
+        }
+
+        .workprige {
+            width: 7.5rem;
+            height: 0.5rem;
+            font-size: 0.3rem;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0.25rem;
+        }
+
+        .workprige div {
+            border: rgb(255, 92, 92) solid 0.01rem;
+            margin-right: 0.5rem;
+            width: 3rem;
+            height: 0.5rem;
+            background-color: rgb(255, 92, 92);
+
+        }
+
+        .workprige p {
+            display: inline-block;
+            width: 2rem;
+            height: 0.5rem;
+            color: rgb(255, 92, 92);
+            border: rgb(255, 92, 92) solid 0.01rem;
+            border-radius: 0.5rem;
+            line-height: 0.5rem;
+            background-color: white;
+            text-align: center;
+        }
+
+        .workprige p span {
+            text-decoration: line-through;
+            color: rgb(199, 198, 198)
+        }
+
+        .workbutton {
+            width: 7.5rem;
+            height: 0.5rem;
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.3rem;
+        }
+
+        .workbuttonbleft {
+            color: rgb(255, 111, 111);
+            width: 3rem;
+            height: 0.5rem;
+            line-height: 0.5rem;
+        }
+
+        .workbuttonbright {
+            color: rgb(199, 198, 198);
+            width: 3rem;
+            height: 0.5rem;
+            text-align: right;
+            line-height: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="navRight"> 郑州▼ </div>
+        <div id="navConter">
+            <div>
+                🔍
+            </div>
+            <div>
+                搜索商家、套餐、话题
+            </div>
+        </div>
+        <div id="navLeft">
+            <img src="./img/1-18.png" alt="">
+            <img src="./img/1-19.png" alt="">
+        </div>
+    </nav>
+    <main>
+        <div id="mainImg">
+            <img src="./img/1-01.png" alt="">
+        </div>
+        <div id="mainList">
+            <div class="mainListItem">
+                <img src="./img/1-6.png" alt="">
+                <p>找商家</p>
+            </div>
+            <div class="mainListItem">
+                <img src="./img/1-7.png" alt="">
+                <p>备婚清单</p>
+            </div>
+            <div class="mainListItem">
+                <img src="./img/1-8.png" alt="">
+                <p>电子请柬</p>
+            </div>
+            <div class="mainListItem">
+                <img src="./img/1-9.png" alt="">
+                <p>结婚任务</p>
+            </div>
+        </div>
+        <div id="mainshopping">
+            <div id="mainshoppingLeft">
+                <p>婚品采购</p>
+                <p> 婚纱礼服 喜糖 请帖</p>
+            </div>
+            <div id="mainshoppingRight">
+                <div class="mainshoppingRightImg">
+                    <img src="./img/1-03.png" alt="">
+                    <div class="mainshoppingRightText">
+                        <P style="color: rgb(240, 109, 30);">婚车租聘</P>
+                        <p>全城最低 买贵退钱</p>
+                    </div>
+                </div>
+                <div class="mainshoppingRightImg">
+                    <img src="./img/1-04.png" alt="">
+                    <div class="mainshoppingRightText">
+                        <P style="color: rgb(22, 125, 213);">全球旅拍</P>
+                        <p>机票+摄影+酒店</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hengfu">
+            <img src="./img/1-4.png" alt="">
+        </div>
+        <div class="work">
+            <div class="workTop">
+                <div class="workTopLeft">
+                    <img src="./img/1-10.png" alt="">
+                    <p>
+                        爱燕子工作室求关注
+                    </p>
+                    <span>
+                        婚纱摄影
+                    </span>
+                </div>
+                <div class="workTopRight">
+                    <P>
+                        +关注
+                    </P>
+                </div>
+            </div>
+            <div class="workSpan">
+                <p>
+                    唯美6套婚纱照 内景加外景多场景
+                </p>
+            </div>
+            <div class="workhengfu">
+                <img src="./img/1-5.png" alt="">
+            </div>
+            <div class="workprige">
+                <div>
+                    <p>
+                        ￥3988 <span>8888</span>
+                    </p>
+                    <span>立刻抢</span>
+                </div>
+            </div>
+            <hr style="color: rgb(199, 198, 198);">
+            <div class="workbutton">
+                <div class="workbuttonbleft">
+                    <p>小清新婚纱照 跟拍</p>
+                </div>
+                <div class="workbuttonbright">
+                    <p> 2073</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
