@@ -399,7 +399,7 @@
             <img src="./img/1-4.png" alt="">
         </div>
         <div id="store">
-            <div>
+            <div id="moveShoppingList" >
                 <div class="work">
                     <div class="workTop">
                         <div class="workTopLeft">
@@ -448,6 +448,7 @@
     </main>
 </body>
 <script src="./js/iscroll.Veb.js"></script>
+<script src="./js/jQuery.min.js"></script>
 <script>
     var mainImg = new iScroll("mainImg", {
         snap: true,
@@ -470,8 +471,8 @@
     var store = new iScroll("store", {
         onScrollEnd: function () {
             if(this.y==this.maxScrollY){
-                console.log(document.getElementById("store").innerHTML)
-                document.getElementById("store").innerHTML+="<div class='work'> <div class='workTop'> <div class='workTopLeft'> <img src='./img/1-10.png' alt=''><p>爱燕子工作室求关注</p> <span>婚纱摄影</span></div><div class='workTopRight'><P>   +关注  </P> </div> </div> <div class='workSpan'><p>唯美6套婚纱照 内景加外景多场景 </p></div><div class='workhengfu'> <img src='./img/1-5.png' alt=''></div> <div class='workprige'><div> <p>  ￥3988 <span>8888</span></p>  <span>立刻抢</span>   </div> </div><hr style='color: rgb(199, 198, 198);'><div class='workbutton'> <div class='workbuttonbleft'><p>小清新婚纱照 跟拍</p> </div><div class='workbuttonbright'><p> 2073</p></div></div></div>"
+                console.log($("#moveShoppingList")[0])
+                $("#moveShoppingList")[0].innerHTML+="<div class='work'> <div class='workTop'> <div class='workTopLeft'> <img src='./img/1-10.png' alt=''><p>爱燕子工作室求关注</p> <span>婚纱摄影</span></div><div class='workTopRight'><P>   +关注  </P> </div> </div> <div class='workSpan'><p>唯美6套婚纱照 内景加外景多场景 </p></div><div class='workhengfu'> <img src='./img/1-5.png' alt=''></div> <div class='workprige'><div> <p>  ￥3988 <span>8888</span></p>  <span>立刻抢</span>   </div> </div><hr style='color: rgb(199, 198, 198);'><div class='workbutton'> <div class='workbuttonbleft'><p>小清新婚纱照 跟拍</p> </div><div class='workbuttonbright'><p> 2073</p></div></div></div>"
             
             }
         }
