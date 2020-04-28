@@ -60,19 +60,23 @@
 
         main {
             width: 7.5rem;
-            height: 10rem;
+            height: auto;
         }
 
         #mainImg {
-            display: block;
+            width: 7.5rem;
+            height: 3.4rem;
+            position: relative;
+        }
+
+        #mainImg img {
             width: 7.5rem;
             height: 3.4rem;
         }
 
-        #mainImg img {
-            display: block;
-            width: 7.5rem;
-            height: 3.4rem;
+        #mainImg div {
+            width: 45rem;
+            font-size: 0rem;
         }
 
         #mainList {
@@ -179,6 +183,10 @@
         }
 
         /*  work*/
+        #store {
+            width: 7.5rem;
+        }
+
         .work {
             width: 7.5rem;
         }
@@ -338,7 +346,14 @@
     </nav>
     <main>
         <div id="mainImg">
-            <img src="./img/1-01.png" alt="">
+            <div>
+                <img src="./img/moveImg3.jpg" alt="">
+                <img src="./img/1-01.png" alt="">
+                <img src="./img/moveImg1.jpg" alt="">
+                <img src="./img/moveing2.jpg" alt="">
+                <img src="./img/moveImg3.jpg" alt="">
+                <img src="./img/1-01.png" alt="">
+            </div>
         </div>
         <div id="mainList">
             <div class="mainListItem">
@@ -383,50 +398,84 @@
         <div class="hengfu">
             <img src="./img/1-4.png" alt="">
         </div>
-        <div class="work">
-            <div class="workTop">
-                <div class="workTopLeft">
-                    <img src="./img/1-10.png" alt="">
-                    <p>
-                        爱燕子工作室求关注
-                    </p>
-                    <span>
-                        婚纱摄影
-                    </span>
-                </div>
-                <div class="workTopRight">
-                    <P>
-                        +关注
-                    </P>
-                </div>
-            </div>
-            <div class="workSpan">
-                <p>
-                    唯美6套婚纱照 内景加外景多场景
-                </p>
-            </div>
-            <div class="workhengfu">
-                <img src="./img/1-5.png" alt="">
-            </div>
-            <div class="workprige">
-                <div>
-                    <p>
-                        ￥3988 <span>8888</span>
-                    </p>
-                    <span>立刻抢</span>
-                </div>
-            </div>
-            <hr style="color: rgb(199, 198, 198);">
-            <div class="workbutton">
-                <div class="workbuttonbleft">
-                    <p>小清新婚纱照 跟拍</p>
-                </div>
-                <div class="workbuttonbright">
-                    <p> 2073</p>
+        <div id="store">
+            <div>
+                <div class="work">
+                    <div class="workTop">
+                        <div class="workTopLeft">
+                            <img src="./img/1-10.png" alt="">
+                            <p>
+                                爱燕子工作室求关注
+                            </p>
+                            <span>
+                                婚纱摄影
+                            </span>
+                        </div>
+                        <div class="workTopRight">
+                            <P>
+                                +关注
+                            </P>
+                        </div>
+                    </div>
+                    <div class="workSpan">
+                        <p>
+                            唯美6套婚纱照 内景加外景多场景
+                        </p>
+                    </div>
+                    <div class="workhengfu">
+                        <img src="./img/1-5.png" alt="">
+                    </div>
+                    <div class="workprige">
+                        <div>
+                            <p>
+                                ￥3988 <span>8888</span>
+                            </p>
+                            <span>立刻抢</span>
+                        </div>
+                    </div>
+                    <hr style="color: rgb(199, 198, 198);">
+                    <div class="workbutton">
+                        <div class="workbuttonbleft">
+                            <p>小清新婚纱照 跟拍</p>
+                        </div>
+                        <div class="workbuttonbright">
+                            <p> 2073</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
+<script src="./js/iscroll.Veb.js"></script>
+<script>
+    var mainImg = new iScroll("mainImg", {
+        snap: true,
+        vScrollbar: false,
+        momentum: false,
+        hScrollbar: false,
+        snapThreshold: 50,
+        onScrollEnd: function () {
+            if (this.currPageX == 5) {
+                this.scrollToPage(1, 0, 0)
+            }
+            if (this.currPageX == 0) {
+                this.scrollToPage(4, 0, 0)
+            }
+        }
+
+    })
+    mainImg.scrollToPage(1, 0, 0)
+    // 加载
+    var store = new iScroll("store", {
+        onScrollEnd: function () {
+            if(this.y==this.maxScrollY){
+                console.log(document.getElementById("store").innerHTML)
+                document.getElementById("store").innerHTML+="<div class='work'> <div class='workTop'> <div class='workTopLeft'> <img src='./img/1-10.png' alt=''><p>爱燕子工作室求关注</p> <span>婚纱摄影</span></div><div class='workTopRight'><P>   +关注  </P> </div> </div> <div class='workSpan'><p>唯美6套婚纱照 内景加外景多场景 </p></div><div class='workhengfu'> <img src='./img/1-5.png' alt=''></div> <div class='workprige'><div> <p>  ￥3988 <span>8888</span></p>  <span>立刻抢</span>   </div> </div><hr style='color: rgb(199, 198, 198);'><div class='workbutton'> <div class='workbuttonbleft'><p>小清新婚纱照 跟拍</p> </div><div class='workbuttonbright'><p> 2073</p></div></div></div>"
+            
+            }
+        }
+    })
+</script>
 
 </html>
