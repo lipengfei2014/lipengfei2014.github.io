@@ -20,8 +20,10 @@
             height: 0.5rem;
             display: flex;
             justify-content: space-around;
-            margin-top: 0.5rem;
             margin-bottom: 0.3rem;
+            position: absolute;
+            left: 0;
+            top: 0
         }
 
         #navRight {
@@ -59,8 +61,11 @@
         }
 
         main {
-            width: 7.5rem;
-            height: auto;
+            position: absolute;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 100%;
+            z-index: 10;
         }
 
         #mainImg {
@@ -74,8 +79,9 @@
             height: 3.4rem;
         }
 
-        #mainImg div {
+        #mainImg>div:nth-child(1) {
             width: 45rem;
+            height: 3.4rem;
             font-size: 0rem;
         }
 
@@ -325,6 +331,33 @@
             text-align: right;
             line-height: 0.5rem;
         }
+
+        #mainImgDot {
+            position: absolute;
+            width: 6rem;
+            height: 0.5rem;
+            left: 0.75rem;
+            top: 2.8rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #mainImgDot div {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: rgb(255, 255, 255);
+            border: solid 1px rgb(0, 0, 0);
+            box-sizing: border-box;
+            font-size: 0.5rem;
+            text-align: center;
+            line-height: 0.5rem;
+        }
+
+        .DotColor {
+            background-color: rgb(0, 0, 0) !important;
+            color: rgb(255, 255, 255);
+            border: solid 1px rgb(255, 255, 255);
+        }
     </style>
 </head>
 
@@ -344,102 +377,107 @@
             <img src="./img/1-19.png" alt="">
         </div>
     </nav>
-    <main>
-        <div id="mainImg">
-            <div>
-                <img src="./img/moveImg3.jpg" alt="">
-                <img src="./img/1-01.png" alt="">
-                <img src="./img/moveImg1.jpg" alt="">
-                <img src="./img/moveing2.jpg" alt="">
-                <img src="./img/moveImg3.jpg" alt="">
-                <img src="./img/1-01.png" alt="">
-            </div>
-        </div>
-        <div id="mainList">
-            <div class="mainListItem">
-                <img src="./img/1-6.png" alt="">
-                <p>找商家</p>
-            </div>
-            <div class="mainListItem">
-                <img src="./img/1-7.png" alt="">
-                <p>备婚清单</p>
-            </div>
-            <div class="mainListItem">
-                <img src="./img/1-8.png" alt="">
-                <p>电子请柬</p>
-            </div>
-            <div class="mainListItem">
-                <img src="./img/1-9.png" alt="">
-                <p>结婚任务</p>
-            </div>
-        </div>
-        <div id="mainshopping">
-            <div id="mainshoppingLeft">
-                <p>婚品采购</p>
-                <p> 婚纱礼服 喜糖 请帖</p>
-            </div>
-            <div id="mainshoppingRight">
-                <div class="mainshoppingRightImg">
-                    <img src="./img/1-03.png" alt="">
-                    <div class="mainshoppingRightText">
-                        <P style="color: rgb(240, 109, 30);">婚车租聘</P>
-                        <p>全城最低 买贵退钱</p>
-                    </div>
+    <main id="box">
+        <div>
+            <div id="mainImg">
+                <div>
+                    <img src="./img/moveImg3.jpg" alt="">
+                    <img src="./img/1-01.png" alt="">
+                    <img src="./img/moveImg1.jpg" alt="">
+                    <img src="./img/moveing2.jpg" alt="">
+                    <img src="./img/moveImg3.jpg" alt="">
+                    <img src="./img/1-01.png" alt="">
                 </div>
-                <div class="mainshoppingRightImg">
-                    <img src="./img/1-04.png" alt="">
-                    <div class="mainshoppingRightText">
-                        <P style="color: rgb(22, 125, 213);">全球旅拍</P>
-                        <p>机票+摄影+酒店</p>
-                    </div>
+                <div id="mainImgDot">
+
                 </div>
             </div>
-        </div>
-        <div class="hengfu">
-            <img src="./img/1-4.png" alt="">
-        </div>
-        <div id="store">
-            <div id="moveShoppingList" >
-                <div class="work">
-                    <div class="workTop">
-                        <div class="workTopLeft">
-                            <img src="./img/1-10.png" alt="">
+            <div id="mainList">
+                <div class="mainListItem">
+                    <img src="./img/1-6.png" alt="">
+                    <p>找商家</p>
+                </div>
+                <div class="mainListItem">
+                    <img src="./img/1-7.png" alt="">
+                    <p>备婚清单</p>
+                </div>
+                <div class="mainListItem">
+                    <img src="./img/1-8.png" alt="">
+                    <p>电子请柬</p>
+                </div>
+                <div class="mainListItem">
+                    <img src="./img/1-9.png" alt="">
+                    <p>结婚任务</p>
+                </div>
+            </div>
+            <div id="mainshopping">
+                <div id="mainshoppingLeft">
+                    <p>婚品采购</p>
+                    <p> 婚纱礼服 喜糖 请帖</p>
+                </div>
+                <div id="mainshoppingRight">
+                    <div class="mainshoppingRightImg">
+                        <img src="./img/1-03.png" alt="">
+                        <div class="mainshoppingRightText">
+                            <P style="color: rgb(240, 109, 30);">婚车租聘</P>
+                            <p>全城最低 买贵退钱</p>
+                        </div>
+                    </div>
+                    <div class="mainshoppingRightImg">
+                        <img src="./img/1-04.png" alt="">
+                        <div class="mainshoppingRightText">
+                            <P style="color: rgb(22, 125, 213);">全球旅拍</P>
+                            <p>机票+摄影+酒店</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hengfu">
+                <img src="./img/1-4.png" alt="">
+            </div>
+            <div id="store">
+                <div id="moveShoppingList">
+                    <div class="work">
+                        <div class="workTop">
+                            <div class="workTopLeft">
+                                <img src="./img/1-10.png" alt="">
+                                <p>
+                                    爱燕子工作室求关注
+                                </p>
+                                <span>
+                                    婚纱摄影
+                                </span>
+                            </div>
+                            <div class="workTopRight">
+                                <P>
+                                    +关注
+                                </P>
+                            </div>
+                        </div>
+                        <div class="workSpan">
                             <p>
-                                爱燕子工作室求关注
+                                唯美6套婚纱照 内景加外景多场景
                             </p>
-                            <span>
-                                婚纱摄影
-                            </span>
                         </div>
-                        <div class="workTopRight">
-                            <P>
-                                +关注
-                            </P>
+                        <div class="workhengfu">
+                            <img src="./img/1-5.png" alt="">
                         </div>
-                    </div>
-                    <div class="workSpan">
-                        <p>
-                            唯美6套婚纱照 内景加外景多场景
-                        </p>
-                    </div>
-                    <div class="workhengfu">
-                        <img src="./img/1-5.png" alt="">
-                    </div>
-                    <div class="workprige">
-                        <div>
-                            <p>
-                                ￥3988 <span>8888</span>
-                            </p>
-                            <span>立刻抢</span>
+                        <div class="workprige">
+                            <div>
+                                <p>
+                                    ￥3988 <span>8888</span>
+                                </p>
+                                <span>立刻抢</span>
+                            </div>
                         </div>
-                    </div>
-                    <hr style="color: rgb(199, 198, 198);">
-                    <div class="workbutton">
-                        <div class="workbuttonbleft">
-                            <p>小清新婚纱照 跟拍</p>
-                        </div>
-                        <div class="workbuttonbright">
-                            <p> 2073</p>
+                        <hr style="color: rgb(199, 198, 198);">
+                        <div class="workbutton">
+                            <div class="workbuttonbleft">
+                                <p>小清新婚纱照 跟拍</p>
+                            </div>
+                            <div class="workbuttonbright">
+                                <p> 2073</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -450,31 +488,51 @@
 <script src="./js/iscroll.Veb.js"></script>
 <script src="./js/jQuery.min.js"></script>
 <script>
+    console.log($("#mainImg>div")[0].children.length, $("#mainImgDot")[0].clientWidth)
+
+    for (var i in $("#mainImg>div")[0].children) {
+        if (i * 1) {
+            if (i <= $("#mainImg>div")[0].children.length - 2) {
+                $("<div>").html(i).appendTo($("#mainImgDot"))
+            }
+        }
+    }
+    $("#mainImgDot>div").eq(0).addClass("DotColor")
     var mainImg = new iScroll("mainImg", {
         snap: true,
         vScrollbar: false,
         momentum: false,
         hScrollbar: false,
         snapThreshold: 50,
+        onBeforeScrollStart: function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        },
         onScrollEnd: function () {
-            if (this.currPageX == 5) {
+            if (this.currPageX == $("#mainImg>div")[0].children.length - 1) {
                 this.scrollToPage(1, 0, 0)
             }
             if (this.currPageX == 0) {
-                this.scrollToPage(4, 0, 0)
+                this.scrollToPage($("#mainImg>div")[0].children.length - 2, 0, 0)
             }
+            $(".DotColor").removeClass("DotColor")
+            $("#mainImgDot>div").eq(this.currPageX - 1 * 1).addClass("DotColor")
         }
-
     })
     mainImg.scrollToPage(1, 0, 0)
     // 加载
-    var store = new iScroll("store", {
+    var box = new iScroll("box", {
+        onScrollMove: function () {
+            console.log(this.y, this.maxScrollY)
+        },
         onScrollEnd: function () {
-            if(this.y==this.maxScrollY){
+            console.log(this.y, this.maxScrollY)
+            if (this.y == this.maxScrollY) {
                 console.log($("#moveShoppingList")[0])
-                $("#moveShoppingList")[0].innerHTML+="<div class='work'> <div class='workTop'> <div class='workTopLeft'> <img src='./img/1-10.png' alt=''><p>爱燕子工作室求关注</p> <span>婚纱摄影</span></div><div class='workTopRight'><P>   +关注  </P> </div> </div> <div class='workSpan'><p>唯美6套婚纱照 内景加外景多场景 </p></div><div class='workhengfu'> <img src='./img/1-5.png' alt=''></div> <div class='workprige'><div> <p>  ￥3988 <span>8888</span></p>  <span>立刻抢</span>   </div> </div><hr style='color: rgb(199, 198, 198);'><div class='workbutton'> <div class='workbuttonbleft'><p>小清新婚纱照 跟拍</p> </div><div class='workbuttonbright'><p> 2073</p></div></div></div>"
-            
+                $("#moveShoppingList")[0].innerHTML += "<div class='work'> <div class='workTop'> <div class='workTopLeft'> <img src='./img/1-10.png' alt=''><p>爱燕子工作室求关注</p> <span>婚纱摄影</span></div><div class='workTopRight'><P>   +关注  </P> </div> </div> <div class='workSpan'><p>唯美6套婚纱照 内景加外景多场景 </p></div><div class='workhengfu'> <img src='./img/1-5.png' alt=''></div> <div class='workprige'><div> <p>  ￥3988 <span>8888</span></p>  <span>立刻抢</span>   </div> </div><hr style='color: rgb(199, 198, 198);'><div class='workbutton'> <div class='workbuttonbleft'><p>小清新婚纱照 跟拍</p> </div><div class='workbuttonbright'><p> 2073</p></div></div></div>"
+
             }
+            this.refresh();
         }
     })
 </script>
