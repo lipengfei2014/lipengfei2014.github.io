@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "workbench.editor.closeOnFileDelete": true,
+    "window.closeWhenEmpty": true,
+    "search.maintainFileSearchCache": true,
+    "editor.suggest.localityBonus": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorWidth": 1e+24,
+    "files.autoSave": "afterDelay"
+}

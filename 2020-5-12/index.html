@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            height: 100%;
+            height: 1000px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <input type='color' id="color">
+    <main>
+
+    </main>
+</body>
+<script src="./jQuery.min.js"></script>
+<script>
+    // 创建cookie函数
+    function fun1(key, value, day, path) {
+        path = "/" || path
+        var daydate = new Date();
+        var time = daydate.getTime();
+        time += 1000 * 60 * 60 * 24 * day;
+        daydate.setTime(time);
+        var GMT = daydate.toGMTString();
+        document.cookie = key + '=' + value + ';expires=' + GMT + (path ? ";path=" + path : "")
+    }
+    $('#color').change(function (e) {
+        var colortheme = e.target.value
+        fun1("colortheme", colortheme, 5, "/")
+    })
+    $(window).scroll(function (e) {
+        var pageTop = document.documentElement.scrollTop + ""
+        fun1("pageTop", pageTop, 5, "/")
+    })
+</script>
+
+</html>
