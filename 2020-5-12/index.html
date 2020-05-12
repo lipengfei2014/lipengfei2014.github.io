@@ -30,11 +30,36 @@
         time += 1000 * 60 * 60 * 24 * day;
         daydate.setTime(time);
         var GMT = daydate.toGMTString();
-        document.cookie = key + '=' + value + ';expires=' + GMT + (path ? ";path=" + path : "")
+        document.cookie = key + '=' + value + ';expires=' + GMT + (path ? ";path=" +'secure=false'+ path : "")
     }
+    function fun2(name) {
+        var obj = {}
+        var arr = []
+        var cook = document.cookie
+        //★ 不加空格会使当i>0时arr1属性名即arr1[0]为字符串无法正常提取！
+        var arr = cook.split("; ")
+        if (!arr) {
+            return name + "未创建cookie"
+        } else {
+            arr.forEach(function (i) {
+                var arr1 = i.split("=")
+                obj[arr1[0]] = arr1[1]
+            }) 
+            return obj[name]  
+        }
+    }
+    // 初始化
+    var color=fun2('colortheme')
+    var pag=fun2('pageTop')
+    console.log(pag,color)
+    $('#color')[0].value=color
+    $('main').css({ "background-color":color })
+    document.documentElement.scrollTop=pag*1
+    console.log(document.documentElement.scrollTop,pag)
     $('#color').change(function (e) {
         var colortheme = e.target.value
         fun1("colortheme", colortheme, 5, "/")
+        $('main').css({ "background-color": $('#color')[0].value })
     })
     $(window).scroll(function (e) {
         var pageTop = document.documentElement.scrollTop + ""
