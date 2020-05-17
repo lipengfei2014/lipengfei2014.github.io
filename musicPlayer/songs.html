@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/icon.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/songs.css">
+    <style>
+        html {
+            font-size: 27.77777vw
+        }
+
+        body {
+            margin: 0;
+            width: 3.6rem;
+            height: 7.4rem;
+            position: relative;
+            background: url(./img/timg1.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button><i class="iconfont">&#xe63a;</i></button>
+        <div>
+            <i class="iconfont">&#xe603;</i>
+            <h5 id="text-webkit-box"></h5>
+        </div>
+    </nav>
+    <div id="body">
+        <div id="mp3">
+            <img src="" alt="">
+            <audio id="mymp3" src="" hidden></audio>
+            <div id="progressBar">
+                <div></div>
+                <div></div>
+            </div>
+            <div id="muiscplayerBtn">
+                <span id="muisplayerstart"><i class="iconfont">&#xe600;</i></span><span id="muisplayerstop"><i
+                        class="iconfont">&#xe625;</i></span>
+            </div>
+        </div>
+        <div id="mp4">
+            <video id="mymp4" src=""></video>
+            <div id="progressBar2">
+                <div></div>
+                <div></div>
+            </div>
+            <div id="muiscplayer2Btn">
+                <span id="muisplayer2start"><i class="iconfont">&#xe600;</i></span><span id="muisplayer2stop"><i class="iconfont">&#xe625;</i></span>
+            </div>
+        </div>
+    </div>
+    <div class="loading"></div>
+</body>
+<script src="./js/jQuery.min.js"></script>
+<script src="./js/axios.js"></script>
+<script>
+    // 生成locationObj，判断是否有MP4
+    console.log(location)
+    var arr = location.search.split("?")
+    var arr2 = arr[1].split(";&")
+    var arr3 = []
+    var obj = {}
+    arr2.forEach((i) => {
+        arr3 = i.split("=")
+        obj[arr3[0]] = decodeURIComponent(arr3[1])
+    })
+    $('#text-webkit-box')[0].innerText = obj.name
+    $("#mp3>img").attr("src", obj.src)
+    //返回按钮
+    $("nav>button").on("touchend", function () {
+        window.history.back(-1)
+    })
+    function funmp3(rid) {
+        axios({ url: "http://www.vebcoder.cn:9090/url?format=mp3&rid=" + rid + "&response=url&type=convert_url3&br=128kmp3&from=web", method: "GET" }).then((response) => {
+            console.log(response.data.url)
+            $("audio").attr("src", response.data.url)
+            $('.loading').css("display", "none")
+
+
+        }).catch((error) => {
+            console.log(error)
+            $('.loading').css("display", "none")
+        })
+    }
+    function funmp4(rid) {
+        axios({ url: "http://www.vebcoder.cn:9090/url?rid="+rid+"&response=url&format=mp4%7Cmkv&type=convert_url", method: "GET" }).then((response) => {
+            console.log(response.data )
+            $('.loading').css("display", "none")
+            $("#mymp4").attr("src",response.data)
+
+        }).catch((error) => {
+            console.log(error)
+            $('.loading').css("display", "none")
+        })
+    }
+    // 编辑图片
+    var pinMove = 0
+    var bule = 1
+    var time
+    function timefunstart() {
+        time = setInterval(function () {
+            pinMove += 5
+            $("#mp3>img")[0].style.transform = "rotate(" + pinMove + "deg)"
+        }, 90)
+    }
+    function timefunstop() {
+        $("#mp3>img")[0].style.transform = "rotate(0deg)"
+        pinMove = 0
+        clearInterval(time)
+        time = null
+    }
+    $("#muisplayerstart").on('touchend', function () {
+        bule++
+        if (bule % 2 == 0) {
+            console.log("开启")
+            timefunstart()
+        } else {
+            console.log("关闭")
+            timefunstop()
+        }
+        $("#muisplayerstart")[0].innerHTML = ""
+        if (mymp3.paused) {
+            // 暂停中
+            mymp3.play()
+            $("#muisplayerstart")[0].innerHTML = "<i class='iconfont'>&#xe674</i>"
+
+
+        } else {
+            // 播放中
+            mymp3.pause()
+            pinMove++
+            $("#muisplayerstart")[0].innerHTML = "<i class='iconfont'>&#xe600;</i>"
+        }
+    })
+    $("#muisplayerstop").on('touchend', function () {
+        console.log("1")
+        mymp3.currentTime = 0
+    })
+    mymp3.ontimeupdate = function () {
+        var duration = this.duration;
+        var currentTime = this.currentTime;
+        $("#progressBar>div:nth-child(2)").css({ "width": currentTime / duration * 3.2 + "rem" })
+        if (currentTime == duration) {
+            timefunstop()
+            mymp3.currentTime = 0
+        }
+    }
+    $("#progressBar").on('click', function (e) {
+        var x = e.originalEvent.clientX - $("#progressBar").offsetLeft;
+        mymp3.currentTime = ((e.originalEvent.clientX / $(this).width()) * mymp3.duration.toFixed(0)).toFixed(0), $(this).width().toFixed(0) * 1
+    })
+    // mp4kong键
+    $("#muisplayer2start").on('touchend', function () {
+        $("#muisplayer2start")[0].innerHTML=""
+        if (mymp4.paused) {
+            // 暂停中
+            mymp4.play()
+            $("#muisplayer2start")[0].innerHTML = "<i class='iconfont'>&#xe674</i>"
+
+
+        } else {
+            // 播放中
+            mymp4.pause()
+            $("#muisplayer2start")[0].innerHTML = "<i class='iconfont'>&#xe600;</i>"
+        }
+    })
+    $("#muisplayer2stop").on('touchend', function () {
+        console.log("1")
+        mymp4.currentTime = 0
+    })
+    mymp4.ontimeupdate = function () {
+        var duration = this.duration;
+        var currentTime = this.currentTime;
+        $("#progressBar2>div:nth-child(2)").css({ "width": currentTime / duration * 3.2 + "rem" })
+    }
+    $("#progressBar2").on('click', function (e) {
+        var x = e.originalEvent.clientX - $("#progressBar2").offsetLeft;
+        mymp4.currentTime = ((e.originalEvent.clientX / $(this).width()) * mymp4.duration.toFixed(0)).toFixed(0), $(this).width().toFixed(0) * 1
+    })
+    // 获取rid
+    if (obj.hasmv == "1") {
+        $("#mp4").css({ "display": "block" })
+        $("#mp3").css({ "display": "none" })
+        funmp4(obj.rid)
+    } else {
+        $("#mp3").css({ "display": "block" })
+        $("#mp4").css({ "display": "none" })
+        funmp3(obj.rid)
+    }
+</script>
+
+</html>

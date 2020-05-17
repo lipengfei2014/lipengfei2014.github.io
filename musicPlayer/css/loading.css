@@ -1,0 +1,9 @@
+.loading{
+    background: url(../img/timg.gif) no-repeat center center ;
+    background-size: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 3.6rem;
+    height:7.4rem;
+    position: fixed;
+    top: 0rem;
+}

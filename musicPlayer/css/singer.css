@@ -1,0 +1,128 @@
+nav{
+    width: 3.6rem;
+    height: 0.5rem;
+    background-color:rgb(194, 47, 47);
+    color: white;
+    font-size: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h5{
+    margin: 0;
+}
+nav>button{
+    border: 0;
+    font-size: 0.4rem;
+    background-color: rgb(194, 47, 47);
+    color: rgb(233, 233, 233);
+
+}
+nav>div{
+    display: flex;
+    justify-content: center;
+    width: 3.2rem;
+}
+.singer{
+    width: 3.6rem;
+    height: 0.5rem;
+    background-color: rgb(233, 233, 233);
+    border-bottom: solid 1px rgb(233, 233, 233);
+}
+.singer>a{
+    text-decoration: none;
+    font-size: 0.20rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.singer img{
+    display: block;
+    width:0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.05rem;
+}
+.singer button{
+    border: 0;
+    font-size: 0.2rem;
+    background-color: rgb(233, 233, 233);
+}
+.singer-left,.singer-right{
+    height: 0.5rem;
+}
+.singer-right{
+     line-height: 0.5rem;
+}
+.singer-left{
+    display: flex;
+    align-items: center;
+}
+.singer-right>button{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+.singer-artist>div:nth-child(1){
+    font-size: 0.15rem;
+    margin-bottom: 0.1rem;
+}
+.singer-artist>div:nth-child(2){
+    font-size: 0.125rem;
+    color: rgb(134, 134, 134);
+    line-height: 0.125rem;
+}
+.text-webkit-box {
+    display: -webkit-box;
+    width: 2rem;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/*iScroll  */
+#singer{
+    position: relative;
+    width: 3.6rem;
+    height: 6.9rem;
+    overflow: hidden;
+}
+#singertwo{
+    width: 3.6rem;
+    height: 6.9rem;
+}
+#intro{
+    margin-top: 0.1rem;
+    width: 3.6rem;
+    height: 1.2rem;
+    display: flex;
+    padding: 0.01rem;
+    margin-bottom: 0.1rem;
+    overflow: hidden;
+    position: relative;
+}
+#intro>img{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem; 
+    border-radius: 50%;
+    overflow: hidden;   
+}
+#starIntro{
+    color: rgb(49, 48, 48);
+    width: 2.4rem;
+    font-size: 0.15rem;
+}
+#singerIdsonger{
+    width: 3.6rem;
+    height: 5.5rem;
+    position: relative;
+    overflow: hidden;
+}
+#tlite{
+    width: 3.6rem;
+    height: 0.5rem;
+    font-size: 0.15rem;
+    text-align: center;
+    line-height: 0.5rem;
+}

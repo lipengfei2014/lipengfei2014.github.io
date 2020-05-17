@@ -1,0 +1,131 @@
+nav, footer {
+    position: absolute;
+}
+
+nav {
+    width: 3.6rem;
+    height: 0.5rem;
+    background-color: rgb(189, 42, 42);
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+nav i {
+    font-size: 0.4rem;
+    color: white;
+}
+
+nav h5 {
+    font-size: 0.4rem;
+    color: white;
+    margin: 0;
+}
+
+main {
+    width: 3.6rem;
+    position: relative;
+    height: 7.4rem;
+    overflow: hidden;
+    background: url(../img/timg1.jpg);
+}
+
+#floorOne {
+    width: 3.6rem;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#tip {
+    width: 3.6rem;
+    height: 0.5rem;
+    font-size: 0.15rem;
+    text-align: center;
+    color: rgb(200, 200, 200);
+}
+
+#tip span {
+    position: relative;
+    top: 0.3rem;
+}
+
+#floorTwo {
+    width: 3.6rem;
+    height: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#floorTwo select {
+    width: 3.6rem;
+    height: 0.3rem;
+    border: 0;
+}
+
+#head {
+    margin: 0 auto;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    border: solid 1px rgb(200, 200, 200);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#singerSearch, #head button {
+    height: 0.3rem;
+    padding: 0;
+    border: 0 !important;
+}
+
+#singerSearch {
+    width: 2.2rem;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+}
+
+#head button {
+    width: 0.3rem;
+}
+#head input{
+    border: 0;
+    background-color: rgb(243, 243, 243);
+}
+#singerList {
+    width: 3.6rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.singer {
+    width: 1.4rem;
+    margin-top: 0.1rem;
+}
+
+.singer a {
+    text-decoration: none;
+    font-size: 0.15rem;
+    color: black;
+}
+
+.singer img {
+    display: block;
+    width: 1.4rem;
+}
+
+.singer p {
+    color: aliceblue;
+    margin: 0 auto;
+    text-align: center;
+}
+.text-webkit-box {
+    display: -webkit-box;
+    width: 80px;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
