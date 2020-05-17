@@ -70,7 +70,7 @@ if (obj.key) {
     }
     function fun(name, page) {
         page = page || 1
-        axios({ url: "https://www.vebcoder.cn:9090/search/searchMusicBykeyWord?key=" + name + "&pn=" + page + "&rn=30", method: "GET" }).then((response) => {
+        axios({ url: "http://www.vebcoder.cn:9090/search/searchMusicBykeyWord?key=" + name + "&pn=" + page + "&rn=30", method: "GET" }).then((response) => {
             console.log(response.data)
             $('.loading').css("display", "none")
             StarsListdata = response.data.data.list
@@ -160,7 +160,7 @@ if (obj.key) {
         });
     }
     function fun2(id) {
-        axios({ url: "https://www.vebcoder.cn:9090/artist/artist?artistid=" + id, method: "GET" }).then((response) => {
+        axios({ url: "http://www.vebcoder.cn:9090/artist/artist?artistid=" + id, method: "GET" }).then((response) => {
             console.log(response.data, $("#starIntro")[0].innerHTML)
             $('.loading').css("display", "none")
             console.log($("#intro>img")[0])
@@ -174,7 +174,7 @@ if (obj.key) {
     }
     function fun3(id, idpage) {
         idpage = idpage || 1
-        axios({ url: "https://www.vebcoder.cn:9090/artist/artistMusic?artistid=" + id + "&pn=" + idpage + "&rn=30", method: "GET" }).then((response) => {
+        axios({ url: "http://www.vebcoder.cn:9090/artist/artistMusic?artistid=" + id + "&pn=" + idpage + "&rn=30", method: "GET" }).then((response) => {
             console.log(response.data.data.list)
             var songerList = response.data.data.list
             fun4(songerList)
