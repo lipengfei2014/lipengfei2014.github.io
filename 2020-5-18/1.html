@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://api.map.baidu.com/api?v=3.0&type=webgl&ak=A7IO4hzvX4swTP9KDcYzAErutLBufRBD"></script>
+
+</head>
+<style>
+    #mapDiv {
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <label for="city">city名</label>
+    <input type="text" name="city" id="city" placeholder="请输入city名">
+    <label for="address">address</label>
+    <input type="text" name="address" id="address" placeholder="请输入address名">
+    <button id="submit"> search </button>
+    <div id="mapDiv"></div>
+</body>
+<script>
+    // navigator.geolocation.getCurrentPosition(function(res){
+    //     console.log(res.coords.latitude,res.coords.longitude) 
+    // })
+    var map = new BMapGL.Map("mapDiv")
+    var Point = new BMapGL.Point(114.62731020000001, 33.6309328)
+    map.centerAndZoom(Point, 15);
+    map.enableScrollWheelZoom(true);
+    var scaleCtrl = new BMapGL.ScaleControl();
+    // 添加
+    map.addControl(scaleCtrl);
+    // map.setMapType(BMAP_EARTH_MAP);
+    // 写jsonp
+    function makeObject(lng, lat) {
+        var point = new BMapGL.Point(lng, lat)
+        map.setCenter(point)
+        // 创建标注
+        var marker = new BMapGL.Marker(point);
+        //标注添加
+        map.addOverlay(marker)
+
+        var addressName = document.getElementById("city").value + "-" + document.getElementById("address").value
+        marker.onclick = function (e) {
+            var opts = {
+                width: 250,
+                height: 100,
+                title: addressName
+            }
+            var WindowObj = new BMapGL.InfoWindow(addressName + ":简介，手机号", opts);
+            map.openInfoWindow(WindowObj, point);
+        }
+    }
+    function callblak(res) {
+        map.clearOverlays();
+        var { lng, lat } = res.result.location
+        makeObject(lng, lat)
+    }
+    submit.onclick = function () {
+        var city = document.getElementById("city").value
+        var address = document.getElementById("address").value
+        var script = document.createElement("script")
+        script.src = "http://api.map.baidu.com/geocoding/v3/?address=" + address + "&city=" + city + "&output=json&ak=A7IO4hzvX4swTP9KDcYzAErutLBufRBD&callback=callblak"
+        document.body.appendChild(script)
+    }
+</script>
+
+</html>
