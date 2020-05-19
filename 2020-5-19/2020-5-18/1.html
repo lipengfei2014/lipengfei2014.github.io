@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://api.map.baidu.com/api?v=3.0&type=webgl&ak=SevmkS8DrulBFIVFLWhCeulNeHtK9L3L"></script>
+
+
+</head>
+<style>
+    #mapDiv {
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <label for="city">city名</label>
+    <input type="text" name="city" id="city" placeholder="请输入city名">
+    <label for="address">address</label>
+    <input type="text" name="address" id="address" placeholder="请输入address名">
+    <button id="submit"> search </button>
+    <div id="mapDiv"></div>
+</body>
+<script>
+    // navigator.geolocation.getCurrentPosition(function(res){
+    //     console.log(res.coords.latitude,res.coords.longitude) 
+    // })
+    var map = new BMapGL.Map("mapDiv")
+    var Point = new BMapGL.Point(114.62731020000001, 33.6309328)
+    map.centerAndZoom(Point, 10);
+    map.enableScrollWheelZoom(true);
+    var scaleCtrl = new BMapGL.ScaleControl();
+    // 添加
+    map.addControl(scaleCtrl);
+    // map.setMapType(BMAP_EARTH_MAP);
+    // 写jsonp
+    function makeObject(addressList) {
+        addressList.forEach((element, i) => {
+            console.log(element, i)
+            var point = new BMapGL.Point(element.location.lng, element.location.lat)
+            map.setCenter(point)
+            // 创建标注
+            var marker = new BMapGL.Marker(point);
+            //标注添加
+            if (i % 3 == 0) {
+                myImg = new BMapGL.Icon(
+                    "./img/dibiao_1.png",
+                    new BMapGL.Size(48, 48)
+                )
+            } else if (i % 3 == 1) {
+                myImg = new BMapGL.Icon(
+                    "./img/dibiao_2.png",
+                    new BMapGL.Size(48, 48)
+                )
+            }else if (i % 3 == 2) {
+                myImg = new BMapGL.Icon(
+                    "./img/dibiao.png",
+                    new BMapGL.Size(48, 48)
+                )
+            }
+            marker.setIcon(myImg)
+            map.addOverlay(marker)
+            marker.onclick = function (e) {
+                var opts = {
+                    width: 250,
+                    height: 200,
+                    title: element.name
+                }
+                var WindowObj = new BMapGL.InfoWindow(element.name + ":简介:" + element.province + element.city + element.area + "，<br>address:" + element.address, opts);
+                map.openInfoWindow(WindowObj, point);
+            }
+        });
+    }
+    function callblak(res) {
+        map.clearOverlays();
+        console.log(res)
+        var addressList = res.results
+        makeObject(addressList)
+    }
+    submit.onclick = function () {
+        var city = document.getElementById("city").value
+        var address = document.getElementById("address").value
+        var script = document.createElement("script")
+        script.src = "http://api.map.baidu.com/place/v2/search?query=" + address + "&region=" + city + "&output=json&ak=SevmkS8DrulBFIVFLWhCeulNeHtK9L3L&callback=callblak"
+        document.body.appendChild(script)
+    }
+</script>
+
+</html> 
