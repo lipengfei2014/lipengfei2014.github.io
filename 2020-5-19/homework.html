@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #text {
+            text-align: center;
+            height: 100vh;
+            line-height: 50vh;
+        }
+
+        #input {
+            width: 200px;
+            height: 50px;
+        }
+
+        button {
+            border: 0;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text">
+        <input type="text" name="input" id="input">
+        <span onclick="fun()"><canvas id="myCan" width="200" height="50"
+                style="position: relative;top: 20px ;"></canvas></span>
+
+        <div>
+            <button style="font-size: 50px;" onclick="fun1()">确定</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    var bule = false
+    // 准备文本
+    var ojbment = ""
+    var obj = []
+    var num = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    var numArr = num.split("")
+    var indexArr = []
+    function index() {
+        for (var i = 0; i < 5; i++) {
+            var a = Math.floor(Math.random() * (numArr.length - 1))
+            indexArr.push(a)
+        }
+        indexArr.forEach(i => {
+            obj.push(numArr[i])
+        })
+        console.log(obj)
+    }
+    index()
+    // 设置Canvas
+    function canvas() {
+        console.log(Math.ceil(numArr.length / 5))
+        var myCan = document.getElementById("myCan").getContext("2d")
+        myCan.clearRect(0, 0, 200, 50)
+        for (var j = 0; j < Math.ceil(numArr.length / 3); j++) {
+            myCan.beginPath()
+            myCan.strokeStyle = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")"
+            myCan.lineWidth = 1
+            myCan.moveTo(Math.floor(Math.random() * 180 + 20), Math.floor(Math.random() * 45 + 1))
+            myCan.lineTo(Math.floor(Math.random() * 180 + 20), Math.floor(Math.random() * 45 + 1));
+            myCan.stroke()
+        }
+        obj.forEach((i, s) => {
+            console.log(i, s + 1)
+            myCan.font = "30px 微软雅黑"
+            myCan.fillStyle = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")"
+            myCan.textBaseline = "middle";
+            myCan.fillText(i, 30 * s + 20, 25);
+            ojbment += i
+        })
+
+    }
+    canvas()
+    function fun() {
+        obj = []
+        ojbment = ""
+        indexArr = []
+        bule = false
+        index()
+        canvas()
+        console.log(ojbment.toLowerCase())
+    }
+    function fun1() {
+        if (input.value == "") {
+            alert("为空")
+            bule = false
+        } else {
+            if (input.value.toLowerCase() == ojbment.toLowerCase()) {
+                alert("为ture")
+                bule = true
+            }
+            else {
+                alert("为false")
+                bule = false
+            }
+        }
+
+    }
+    console.log(ojbment.toLowerCase())
+</script>
+
+</html>
