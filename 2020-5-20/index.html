@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷达图</title>
+    <script src="./echarts.min.js"></script>
+    <style>
+        #box {
+            margin: 0;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" style="background-image: url(https://game.gtimg.cn/images/lol/act/img/skin/big29000.jpg);width: 600px;height:420px ;background-size: 600px 420px;" >
+        <div id="cartogram" style="width: 600px;height:420px ;">
+
+        </div>
+    </div>
+</body>
+<script>
+    var dataBJ = [[9, 6, 2, 3]];
+
+    var dataSH = [
+        [2, 4, 2, 9]
+    ];
+
+    var dataGZ = [
+        [8, 10, 4, 4]
+    ];
+    var mycar = document.getElementById("cartogram")
+    var my = echarts.init(mycar)
+
+    var lineStyle = {
+        normal: {
+            width: 1,
+            opacity: 0.5
+        }
+    };
+    var option = {
+        backgroundColor:"",
+        title: {
+            text: '瘟疫之源-英雄分析',
+            left: 'center',
+            textStyle: {
+                color: '#eee'
+            }
+        },
+        legend: {
+            bottom: 5,
+            data: [{ name: '瘟疫之源', icon: "image://https://ossweb-img.qq.com/images/lol/img/champion/Twitch.png" }, { name: '复仇焰魂', icon: "image://https://ossweb-img.qq.com/images/lol/img/champion/Brand.png" }, { name: '疾风剑豪', icon: "image://https://ossweb-img.qq.com/images/lol/img/champion/Yasuo.png" }],
+            itemGap: 20,
+            textStyle: {
+                color: '#fff',
+                fontSize: 14
+            },
+            selectedMode: 'single',
+        },
+        radar: {
+            indicator: [
+                { name: '攻击 ', max: 10 },
+                { name: '上手难度', max: 10 },
+                { name: '防御', max: 10 },
+                { name: '法术 ', max: 10 },
+            ],
+            shape: 'circle',
+            splitNumber: 10,
+            name: {
+                textStyle: {
+                    color: 'rgb(238, 197, 102)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: [
+                        'rgba(238, 197, 102, 0.1)', 'rgba(238, 197, 102, 0.2)',
+                        'rgba(238, 197, 102, 0.3)', 'rgba(238, 197, 102, 0.4)',
+                        'rgba(238, 197, 102, 0.5)', 'rgba(238, 197, 102, 0.6)',
+                        'rgba(238, 197, 102, 0.7)', 'rgba(238, 197, 102, 0.8)',
+                        'rgba(238, 197, 102, 0.9)', 'rgba(238, 197, 102, 0.1)',
+                    ].reverse()
+                }
+            },
+            splitArea: {
+                show: false
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(238, 197, 102, 0.8)'
+                }
+            }
+        },
+        series: [
+            {
+                name: '瘟疫之源',
+                type: 'radar',
+                pic: "https://game.gtimg.cn/images/lol/act/img/skin/big29000.jpg",
+                lineStyle: lineStyle,
+                data: dataBJ,
+                symbol: 'none',
+                itemStyle: {
+                    color: '#F9713C'
+                },
+                areaStyle: {
+                    opacity: 0.1
+                },
+            },
+            {
+                name: '复仇焰魂',
+                type: 'radar',
+                pic: "https://game.gtimg.cn/images/lol/act/img/skin/big63000.jpg",
+                lineStyle: lineStyle,
+                data: dataSH,
+                symbol: 'none',
+                itemStyle: {
+                    color: '#B3E4A1'
+                },
+                areaStyle: {
+                    opacity: 0.05
+                }
+            },
+            {
+                name: '疾风剑豪',
+                type: 'radar',
+                pic: "https://game.gtimg.cn/images/lol/act/img/skin/big157000.jpg",
+                lineStyle: lineStyle,
+                data: dataGZ,
+                symbol: 'none',
+                itemStyle: {
+                    color: 'rgb(238, 197, 102)'
+                },
+                areaStyle: {
+                    opacity: 0.05
+                }
+            }
+        ]
+    };
+
+    my.setOption(option)
+    my.on('legendselectchanged', function (params) {
+        console.log(params, option.series[0])
+        if (params.name == "瘟疫之源") {
+
+            my.setOption({
+                title: {
+                    text: params.name + "-英雄分析"
+                },
+            })
+            document.getElementById("box").style.backgroundImage=" url("+option.series[0].pic+")"
+        } else if (params.name == "复仇焰魂") {
+
+            my.setOption({
+                title: {
+                    text: params.name + "-英雄分析"
+                },
+            })
+            document.getElementById("box").style.backgroundImage=" url("+option.series[1].pic+")"
+        }else if (params.name == "疾风剑豪"){
+
+            my.setOption({
+                title: {
+                    text: params.name + "-英雄分析"
+                },
+            })
+            document.getElementById("box").style.backgroundImage=" url("+option.series[2].pic+")"
+        }
+    })
+</script>
+
+</html>
