@@ -91,8 +91,6 @@
 <script src="./js/jQuery.min.js"></script>
 <script>
     //   选择多个文件
-
-    var upFill = []
     var arr=[]
     var a;
     function fun(arr) {
@@ -109,7 +107,6 @@
                         var image = document.createElement("img")
                         image.src = this.result
                         image.index = item
-                        upFill.push(this.result)
                         div.appendChild(image)
                         var span = document.createElement("span")
                         span.innerHTML = "删除"
@@ -178,7 +175,7 @@
         console.log(e.target.index,arr)
     })
     sumit.onclick = function () {
-        console.log(upFill)
+        console.log(arr)
     }
 </script>
 
