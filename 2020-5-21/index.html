@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dragIn {
+            width: 500px;
+            height: 250px;
+            background-color: rgba(233, 233, 233, 0.8);
+            text-align: center;
+            line-height: 250px;
+            font-size: 50px;
+            margin: 10px auto;
+        }
+
+        #IMgshow {
+            width: 500px;
+            height: 150px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(233, 233, 233, 0.8);
+            align-items: center;
+            text-align: center;
+        }
+
+        .imge {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            border: solid 1px white;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        p {
+            width: 80px;
+            height: 40px;
+            background-color: rgba(245, 3, 36, 0.9);
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            margin: 0 auto;
+            cursor: pointer;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 90px;
+            height: 90px;
+            border: none
+        }
+
+        span {
+            z-index: 12;
+            position: absolute;
+            display: none;
+            text-align: center;
+            width: 50px;
+            height: 20px;
+            top: 65px;
+            left: 20px;
+            background-color: rgba(245, 3, 36, 0.9);
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+            line-height: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <input type="file" style="display: none;" id="myfiles">
+        <div id="dragIn"> 拖入 </div>
+    </label>
+    <div id="IMgshow">
+    </div>
+    <p id="sumit">上传</p>
+
+</body>
+<script src="./js/jQuery.min.js"></script>
+<script>
+    //   选择多个文件
+
+    var upFill = []
+    var arr=[]
+    var a;
+    function fun(arr) {
+        Object.keys(arr).forEach((i, item) => {
+            console.log(i, item,arr)
+            var typeFill = arr[item].type.split("/")[0]
+            if (typeFill == "image") {
+                if (item <= 4) {
+                    var read = new FileReader()
+                    read.readAsDataURL(arr[item])
+                    read.onload = function () {
+                        var div = document.createElement("div")
+                        div.classList.add("imge")
+                        var image = document.createElement("img")
+                        image.src = this.result
+                        image.index = item
+                        upFill.push(this.result)
+                        div.appendChild(image)
+                        var span = document.createElement("span")
+                        span.innerHTML = "删除"
+                        span.index = item
+                        div.appendChild(span)
+                        document.getElementById("IMgshow").appendChild(div)
+                    }
+                } else {
+                    alert("超过5个")
+                }
+
+            } else {
+                alert("不是image")
+            }
+
+        })
+    }
+    function fun1(arr) {
+        $("#IMgshow")[0].innerHTML=""
+        fun(arr)
+    }
+    myfiles.onchange = function () {
+        arr.push(this.files[0])
+        console.log(this.files)
+        a = this
+
+        console.log(this, a)
+        fun1(arr)
+    }
+    // 拖动添加
+    dragIn.ondragover = function (e) {
+        e.preventDefault();
+        dragIn.style.background = "white";
+        dragIn.innerHTML = "松开"
+
+    }
+    dragIn.ondragleave = function (e) {
+        e.preventDefault();
+        e.stopPropagation()
+        dragIn.style.background = "rgba(233, 233, 233, 0.8)";
+        dragIn.innerHTML = "拖入"
+    }
+    var myfi = [];
+
+    // 添加文件
+    dragIn.ondrop = function (e) {
+        e.preventDefault();
+        console.log(e.dataTransfer.files[0])
+        arr.push(e.dataTransfer.files[0])
+        myfi  = myfi .concat(a);
+        fun1(arr)
+        dragIn.style.background = "rgba(233, 233, 233, 0.8)";
+        dragIn.innerHTML = "拖入"
+    }
+    $("#IMgshow ").on("mouseenter", "img", function (e) {
+        $("span").eq(e.target.index)[0].style.display="block"
+        console.log(e.target.index,$("span").eq(0)[0])
+
+    })
+    $("#IMgshow ").on("mouseleave", "img", function (e) {
+        e.target.index,$("span").eq(e.target.index)[0].style.display="none"
+    })
+    $(("#IMgshow")).on("click", " span", function (e) {
+        arr.splice(e.target.index, 1)
+        fun1(arr)
+        console.log(e.target.index,arr)
+    })
+    sumit.onclick = function () {
+        console.log(upFill)
+    }
+</script>
+
+</html>

@@ -49,6 +49,7 @@
                 color: '#eee'
             }
         },
+        tooltip:{},
         legend: {
             bottom: 5,
             data: [{ name: '瘟疫之源', icon: "image://https://ossweb-img.qq.com/images/lol/img/champion/Twitch.png" }, { name: '复仇焰魂', icon: "image://https://ossweb-img.qq.com/images/lol/img/champion/Brand.png" }, { name: '疾风剑豪', icon: "image://https://ossweb-img.qq.com/images/lol/img/champion/Yasuo.png" }],
@@ -58,8 +59,12 @@
                 fontSize: 14
             },
             selectedMode: 'single',
+            itemWidth:20,
+            itemHeight:20
         },
         radar: {
+            radius:100,
+            
             indicator: [
                 { name: '攻击 ', max: 10 },
                 { name: '上手难度', max: 10 },
