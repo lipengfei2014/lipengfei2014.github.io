@@ -149,18 +149,17 @@
         dragIn.style.background = "rgba(233, 233, 233, 0.8)";
         dragIn.innerHTML = "拖入"
     }
-    var myfi = [];
 
     // 添加文件
     dragIn.ondrop = function (e) {
         e.preventDefault();
         console.log(e.dataTransfer.files[0])
         arr.push(e.dataTransfer.files[0])
-        myfi  = myfi .concat(a);
         fun1(arr)
         dragIn.style.background = "rgba(233, 233, 233, 0.8)";
         dragIn.innerHTML = "拖入"
     }
+    // span显示和隐藏
     $("#IMgshow ").on("mouseenter", "img", function (e) {
         $("span").eq(e.target.index)[0].style.display="block"
         console.log(e.target.index,$("span").eq(0)[0])
@@ -169,11 +168,13 @@
     $("#IMgshow ").on("mouseleave", "img", function (e) {
         e.target.index,$("span").eq(e.target.index)[0].style.display="none"
     })
+    // span 事件 点击一下 重新刷新页面
     $(("#IMgshow")).on("click", " span", function (e) {
         arr.splice(e.target.index, 1)
         fun1(arr)
         console.log(e.target.index,arr)
     })
+    // 显示当前加载的图片
     sumit.onclick = function () {
         console.log(arr)
     }
