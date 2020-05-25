@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #main {
+            margin: 0 auto;
+            width: 360px;
+            height: 215px;
+        }
+
+        #mainTop {
+            position: relative;
+            width: 360px;
+            height: 140px;
+        }
+
+
+
+        #mainButton {
+            margin-top: 20px;
+            width: 360px;
+            height: 55px;
+            position: relative;
+        }
+
+        #mainButton>div:nth-child(1) {
+            width: 340px;
+            height: 20px;
+            background-color: rgb(187, 187, 187);
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 0 auto;
+            position: relative;
+            top: 18px;
+        }
+
+        #mainButton>div:nth-child(2) {
+            position: absolute;
+            top: 18px;
+            left: 11px;
+            height: 20px;
+            background-color: rgb(8, 159, 247);
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+        #moveImg {
+            display: none;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+
+        #button {
+            position: absolute;
+            top: 0;
+            width: 55px;
+            height: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="mainTop">
+            <img src="images/a.png" alt="">
+            <img src="images/a1.png" id="moveImg" alt="">
+        </div>
+        <div id="mainButton">
+            <div>
+                向右滑动》》》》》》》
+            </div>
+            <div>
+            </div>
+            <img src="images/arrow.png" id="button" alt="">
+        </div>
+    </div>
+</body>
+<script src="./js/jQuery.min.js"></script>
+<script>
+    console.log($("#main")[0].offsetLeft)
+    //  核心代码
+    var arr = [{
+        pic: "images/a.png",
+        picImg: "images/a1.png"
+    }, {
+        pic: "images/b.png",
+        picImg: "images/b1.png"
+    }, {
+        pic: "images/c.png",
+        picImg: "images/c1.png"
+    }, {
+        pic: "images/c.png",
+        picImg: "images/c1.png"
+    }, {
+        pic: "images/d.png",
+        picImg: "images/d1.png"
+    }]
+    var index;
+    var length = 0;
+    var longMin = 110
+    var topNun=30
+    var name = ""
+    var objfill = []
+    function fun() {
+        index = Math.floor(Math.random() * 4)
+        var obj = arr[index]
+        name = obj.pic.split("/")[1].split(".")[0]
+        if (name == "a") {
+            topNun=30
+            longMin = 110
+            console.log("a")
+        } else if (name == "b") {
+            console.log("b")
+            topNun=35
+            longMin = 90
+        } else if (name == "c") {
+            console.log("c")
+            topNun= 42
+            longMin = 175
+        } else if (name == "d") {
+            console.log("d")
+            topNun=60
+            longMin = 80
+        }
+        return arr[index]
+    }
+    $("#mainButton").on("mousedown", function (e) {
+        e.preventDefault();
+        $("#mainButton").on("mousemove", function (e) {
+            length = e.clientX - $("#main")[0].offsetLeft
+            $("#mainButton>div:nth-child(2)").css({ "width": e.clientX - $("#main")[0].offsetLeft + "px" })
+            $("#button").css({ "left": e.clientX - $("#main")[0].offsetLeft + "px" })
+            $("#moveImg").css({ "left": e.clientX - $("#main")[0].offsetLeft + "px", "display": "block", "top": topNun + "px" })
+        })
+        console.log(topNun)
+    })
+    $("#destination").css({ "background-color": "blue;" })
+    $("#mainButton").on("mouseup", function () {
+        $("#mainButton>div:nth-child(2)").css({ "width": 0 + "px" })
+        $("#button").css({ "left": 0 + "px" })
+        $("#moveImg").css({ "left": 0 + "px", "display": "none", "top": 0 + "px" })
+        $("#mainButton").unbind("mousemove")
+        if (length >= longMin - 30 && length <= longMin + 30) {
+            alert("通过")
+            $("#main")[0].innerHTML=""
+        } else {
+            alert("失败")
+            objfill = fun() 
+            $("#mainTop>img:nth-child(1)").attr("src", objfill.pic)
+            $("#mainTop>img:nth-child(2)").attr("src", objfill.picImg)
+        }
+    })
+</script>
+
+</html>

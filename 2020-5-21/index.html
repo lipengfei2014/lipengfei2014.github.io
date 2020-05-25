@@ -91,11 +91,11 @@
 <script src="./js/jQuery.min.js"></script>
 <script>
     //   选择多个文件
-    var arr=[]
+    var arr = []
     var a;
     function fun(arr) {
         Object.keys(arr).forEach((i, item) => {
-            console.log(i, item,arr)
+            console.log(i, item, arr)
             var typeFill = arr[item].type.split("/")[0]
             if (typeFill == "image") {
                 if (item <= 4) {
@@ -116,16 +116,18 @@
                     }
                 } else {
                     alert("超过5个")
+                    arr.pop()
                 }
 
             } else {
                 alert("不是image")
+                arr.pop()
             }
 
         })
     }
     function fun1(arr) {
-        $("#IMgshow")[0].innerHTML=""
+        $("#IMgshow")[0].innerHTML = ""
         fun(arr)
     }
     myfiles.onchange = function () {
@@ -161,18 +163,18 @@
     }
     // span显示和隐藏
     $("#IMgshow ").on("mouseenter", "img", function (e) {
-        $("span").eq(e.target.index)[0].style.display="block"
-        console.log(e.target.index,$("span").eq(0)[0])
+        $("span").eq(e.target.index)[0].style.display = "block"
+        console.log(e.target.index, $("span").eq(0)[0])
 
     })
     $("#IMgshow ").on("mouseleave", "img", function (e) {
-        e.target.index,$("span").eq(e.target.index)[0].style.display="none"
+        e.target.index, $("span").eq(e.target.index)[0].style.display = "none"
     })
     // span 事件 点击一下 重新刷新页面
     $(("#IMgshow")).on("click", " span", function (e) {
         arr.splice(e.target.index, 1)
         fun1(arr)
-        console.log(e.target.index,arr)
+        console.log(e.target.index, arr)
     })
     // 显示当前加载的图片
     sumit.onclick = function () {

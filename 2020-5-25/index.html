@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/icon.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #passwordShow {
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+            margin: 0 auto;
+            border: solid 1px rgb(233, 233, 233);
+            font-size: 19px;
+        }
+
+        #passwordShow>input {
+            border: none;
+        }
+
+        #songslist {
+            width: 600px;
+            height: auto;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .song {
+            list-style: none;
+            border-bottom: solid 1px rgb(200, 200, 200);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .song-left {
+            display: flex;
+        }
+
+        .song-left>img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .song-singer {
+            padding-left: 40px;
+            display: flex;
+            width: 300px;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .song-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .song-singer div {
+            display: -webkit-box;
+            width: 300px;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .btn-music {
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="passwordShow">
+            <i class="iconfont">&#xe6aa;</i>
+            <input :type="(bool?'password':'text')" placeholder="输入密码">
+            <label>
+                <input type="checkbox" style="display: none;" v-model="bool">
+                <div v-if="bool"><i class="iconfont" style="color: red;">&#xe65f;</i></div>
+                <div v-else> <i class="iconfont" style="color: green;">&#xe668;</i></div>
+            </label>
+        </div>
+        <ul id="songslist">
+            <li class="song" v-for="( item,index ) in list " :key=index>
+                <div class="song-left">
+                    <img :src="item.pic" alt="">
+                    <div class="song-singer">
+                        <div>{{item.name}} 时长：{{item.songTimeMinutes}} </div>
+                        <div> {{item.album}}-{{item.name}}-{{item.releaseDate}} </div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="btn-music"> <i class="iconfont">&#xe6b5;</i> </div>
+                    <div class="btn-music"><i  v-if="item.hasmv" class="iconfont">&#xe62e;</i></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="./js/homework(1).js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            bool: true,
+            list: homeWorkData.data.list
+        }
+    })
+</script>
+
+</html>
