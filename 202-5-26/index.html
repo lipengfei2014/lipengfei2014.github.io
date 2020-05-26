@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 1.逐渐隐藏 -->
+        <div id="opcshow">
+            <img v-for="(item,index) in opcImgArr" :src="item" :class="{opaimg:num==index}" alt="">
+            <div id="imgBtn">
+                <div id="imgBtnLeft" @click="prev">上一页</div>
+                <div id="imgBtnCenter">
+                    <span v-for="i in opcImgArr.length" :class="{lishow:num==i-1}" @click="num=i-1"> {{i}} </span>
+                </div>
+                <div id="imgBtnRight" @click="next">下一页</div>
+            </div>
+        </div>
+        <!-- 2.无缝轮播 -->
+        <div id="seamlessshow">
+            <div id="moveImg" :style="{marginLeft:-400*num1+'px',transition:'all '+time+'s'}">
+                <img v-for="(item,index) in opcImgArr" :src="item" :class="{opaimg:num1==index}" alt="">
+            </div>
+            <div id="img2Btn">
+                <div id="imgBtnLeft" @click="prevTwo">上一页</div>
+                <div id="imgBtnCenter">
+                    <span v-for="i in opcImgArr.length" :class="{lishow:num1==i-1}" @click="fun(i-1)"> {{i}} </span>
+                </div>
+                <div id="imgBtnRight" @click="nextTwo">下一页</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            opcImgArr: ["img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg",],
+            num: 0,
+            num1: 0,
+            time: 0.5
+        },
+        mounted: function () {
+            document.getElementById("moveImg").style.width = this.opcImgArr.length * 400 + "px"
+        },
+        methods: {
+            prev: function () {
+                this.num--
+                if (this.num < 0) {
+                    this.num = this.opcImgArr.length - 1
+                }
+
+                console.log(this.num)
+
+            },
+            next: function () {
+                this.num++
+                console.log(this.opcImgArr.length, this.num)
+                if (this.num > this.opcImgArr.length - 1) {
+                    this.num = 0
+                }
+            },
+            prevTwo: function () {
+                this.num1--
+                if (this.num1 < 0) {
+                    this.num1 = this.opcImgArr.length - 1
+                    this.time = 0;
+                } else {
+                    this.time = 0.5;
+                }
+            },
+            nextTwo: function () {
+                this.num1++
+                if (this.num1 > this.opcImgArr.length - 1) {
+                    this.num1 = 0
+                    this.time = 0;
+                } else {
+                    this.time = 0.5;
+                }
+            },
+            fun(i) {
+                this.num1 = i
+                this.time = 0;
+            }
+        },
+    })
+</script>
+
+</html>
