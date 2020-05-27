@@ -44,14 +44,20 @@
         el: "#app",
         data: {
             opcImgArr: ["img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg",],
-            opcImg2Arr: ["img/4.jpg", "img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/0.jpg"],
+            opcImg2Arr:["img/0.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg",],
             num: 0,
             num1: 1,
             time: 0.5,
-            boll: true
+            timer:null
         },
-        mounted: function () {
+        created() {
+            this.opcImg2Arr.push(this.opcImg2Arr[0])
+            this.opcImg2Arr.unshift(this.opcImg2Arr[this.opcImg2Arr.length-1])
             document.getElementById("moveImg").style.width = this.opcImg2Arr.length * 400 + "px"
+            timer=setInterval(function(){
+                this.nextTwo()
+            }.bind(this),2000)
+      
         },
         methods: {
             prev: function () {
@@ -71,46 +77,38 @@
                 }
             },
             prevTwo: function () {
-                if (this.boll) {
-                    this.boll = false;
+             
                     this.num1--
-                }
+              
             },
             nextTwo: function () {
-
-                if (this.boll) {
-                    this.boll = false;
                     this.num1++
-                }
+              
 
             },
             fun(i) {
                 this.num1 = i
                 this.time = 0;
-                var img1 = this;
                 setTimeout(function () {
-                    img1.time = 0.5
-                }, 16.7)
+                    this.time = 0.5
+                }.bind(this), 16.7)
             },
             fun2: function () {
                 if (this.num1 == 0) {
                     this.num1 = this.opcImg2Arr.length - 2
                     this.time = 0;
-                    var img2 = this;
                     setTimeout(function () {
-                        img2.time = 0.5
-                    }, 16.7)
+                        this.time = 0.5
+                    }.bind(this), 16.7)
                 }
                 if (this.num1 == this.opcImg2Arr.length - 1) {
                     this.num1 = 1
                     this.time = 0;
-                    var img = this;
                     setTimeout(function () {
-                        img.time = 0.5
-                    }, 16.7)
+                        this.time = 0.5
+                    }.bind(this), 16.7)
                 }
-                console.log(this.num1, this.opcImg2Arr.length - 1)
-                this.boll = true;
+            
             }
         },
     })

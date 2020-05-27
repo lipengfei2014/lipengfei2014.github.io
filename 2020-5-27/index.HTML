@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<style>
+    table {
+        width: 500px;
+        border: solid 1px black;
+        border-collapse: collapse;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    tr,
+    td {
+        border: solid 1px black;
+    }
+</style>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <tr>
+                <td>序号</td>
+                <td>商品名称</td>
+                <td>种类</td>
+                <td>样式</td>
+                <td>价格</td>
+                <td>选择</td>
+                <td>删除</td>
+            </tr>
+            <tr v-for="(item,index) in lidata " :key="index">
+                <td v-if="index<=2" style="color: red;"> 热门商品 </td>
+                <td v-else>{{index}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.type_one}}</td>
+                <td>{{item.type_two}}</td>
+                <td>￥：{{item.price}}</td>
+                <td><input type='checkbox' :value="item" @change="checkout(index)" v-model="arr"></td>
+                <td><button @click="fun(index)">删除</button></td>
+            </tr>
+            <tr>
+                <td> 总计</td>
+                <td colspan="4">{{arr.length}}/{{lidata.length}}</td>
+                <td><input type='checkbox' @change="checkout2" v-model="chicked"></td>
+                <td style="width: 52.55px;height: 23.6px;"><button v-show="arr.length" @click="deleteture">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            lidata: [],
+            arr: [],
+            chicked: false,
+            num: 0
+        },
+        created() {
+            axios({
+                url: "http://vebcoder.cn:9527/api/goodList?page=10",
+                methods: "get"
+            }).then(res => {
+                this.lidata = res.data
+
+            })
+        },
+        methods: {
+            fun(index) {
+                this.lidata.splice(index, 1)
+            },
+            checkout() {
+                this.chicked = this.lidata.length == this.arr.length
+            },
+            checkout2() {
+                if (this.chicked) {
+                    this.arr = this.lidata;
+                } else {
+                    this.arr = [];
+                }
+            },
+            deleteture() {
+                var b=[]
+                this.arr.forEach(element => {
+                    console.log(element.Id)
+                    b.push(element.Id)
+                })
+                this.lidata=this.lidata.filter(function(item){
+                    return b.indexOf(item.Id)<0;
+                })
+                this.arr=[]
+            }
+        }
+    })
+</script>
+
+</html>
