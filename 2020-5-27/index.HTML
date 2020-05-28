@@ -34,16 +34,21 @@
                 <td>选择</td>
                 <td>删除</td>
             </tr>
-            <tr v-for="(item,index) in lidata " :key="index">
-                <td v-if="index<=2" style="color: red;"> 热门商品 </td>
-                <td v-else>{{index}}</td>
-                <td>{{item.title}}</td>
-                <td>{{item.type_one}}</td>
-                <td>{{item.type_two}}</td>
-                <td>￥：{{item.price}}</td>
-                <td><input type='checkbox' :value="item" @change="checkout(index)" v-model="arr"></td>
-                <td><button @click="fun(index)">删除</button></td>
-            </tr>
+            <div>
+                <tr v-for="(item,index) in lidata " :key="index" v-show="lidata.length>0" >
+                    <td v-if="index<=2" style="color: red;"> 热门商品 </td>
+                    <td v-else>{{index}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.type_one}}</td>
+                    <td>{{item.type_two}}</td>
+                    <td>￥：{{item.price}}</td>
+                    <td><input type='checkbox' :value="item" @change="checkout(index)" v-model="arr"></td>
+                    <td><button @click="fun(index)">删除</button></td>
+                </tr>
+                <tr v-show="lidata.length==0">
+                    <td colspan="7">木有数据</td>
+                </tr>
+            </div>
             <tr>
                 <td> 总计</td>
                 <td colspan="4">{{arr.length}}/{{lidata.length}}</td>
@@ -90,15 +95,16 @@
                 }
             },
             deleteture() {
-                var b=[]
+                var b = []
+                var c = []
                 this.arr.forEach(element => {
-                    console.log(element.Id)
                     b.push(element.Id)
                 })
-                this.lidata=this.lidata.filter(function(item){
-                    return b.indexOf(item.Id)<0;
+                this.lidata = this.lidata.filter(function (item) {
+                    return b.indexOf(item.Id) < 0;
                 })
-                this.arr=[]
+                this.arr = []
+                this.chicked = false
             }
         }
     })
