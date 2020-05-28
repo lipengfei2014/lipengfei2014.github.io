@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        width: 500px;
+        border: solid 1px black;
+        border-collapse: collapse;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    tr,
+    td {
+        border: solid 1px black;
+    }
+
+    td {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+
+
+    }
+
+    #app {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #app>div {
+        width: 45%;
+    }
+</style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="left">
+            <table>
+                <tr>
+                    <td>序号</td>
+                    <td>商品名称</td>
+                    <td>种类</td>
+                    <td>样式</td>
+                    <td>价格</td>
+                    <td>添加</td>
+                </tr>
+                <tr v-for="(item,index) in lidata " :key="index">
+                    <td v-if="index<=2" style="color: red;"> 热门商品 </td>
+                    <td v-else>{{index}}</td>
+                    <td style="width: 80px;">{{item.title}}</td>
+                    <td>{{item.type_one}}</td>
+                    <td>{{item.type_two}}</td>
+                    <td>￥：{{item.price}}</td>
+                    <td><button @click="addItem(item)">添加</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="right">
+            <table>
+                <tr>
+                    <td colspan="7">购物车</td>
+                </tr>
+                <tr>
+                    <td>选择</td>
+                    <td>图片</td>
+                    <td>商品名称</td>
+                    <td>价格</td>
+                    <td>数量</td>
+                    <td>删除</td>
+                </tr>
+                <tr v-for="(item,index) in goodslist " :key="index" v-show="goodslist.length>0">
+                    <td><input type='checkbox' :value="item" @change="checkout(index)" v-model="arr"></td>
+                    <td><img :src="item.img_list_url" style="width: 50px;height: 50px;" alt=""></td>
+                    <td>{{item.title}}</td>
+                    <td>￥：{{item.price}}</td>
+                    <td> <button @click="item.counts++">+</button> {{item.counts}} <button
+                            @click="item.counts--">-</button> </td>
+                    <td><button @click="fun(index)">删除</button></td>
+                </tr>
+                <tr v-show="goodslist.length==0">
+                    <td colspan="7">木有数据</td>
+                </tr>
+                <tr>
+                    <td> 总计</td>
+                    <td colspan="3">已选择{{numberOfCases}}件 ￥:{{finallyPrice}}元 </td>
+                    <td><input type='checkbox' @change="checkout2" v-model="chicked"></td>
+                    <td style="width: 52.55px;height: 23.6px;"><button v-show="arr.length"
+                            @click="deleteture">删除</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            lidata: [],
+            arr: [],
+            goodslist: [],
+            chicked: false,
+            num: 0,
+        },
+        created() {
+            axios({
+                url: "http://vebcoder.cn:9527/api/goodList?page=10",
+                methods: "get"
+            }).then(res => {
+                this.lidata = res.data
+                console.log(this.lidata)
+            })
+        },
+        methods: {
+            addItem(item) {
+                var bollen = true
+                this.goodslist.forEach((i) => {
+                    if (i.Id == item.Id) {
+                        i.counts++
+                        return bollen = false
+                    }
+                })
+                if (bollen) {
+                    this.goodslist.push({
+                        Id: item.Id,
+                        img_list_url: item.img_list_url,
+                        mack: item.mack,
+                        nice: item.nice,
+                        price: item.price,
+                        title: item.title,
+                        type_one: item.type_one,
+                        type_two: item.type_two,
+                        counts: 1
+                    })
+                }
+                console.log(this.goodslist)
+            },
+            // 购物车
+            fun(index) {
+                this.goodslist.splice(index, 1)
+            },
+            checkout() {
+                this.chicked = this.goodslist.length == this.arr.length
+            },
+            checkout2() {
+                if (this.chicked) {
+                    this.arr = this.goodslist;
+                } else {
+                    this.arr = [];
+                }
+            },
+            deleteture() {
+                var b = []
+                var c = []
+                this.arr.forEach(element => {
+                    b.push(element.Id)
+                })
+                this.goodslist = this.goodslist.filter(function (item) {
+                    return b.indexOf(item.Id) < 0;
+                })
+                this.arr = []
+                this.chicked = false
+            }
+        },
+        computed: {
+            finallyPrice: function () {
+                var a = 0
+                this.goodslist.forEach((i) => {
+                    a += i.price * i.counts
+                })
+                return a
+            },
+            numberOfCases: function () {
+                var b = 0
+                this.goodslist.forEach((i) => {
+                    b +=i.counts
+                })
+                return b
+            }
+        },
+    })
+</script>
+
+</html>
