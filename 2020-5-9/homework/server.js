@@ -7,26 +7,24 @@ request("http://www.qihuiwang.com/", function (err, res, body) {
 
     var $ = cheerio.load(body);
     var listData = [];
-    var dataTwo = [];
-    var dataThree = []
+  
  
     // 一级分类
-    $(".nav-sub li a").each(function () {
-
+    $(".mCate .mNav").each(function () {
         var type_one = $(this).text();
+        var dataTwo = [];
         // 二级分类
         $(this).siblings(".subNav").find("dt").each(function () {
             var type_two = $(this).text()
             // 三层
-
-            $(this).siblings("dd").find("a").each(function () {
-                var datamin = $(this).text()
-                dataThree.push(datamin)
-                dataTwo.push({
-                    "type_two": type_two,
-                    "list": dataThree
-                })
-            })
+            var dataThree = []
+            $(this).siblings("dd").find("a").each(function(){
+				dataThree.push({text:$(this).text(),herf:"1"});
+			})
+           dataTwo.push({
+            "type_two":type_two,
+            "list":dataThree
+           })
         })
         listData.push({
             "type_one": type_one,

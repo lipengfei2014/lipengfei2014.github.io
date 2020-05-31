@@ -1,0 +1,2473 @@
+var d= [
+    {
+        "type_one": "机械/设备/模具",
+        "list": [
+            {
+                "type_two": "风机、排风设备",
+                "list": [
+                    {
+                        "text": "通风机",
+                        "herf": "http://product.qihuiwang.com/q35372"
+                    },
+                    {
+                        "text": "离子风机",
+                        "herf": "http://product.qihuiwang.com/q35374"
+                    },
+                    {
+                        "text": "鼓风机",
+                        "herf": "http://product.qihuiwang.com/q35375"
+                    },
+                    {
+                        "text": "工业风扇",
+                        "herf": "http://product.qihuiwang.com/q35376"
+                    },
+                    {
+                        "text": "风机盘管",
+                        "herf": "http://product.qihuiwang.com/q35377"
+                    },
+                    {
+                        "text": "风幕机",
+                        "herf": "http://product.qihuiwang.com/q35378"
+                    },
+                    {
+                        "text": "离子风机",
+                        "herf": "http://product.qihuiwang.com/q35374"
+                    },
+                    {
+                        "text": "工业风扇",
+                        "herf": "http://product.qihuiwang.com/q35376"
+                    },
+                    {
+                        "text": "风叶",
+                        "herf": "http://product.qihuiwang.com/q35379"
+                    },
+                    {
+                        "text": "风机盘管",
+                        "herf": "http://product.qihuiwang.com/q35377"
+                    }
+                ]
+            },
+            {
+                "type_two": "刀具和夹具",
+                "list": [
+                    {
+                        "text": "刀片",
+                        "herf": "http://product.qihuiwang.com/q35395"
+                    },
+                    {
+                        "text": "铣刀",
+                        "herf": "http://product.qihuiwang.com/q35396"
+                    },
+                    {
+                        "text": "夹具、夹头",
+                        "herf": "http://product.qihuiwang.com/q35397"
+                    },
+                    {
+                        "text": "钻头",
+                        "herf": "http://product.qihuiwang.com/q35398"
+                    },
+                    {
+                        "text": "其它刀具和夹具",
+                        "herf": "http://product.qihuiwang.com/q35399"
+                    },
+                    {
+                        "text": "刀柄、刀杆",
+                        "herf": "http://product.qihuiwang.com/q35401"
+                    },
+                    {
+                        "text": "数控刀具",
+                        "herf": "http://product.qihuiwang.com/q35402"
+                    },
+                    {
+                        "text": "切刀",
+                        "herf": "http://product.qihuiwang.com/q35403"
+                    },
+                    {
+                        "text": "滚刀",
+                        "herf": "http://product.qihuiwang.com/q35407"
+                    },
+                    {
+                        "text": "冲头",
+                        "herf": "http://product.qihuiwang.com/q35408"
+                    }
+                ]
+            },
+            {
+                "type_two": "通用五金配件",
+                "list": [
+                    {
+                        "text": "滑轮",
+                        "herf": "http://product.qihuiwang.com/q38893"
+                    },
+                    {
+                        "text": "脚轮、万向轮",
+                        "herf": "http://product.qihuiwang.com/q38894"
+                    },
+                    {
+                        "text": "滚筒",
+                        "herf": "http://product.qihuiwang.com/q38895"
+                    },
+                    {
+                        "text": "管夹",
+                        "herf": "http://product.qihuiwang.com/q38896"
+                    },
+                    {
+                        "text": "锁具",
+                        "herf": "http://product.qihuiwang.com/q38897"
+                    },
+                    {
+                        "text": "斗齿",
+                        "herf": "http://product.qihuiwang.com/q38898"
+                    },
+                    {
+                        "text": "托辊",
+                        "herf": "http://product.qihuiwang.com/q38899"
+                    },
+                    {
+                        "text": "卸扣",
+                        "herf": "http://product.qihuiwang.com/q38900"
+                    },
+                    {
+                        "text": "直通",
+                        "herf": "http://product.qihuiwang.com/q38902"
+                    },
+                    {
+                        "text": "吊钩、抓钩",
+                        "herf": "http://product.qihuiwang.com/q38903"
+                    }
+                ]
+            },
+            {
+                "type_two": "矿山机械",
+                "list": [
+                    {
+                        "text": "矿山机械",
+                        "herf": "http://product.qihuiwang.com/q39082"
+                    },
+                    {
+                        "text": "矿山车",
+                        "herf": "http://product.qihuiwang.com/q39402"
+                    },
+                    {
+                        "text": "煤矿机械",
+                        "herf": "http://product.qihuiwang.com/q39403"
+                    },
+                    {
+                        "text": "破碎机",
+                        "herf": "http://product.qihuiwang.com/q39404"
+                    },
+                    {
+                        "text": "磨矿设备",
+                        "herf": "http://product.qihuiwang.com/q39405"
+                    },
+                    {
+                        "text": "浮选设备",
+                        "herf": "http://product.qihuiwang.com/q39406"
+                    },
+                    {
+                        "text": "螺旋选矿机",
+                        "herf": "http://product.qihuiwang.com/q39407"
+                    },
+                    {
+                        "text": "炭浆厂设备",
+                        "herf": "http://product.qihuiwang.com/q39408"
+                    },
+                    {
+                        "text": "洗选机",
+                        "herf": "http://product.qihuiwang.com/q39414"
+                    }
+                ]
+            },
+            {
+                "type_two": "食品机械",
+                "list": [
+                    {
+                        "text": "粉碎与切割机械",
+                        "herf": "http://product.qihuiwang.com/q39926"
+                    },
+                    {
+                        "text": "搅拌均匀与均质机械",
+                        "herf": "http://product.qihuiwang.com/q39927"
+                    },
+                    {
+                        "text": "成型机械、分离机械",
+                        "herf": "http://product.qihuiwang.com/q39928"
+                    },
+                    {
+                        "text": "蒸发与浓缩机械",
+                        "herf": "http://product.qihuiwang.com/q39929"
+                    },
+                    {
+                        "text": "干燥机械",
+                        "herf": "http://product.qihuiwang.com/q39930"
+                    },
+                    {
+                        "text": "冷冻机械",
+                        "herf": "http://product.qihuiwang.com/q39931"
+                    }
+                ]
+            },
+            {
+                "type_two": "真空设备",
+                "list": [
+                    {
+                        "text": "真空设备",
+                        "herf": "http://product.qihuiwang.com/q35548"
+                    },
+                    {
+                        "text": "旋片真空泵",
+                        "herf": "http://product.qihuiwang.com/q39966"
+                    },
+                    {
+                        "text": "往复真空泵",
+                        "herf": "http://product.qihuiwang.com/q39970"
+                    },
+                    {
+                        "text": "液环真空泵",
+                        "herf": "http://product.qihuiwang.com/q39971"
+                    },
+                    {
+                        "text": "水喷射泵",
+                        "herf": "http://product.qihuiwang.com/q39972"
+                    },
+                    {
+                        "text": "低温泵",
+                        "herf": "http://product.qihuiwang.com/q39975"
+                    }
+                ]
+            },
+            {
+                "type_two": "汽车轮毂",
+                "list": [
+                    {
+                        "text": "汽车轮毂",
+                        "herf": "http://product.qihuiwang.com/q39079"
+                    },
+                    {
+                        "text": "汽车轮毂喷剂",
+                        "herf": "http://product.qihuiwang.com/q39378"
+                    },
+                    {
+                        "text": "汽车轮毂修复",
+                        "herf": "http://product.qihuiwang.com/q39379"
+                    },
+                    {
+                        "text": "汽车轮毂清洗剂",
+                        "herf": "http://product.qihuiwang.com/q39381"
+                    },
+                    {
+                        "text": "汽车轮毂改装",
+                        "herf": "http://product.qihuiwang.com/q39382"
+                    }
+                ]
+            },
+            {
+                "type_two": "道路养护机械",
+                "list": [
+                    {
+                        "text": "道路养护机械",
+                        "herf": "http://product.qihuiwang.com/q39081"
+                    },
+                    {
+                        "text": "微表处摊铺机",
+                        "herf": "http://product.qihuiwang.com/q39383"
+                    },
+                    {
+                        "text": "铣刨机",
+                        "herf": "http://product.qihuiwang.com/q39385"
+                    },
+                    {
+                        "text": "热再生修补机",
+                        "herf": "http://product.qihuiwang.com/q39386"
+                    },
+                    {
+                        "text": "抛丸机",
+                        "herf": "http://product.qihuiwang.com/q39391"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "农作物/花卉/禽畜",
+        "list": [
+            {
+                "type_two": "粮食",
+                "list": [
+                    {
+                        "text": "玉米",
+                        "herf": "http://product.qihuiwang.com/q33983"
+                    },
+                    {
+                        "text": "豆类",
+                        "herf": "http://product.qihuiwang.com/q33984"
+                    },
+                    {
+                        "text": "稻谷",
+                        "herf": "http://product.qihuiwang.com/q33985"
+                    },
+                    {
+                        "text": "高粱、粟、黍",
+                        "herf": "http://product.qihuiwang.com/q33986"
+                    },
+                    {
+                        "text": "麦类",
+                        "herf": "http://product.qihuiwang.com/q33987"
+                    },
+                    {
+                        "text": "薯类",
+                        "herf": "http://product.qihuiwang.com/q33988"
+                    },
+                    {
+                        "text": "其他粮食",
+                        "herf": "http://product.qihuiwang.com/q33989"
+                    },
+                    {
+                        "text": "杂粮",
+                        "herf": "http://product.qihuiwang.com/q310403"
+                    }
+                ]
+            },
+            {
+                "type_two": "新鲜蔬菜",
+                "list": [
+                    {
+                        "text": "花菜类",
+                        "herf": "http://product.qihuiwang.com/q33996"
+                    },
+                    {
+                        "text": "豆荚类",
+                        "herf": "http://product.qihuiwang.com/q33997"
+                    },
+                    {
+                        "text": "瓜果类",
+                        "herf": "http://product.qihuiwang.com/q33998"
+                    },
+                    {
+                        "text": "根菜类",
+                        "herf": "http://product.qihuiwang.com/q33999"
+                    },
+                    {
+                        "text": "块茎类",
+                        "herf": "http://product.qihuiwang.com/q34001"
+                    },
+                    {
+                        "text": "叶菜类",
+                        "herf": "http://product.qihuiwang.com/q34002"
+                    },
+                    {
+                        "text": "竹笋类",
+                        "herf": "http://product.qihuiwang.com/q34004"
+                    }
+                ]
+            },
+            {
+                "type_two": "生鲜水果",
+                "list": [
+                    {
+                        "text": "猕猴桃",
+                        "herf": "http://product.qihuiwang.com/q34021"
+                    },
+                    {
+                        "text": "葡萄",
+                        "herf": "http://product.qihuiwang.com/q34022"
+                    },
+                    {
+                        "text": "苹果",
+                        "herf": "http://product.qihuiwang.com/q34023"
+                    },
+                    {
+                        "text": "柑桔、橙、柚",
+                        "herf": "http://product.qihuiwang.com/q34024"
+                    },
+                    {
+                        "text": "香蕉",
+                        "herf": "http://product.qihuiwang.com/q34025"
+                    },
+                    {
+                        "text": "草莓",
+                        "herf": "http://product.qihuiwang.com/q34026"
+                    },
+                    {
+                        "text": "梨",
+                        "herf": "http://product.qihuiwang.com/q34031"
+                    },
+                    {
+                        "text": "桃",
+                        "herf": "http://product.qihuiwang.com/q34032"
+                    },
+                    {
+                        "text": "枇杷",
+                        "herf": "http://product.qihuiwang.com/q34034"
+                    }
+                ]
+            },
+            {
+                "type_two": "坚果子仁",
+                "list": [
+                    {
+                        "text": "生核桃",
+                        "herf": "http://product.qihuiwang.com/q34038"
+                    },
+                    {
+                        "text": "生板栗",
+                        "herf": "http://product.qihuiwang.com/q34039"
+                    },
+                    {
+                        "text": "生瓜子",
+                        "herf": "http://product.qihuiwang.com/q34040"
+                    },
+                    {
+                        "text": "生白果",
+                        "herf": "http://product.qihuiwang.com/q34041"
+                    },
+                    {
+                        "text": "生开心果",
+                        "herf": "http://product.qihuiwang.com/q34042"
+                    },
+                    {
+                        "text": "其他坚果、果仁",
+                        "herf": "http://product.qihuiwang.com/q34044"
+                    }
+                ]
+            },
+            {
+                "type_two": "牲畜禽类",
+                "list": [
+                    {
+                        "text": "牛",
+                        "herf": "http://product.qihuiwang.com/q34045"
+                    },
+                    {
+                        "text": "猪",
+                        "herf": "http://product.qihuiwang.com/q34046"
+                    },
+                    {
+                        "text": "鸡",
+                        "herf": "http://product.qihuiwang.com/q34048"
+                    },
+                    {
+                        "text": "鹌鹑",
+                        "herf": "http://product.qihuiwang.com/q34049"
+                    },
+                    {
+                        "text": "肉鸽",
+                        "herf": "http://product.qihuiwang.com/q34050"
+                    },
+                    {
+                        "text": "马",
+                        "herf": "http://product.qihuiwang.com/q34051"
+                    },
+                    {
+                        "text": "兔",
+                        "herf": "http://product.qihuiwang.com/q34052"
+                    },
+                    {
+                        "text": "鸭",
+                        "herf": "http://product.qihuiwang.com/q34053"
+                    },
+                    {
+                        "text": "鹅",
+                        "herf": "http://product.qihuiwang.com/q34054"
+                    },
+                    {
+                        "text": "驴",
+                        "herf": "http://product.qihuiwang.com/q34055"
+                    },
+                    {
+                        "text": "其它牲畜禽类",
+                        "herf": "http://product.qihuiwang.com/q34056"
+                    }
+                ]
+            },
+            {
+                "type_two": "鲜活水产品",
+                "list": [
+                    {
+                        "text": "鱼类",
+                        "herf": "http://product.qihuiwang.com/q34057"
+                    },
+                    {
+                        "text": "虾类",
+                        "herf": "http://product.qihuiwang.com/q34058"
+                    },
+                    {
+                        "text": "蟹类",
+                        "herf": "http://product.qihuiwang.com/q34059"
+                    },
+                    {
+                        "text": "鳖类",
+                        "herf": "http://product.qihuiwang.com/q34060"
+                    },
+                    {
+                        "text": "贝类",
+                        "herf": "http://product.qihuiwang.com/q34061"
+                    },
+                    {
+                        "text": "其它鲜活水产品",
+                        "herf": "http://product.qihuiwang.com/q34062"
+                    }
+                ]
+            },
+            {
+                "type_two": "种子种苗",
+                "list": [
+                    {
+                        "text": "花卉种子、种苗",
+                        "herf": "http://product.qihuiwang.com/q34070"
+                    },
+                    {
+                        "text": "动物种苗",
+                        "herf": "http://product.qihuiwang.com/q34071"
+                    },
+                    {
+                        "text": "农作物种子、种苗",
+                        "herf": "http://product.qihuiwang.com/q34072"
+                    },
+                    {
+                        "text": "食用菌菌种",
+                        "herf": "http://product.qihuiwang.com/q34073"
+                    },
+                    {
+                        "text": "其他种子、种苗",
+                        "herf": "http://product.qihuiwang.com/q34074"
+                    }
+                ]
+            },
+            {
+                "type_two": "绿化苗木",
+                "list": [
+                    {
+                        "text": "乔木",
+                        "herf": "http://product.qihuiwang.com/q34075"
+                    },
+                    {
+                        "text": "球类植物",
+                        "herf": "http://product.qihuiwang.com/q34076"
+                    },
+                    {
+                        "text": "竹类植物",
+                        "herf": "http://product.qihuiwang.com/q34077"
+                    },
+                    {
+                        "text": "树木盆景",
+                        "herf": "http://product.qihuiwang.com/q34078"
+                    },
+                    {
+                        "text": "灌木",
+                        "herf": "http://product.qihuiwang.com/q34079"
+                    },
+                    {
+                        "text": "果树",
+                        "herf": "http://product.qihuiwang.com/q34080"
+                    },
+                    {
+                        "text": "草坪",
+                        "herf": "http://product.qihuiwang.com/q34081"
+                    },
+                    {
+                        "text": "棕榈类植物",
+                        "herf": "http://product.qihuiwang.com/q34082"
+                    },
+                    {
+                        "text": "攀援植物",
+                        "herf": "http://product.qihuiwang.com/q34083"
+                    }
+                ]
+            },
+            {
+                "type_two": "花卉",
+                "list": [
+                    {
+                        "text": "鲜花",
+                        "herf": "http://product.qihuiwang.com/q34085"
+                    },
+                    {
+                        "text": "室内观叶植物",
+                        "herf": "http://product.qihuiwang.com/q34086"
+                    },
+                    {
+                        "text": "室内观花植物",
+                        "herf": "http://product.qihuiwang.com/q34087"
+                    },
+                    {
+                        "text": "室内观果植物",
+                        "herf": "http://product.qihuiwang.com/q34088"
+                    },
+                    {
+                        "text": "一二年生草花",
+                        "herf": "http://product.qihuiwang.com/q34089"
+                    },
+                    {
+                        "text": "其他花卉",
+                        "herf": "http://product.qihuiwang.com/q34090"
+                    }
+                ]
+            },
+            {
+                "type_two": "食用油",
+                "list": [
+                    {
+                        "text": "橄榄油",
+                        "herf": "http://product.qihuiwang.com/q310484"
+                    },
+                    {
+                        "text": "山茶油",
+                        "herf": "http://product.qihuiwang.com/q310485"
+                    },
+                    {
+                        "text": "玉米油",
+                        "herf": "http://product.qihuiwang.com/q310488"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "建筑/建材/五金",
+        "list": [
+            {
+                "type_two": "建筑装修施工",
+                "list": [
+                    {
+                        "text": "阳台",
+                        "herf": "http://product.qihuiwang.com/q34258"
+                    },
+                    {
+                        "text": "壁炉",
+                        "herf": "http://product.qihuiwang.com/q34259"
+                    },
+                    {
+                        "text": "地坪",
+                        "herf": "http://product.qihuiwang.com/q34260"
+                    },
+                    {
+                        "text": "楼梯",
+                        "herf": "http://product.qihuiwang.com/q34261"
+                    },
+                    {
+                        "text": "园林",
+                        "herf": "http://product.qihuiwang.com/q34262"
+                    },
+                    {
+                        "text": "庭院",
+                        "herf": "http://product.qihuiwang.com/q34263"
+                    },
+                    {
+                        "text": "喷泉",
+                        "herf": "http://product.qihuiwang.com/q34264"
+                    },
+                    {
+                        "text": "活动房",
+                        "herf": "http://product.qihuiwang.com/q34256"
+                    },
+                    {
+                        "text": "阳光房",
+                        "herf": "http://product.qihuiwang.com/q34257"
+                    }
+                ]
+            },
+            {
+                "type_two": "装配电动工具",
+                "list": [
+                    {
+                        "text": "电动螺丝刀",
+                        "herf": "http://product.qihuiwang.com/q36760"
+                    },
+                    {
+                        "text": "电动套丝机",
+                        "herf": "http://product.qihuiwang.com/q36761"
+                    },
+                    {
+                        "text": "电动扳手",
+                        "herf": "http://product.qihuiwang.com/q36762"
+                    },
+                    {
+                        "text": "螺丝机",
+                        "herf": "http://product.qihuiwang.com/q36763"
+                    },
+                    {
+                        "text": "套装电动工具",
+                        "herf": "http://product.qihuiwang.com/q36764"
+                    },
+                    {
+                        "text": "其它装配电动工具",
+                        "herf": "http://product.qihuiwang.com/q36765"
+                    }
+                ]
+            },
+            {
+                "type_two": "门窗五金",
+                "list": [
+                    {
+                        "text": "拉手",
+                        "herf": "http://product.qihuiwang.com/q36802"
+                    },
+                    {
+                        "text": "插销",
+                        "herf": "http://product.qihuiwang.com/q36804"
+                    },
+                    {
+                        "text": "滑轨",
+                        "herf": "http://product.qihuiwang.com/q36806"
+                    },
+                    {
+                        "text": "羊眼",
+                        "herf": "http://product.qihuiwang.com/q36807"
+                    },
+                    {
+                        "text": "门夹",
+                        "herf": "http://product.qihuiwang.com/q36809"
+                    },
+                    {
+                        "text": "门窗挂钩",
+                        "herf": "http://product.qihuiwang.com/q36801"
+                    },
+                    {
+                        "text": "门碰、门吸",
+                        "herf": "http://product.qihuiwang.com/q36805"
+                    },
+                    {
+                        "text": "合页、铰链",
+                        "herf": "http://product.qihuiwang.com/q36803"
+                    },
+                    {
+                        "text": "闭门器、开门器",
+                        "herf": "http://product.qihuiwang.com/q36800"
+                    }
+                ]
+            },
+            {
+                "type_two": "磨抛光电动工具",
+                "list": [
+                    {
+                        "text": "磨光机",
+                        "herf": "http://product.qihuiwang.com/q36766"
+                    },
+                    {
+                        "text": "角磨机",
+                        "herf": "http://product.qihuiwang.com/q36769"
+                    },
+                    {
+                        "text": "抛光机",
+                        "herf": "http://product.qihuiwang.com/q36770"
+                    },
+                    {
+                        "text": "砂光机",
+                        "herf": "http://product.qihuiwang.com/q36771"
+                    },
+                    {
+                        "text": "磨刀机",
+                        "herf": "http://product.qihuiwang.com/q36772"
+                    },
+                    {
+                        "text": "电动砂轮机",
+                        "herf": "http://product.qihuiwang.com/q36767"
+                    },
+                    {
+                        "text": "其它磨抛光电动工具",
+                        "herf": "http://product.qihuiwang.com/q36773"
+                    }
+                ]
+            },
+            {
+                "type_two": "水暖五金",
+                "list": [
+                    {
+                        "text": "地漏",
+                        "herf": "http://product.qihuiwang.com/q38909"
+                    },
+                    {
+                        "text": "水嘴",
+                        "herf": "http://product.qihuiwang.com/q38910"
+                    },
+                    {
+                        "text": "下水",
+                        "herf": "http://product.qihuiwang.com/q38915"
+                    },
+                    {
+                        "text": "阀片",
+                        "herf": "http://product.qihuiwang.com/q38921"
+                    },
+                    {
+                        "text": "三角阀",
+                        "herf": "http://product.qihuiwang.com/q38920"
+                    },
+                    {
+                        "text": "冲洗阀",
+                        "herf": "http://product.qihuiwang.com/q38918"
+                    },
+                    {
+                        "text": "分水器",
+                        "herf": "http://product.qihuiwang.com/q38916"
+                    },
+                    {
+                        "text": "花洒软管",
+                        "herf": "http://product.qihuiwang.com/q38913"
+                    },
+                    {
+                        "text": "花洒及配件",
+                        "herf": "http://product.qihuiwang.com/q38912"
+                    },
+                    {
+                        "text": "暖气片、散热器",
+                        "herf": "http://product.qihuiwang.com/q38914"
+                    }
+                ]
+            },
+            {
+                "type_two": "楼宇设施",
+                "list": [
+                    {
+                        "text": "电梯",
+                        "herf": "http://product.qihuiwang.com/q34351"
+                    },
+                    {
+                        "text": "扶梯",
+                        "herf": "http://product.qihuiwang.com/q34352"
+                    },
+                    {
+                        "text": "货梯",
+                        "herf": "http://product.qihuiwang.com/q34353"
+                    },
+                    {
+                        "text": "消防器材",
+                        "herf": "http://product.qihuiwang.com/q34346"
+                    },
+                    {
+                        "text": "安全监控",
+                        "herf": "http://product.qihuiwang.com/q34348"
+                    },
+                    {
+                        "text": "防盗报警",
+                        "herf": "http://product.qihuiwang.com/q34349"
+                    },
+                    {
+                        "text": "电梯配件",
+                        "herf": "http://product.qihuiwang.com/q34354"
+                    },
+                    {
+                        "text": "其它楼宇设施",
+                        "herf": "http://product.qihuiwang.com/q34355"
+                    }
+                ]
+            },
+            {
+                "type_two": "管道系统",
+                "list": [
+                    {
+                        "text": "置物架",
+                        "herf": "http://product.qihuiwang.com/q34362"
+                    },
+                    {
+                        "text": "上水系统",
+                        "herf": "http://product.qihuiwang.com/q34358"
+                    },
+                    {
+                        "text": "燃气系统",
+                        "herf": "http://product.qihuiwang.com/q34359"
+                    },
+                    {
+                        "text": "排水系统",
+                        "herf": "http://product.qihuiwang.com/q34360"
+                    },
+                    {
+                        "text": "冷热水系统",
+                        "herf": "http://product.qihuiwang.com/q34357"
+                    },
+                    {
+                        "text": "管道辅助材料",
+                        "herf": "http://product.qihuiwang.com/q34361"
+                    },
+                    {
+                        "text": "其他管道系统",
+                        "herf": "http://product.qihuiwang.com/q34363"
+                    }
+                ]
+            },
+            {
+                "type_two": "保温、隔热材料",
+                "list": [
+                    {
+                        "text": "EPS板",
+                        "herf": "http://product.qihuiwang.com/q39645"
+                    },
+                    {
+                        "text": "XPS板",
+                        "herf": "http://product.qihuiwang.com/q39646"
+                    },
+                    {
+                        "text": "岩棉板",
+                        "herf": "http://product.qihuiwang.com/q39647"
+                    },
+                    {
+                        "text": "珍珠岩",
+                        "herf": "http://product.qihuiwang.com/q39650"
+                    },
+                    {
+                        "text": "聚氨酯发泡",
+                        "herf": "http://product.qihuiwang.com/q39649"
+                    },
+                    {
+                        "text": "胶粉聚苯颗粒",
+                        "herf": "http://product.qihuiwang.com/q39648"
+                    },
+                    {
+                        "text": "保温、隔热材料",
+                        "herf": "http://product.qihuiwang.com/q34371"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "能源/矿产/石油",
+        "list": [
+            {
+                "type_two": "有色金属矿产",
+                "list": [
+                    {
+                        "text": "重有色金属矿产",
+                        "herf": "http://product.qihuiwang.com/q34876"
+                    },
+                    {
+                        "text": "稀有金属矿产",
+                        "herf": "http://product.qihuiwang.com/q34877"
+                    },
+                    {
+                        "text": "贵金属矿产",
+                        "herf": "http://product.qihuiwang.com/q34878"
+                    },
+                    {
+                        "text": "半金属矿产",
+                        "herf": "http://product.qihuiwang.com/q34879"
+                    },
+                    {
+                        "text": "轻有色金属矿产",
+                        "herf": "http://product.qihuiwang.com/q34875"
+                    },
+                    {
+                        "text": "其它有色金属矿产",
+                        "herf": "http://product.qihuiwang.com/q34880"
+                    }
+                ]
+            },
+            {
+                "type_two": "石油燃料",
+                "list": [
+                    {
+                        "text": "汽油",
+                        "herf": "http://product.qihuiwang.com/q34908"
+                    },
+                    {
+                        "text": "柴油",
+                        "herf": "http://product.qihuiwang.com/q34909"
+                    },
+                    {
+                        "text": "燃料油",
+                        "herf": "http://product.qihuiwang.com/q34910"
+                    },
+                    {
+                        "text": "渣油",
+                        "herf": "http://product.qihuiwang.com/q34913"
+                    },
+                    {
+                        "text": "航空煤油",
+                        "herf": "http://product.qihuiwang.com/q34912"
+                    },
+                    {
+                        "text": "液化石油气",
+                        "herf": "http://product.qihuiwang.com/q34911"
+                    },
+                    {
+                        "text": "其他石油燃料",
+                        "herf": "http://product.qihuiwang.com/q34914"
+                    }
+                ]
+            },
+            {
+                "type_two": "原煤",
+                "list": [
+                    {
+                        "text": "褐煤",
+                        "herf": "http://product.qihuiwang.com/q34899"
+                    },
+                    {
+                        "text": "无烟煤",
+                        "herf": "http://product.qihuiwang.com/q34900"
+                    },
+                    {
+                        "text": "烟煤",
+                        "herf": "http://product.qihuiwang.com/q34901"
+                    },
+                    {
+                        "text": "其他原煤",
+                        "herf": "http://product.qihuiwang.com/q34902"
+                    }
+                ]
+            },
+            {
+                "type_two": "沥青",
+                "list": [
+                    {
+                        "text": "沥青",
+                        "herf": "http://product.qihuiwang.com/q34915"
+                    },
+                    {
+                        "text": "煤焦沥青",
+                        "herf": "http://product.qihuiwang.com/q39878"
+                    },
+                    {
+                        "text": "石油沥青",
+                        "herf": "http://product.qihuiwang.com/q39879"
+                    }
+                ]
+            },
+            {
+                "type_two": "基本金属",
+                "list": [
+                    {
+                        "text": "铁",
+                        "herf": "http://product.qihuiwang.com/q34722"
+                    },
+                    {
+                        "text": "铜",
+                        "herf": "http://product.qihuiwang.com/q34723"
+                    },
+                    {
+                        "text": "锌",
+                        "herf": "http://product.qihuiwang.com/q34724"
+                    },
+                    {
+                        "text": "镍",
+                        "herf": "http://product.qihuiwang.com/q34725"
+                    },
+                    {
+                        "text": "铝",
+                        "herf": "http://product.qihuiwang.com/q34727"
+                    },
+                    {
+                        "text": "铅",
+                        "herf": "http://product.qihuiwang.com/q34728"
+                    }
+                ]
+            },
+            {
+                "type_two": "工业润滑油",
+                "list": [
+                    {
+                        "text": "导轨油",
+                        "herf": "http://product.qihuiwang.com/q34919"
+                    },
+                    {
+                        "text": "导热油",
+                        "herf": "http://product.qihuiwang.com/q34920"
+                    },
+                    {
+                        "text": "工具油",
+                        "herf": "http://product.qihuiwang.com/q34922"
+                    },
+                    {
+                        "text": "机械油",
+                        "herf": "http://product.qihuiwang.com/q34923"
+                    },
+                    {
+                        "text": "乳化油",
+                        "herf": "http://product.qihuiwang.com/q34924"
+                    },
+                    {
+                        "text": "切削油",
+                        "herf": "http://product.qihuiwang.com/q34925"
+                    },
+                    {
+                        "text": "基础油",
+                        "herf": "http://product.qihuiwang.com/q34927"
+                    },
+                    {
+                        "text": "真空泵油",
+                        "herf": "http://product.qihuiwang.com/q34926"
+                    },
+                    {
+                        "text": "变压器油",
+                        "herf": "http://product.qihuiwang.com/q34921"
+                    }
+                ]
+            },
+            {
+                "type_two": "金属加工材",
+                "list": [
+                    {
+                        "text": "铜及铜合金材",
+                        "herf": "http://product.qihuiwang.com/q34842"
+                    },
+                    {
+                        "text": "铝及铝合金材",
+                        "herf": "http://product.qihuiwang.com/q34843"
+                    },
+                    {
+                        "text": "锌及锌合金材",
+                        "herf": "http://product.qihuiwang.com/q34844"
+                    },
+                    {
+                        "text": "锡及锡合金材",
+                        "herf": "http://product.qihuiwang.com/q34845"
+                    },
+                    {
+                        "text": "镍及镍合金材",
+                        "herf": "http://product.qihuiwang.com/q34846"
+                    },
+                    {
+                        "text": "钛及钛合金材",
+                        "herf": "http://product.qihuiwang.com/q34847"
+                    },
+                    {
+                        "text": "金属复合材",
+                        "herf": "http://product.qihuiwang.com/q34848"
+                    }
+                ]
+            },
+            {
+                "type_two": "有色金属合金",
+                "list": [
+                    {
+                        "text": "铝合金",
+                        "herf": "http://product.qihuiwang.com/q34787"
+                    },
+                    {
+                        "text": "钛合金",
+                        "herf": "http://product.qihuiwang.com/q34788"
+                    },
+                    {
+                        "text": "锌合金",
+                        "herf": "http://product.qihuiwang.com/q34789"
+                    },
+                    {
+                        "text": "铜合金",
+                        "herf": "http://product.qihuiwang.com/q34791"
+                    },
+                    {
+                        "text": "镍合金",
+                        "herf": "http://product.qihuiwang.com/q34792"
+                    },
+                    {
+                        "text": "锡合金",
+                        "herf": "http://product.qihuiwang.com/q34793"
+                    },
+                    {
+                        "text": "镁合金",
+                        "herf": "http://product.qihuiwang.com/q34794"
+                    },
+                    {
+                        "text": "铅合金",
+                        "herf": "http://product.qihuiwang.com/q34795"
+                    },
+                    {
+                        "text": "硬质合金",
+                        "herf": "http://product.qihuiwang.com/q34790"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "电工/电气/配电",
+        "list": [
+            {
+                "type_two": "高压电器",
+                "list": [
+                    {
+                        "text": "高压开关柜",
+                        "herf": "http://product.qihuiwang.com/q35870"
+                    },
+                    {
+                        "text": "高压断路器",
+                        "herf": "http://product.qihuiwang.com/q35872"
+                    },
+                    {
+                        "text": "高压熔断器",
+                        "herf": "http://product.qihuiwang.com/q35871"
+                    },
+                    {
+                        "text": "高压接地开关",
+                        "herf": "http://product.qihuiwang.com/q35876"
+                    },
+                    {
+                        "text": "电缆分接箱",
+                        "herf": "http://product.qihuiwang.com/q35875"
+                    },
+                    {
+                        "text": "防雷避雷产品",
+                        "herf": "http://product.qihuiwang.com/q35869"
+                    }
+                ]
+            },
+            {
+                "type_two": "调压器",
+                "list": [
+                    {
+                        "text": "调压器",
+                        "herf": "http://product.qihuiwang.com/q35878"
+                    },
+                    {
+                        "text": "可控硅调压器",
+                        "herf": "http://product.qihuiwang.com/q39826"
+                    },
+                    {
+                        "text": "子偶调压器",
+                        "herf": "http://product.qihuiwang.com/q39828"
+                    },
+                    {
+                        "text": "干式大功率调压器",
+                        "herf": "http://product.qihuiwang.com/q39829"
+                    },
+                    {
+                        "text": "干式电力调压器",
+                        "herf": "http://product.qihuiwang.com/q39830"
+                    },
+                    {
+                        "text": "接触式调压器",
+                        "herf": "http://product.qihuiwang.com/q39831"
+                    }
+                ]
+            },
+            {
+                "type_two": "变压器组件",
+                "list": [
+                    {
+                        "text": "变压器组件",
+                        "herf": "http://product.qihuiwang.com/q35894"
+                    }
+                ]
+            },
+            {
+                "type_two": "电动机",
+                "list": [
+                    {
+                        "text": "机械设备用电动机",
+                        "herf": "http://product.qihuiwang.com/q35908"
+                    },
+                    {
+                        "text": "异步电动机",
+                        "herf": "http://product.qihuiwang.com/q35910"
+                    },
+                    {
+                        "text": "电动机配件",
+                        "herf": "http://product.qihuiwang.com/q35911"
+                    }
+                ]
+            },
+            {
+                "type_two": "电线、电缆",
+                "list": [
+                    {
+                        "text": "控制电缆",
+                        "herf": "http://product.qihuiwang.com/q35932"
+                    },
+                    {
+                        "text": "橡套电缆",
+                        "herf": "http://product.qihuiwang.com/q35933"
+                    },
+                    {
+                        "text": "漆包线",
+                        "herf": "http://product.qihuiwang.com/q35934"
+                    },
+                    {
+                        "text": "网管",
+                        "herf": "http://product.qihuiwang.com/q35935"
+                    },
+                    {
+                        "text": "绝缘导线",
+                        "herf": "http://product.qihuiwang.com/q35936"
+                    },
+                    {
+                        "text": "音频线、视频线",
+                        "herf": "http://product.qihuiwang.com/q35937"
+                    },
+                    {
+                        "text": "特种电缆",
+                        "herf": "http://product.qihuiwang.com/q35938"
+                    },
+                    {
+                        "text": "电力电缆",
+                        "herf": "http://product.qihuiwang.com/q35939"
+                    },
+                    {
+                        "text": "电子线",
+                        "herf": "http://product.qihuiwang.com/q35941"
+                    }
+                ]
+            },
+            {
+                "type_two": "插座",
+                "list": [
+                    {
+                        "text": "工业插座",
+                        "herf": "http://product.qihuiwang.com/q35950"
+                    },
+                    {
+                        "text": "地面插座",
+                        "herf": "http://product.qihuiwang.com/q35951"
+                    },
+                    {
+                        "text": "定时器插座",
+                        "herf": "http://product.qihuiwang.com/q35952"
+                    },
+                    {
+                        "text": "音频、视频插座",
+                        "herf": "http://product.qihuiwang.com/q35953"
+                    },
+                    {
+                        "text": "转换插座",
+                        "herf": "http://product.qihuiwang.com/q35954"
+                    },
+                    {
+                        "text": "墙壁插座",
+                        "herf": "http://product.qihuiwang.com/q35955"
+                    },
+                    {
+                        "text": "机柜插座",
+                        "herf": "http://product.qihuiwang.com/q35956"
+                    }
+                ]
+            },
+            {
+                "type_two": "其它电工电气",
+                "list": [
+                    {
+                        "text": "工装设备",
+                        "herf": "http://product.qihuiwang.com/q36041"
+                    },
+                    {
+                        "text": "电阻材料",
+                        "herf": "http://product.qihuiwang.com/q36042"
+                    },
+                    {
+                        "text": "废电子电器",
+                        "herf": "http://product.qihuiwang.com/q36043"
+                    },
+                    {
+                        "text": "其它电工电气产品",
+                        "herf": "http://product.qihuiwang.com/q36044"
+                    }
+                ]
+            },
+            {
+                "type_two": "开关",
+                "list": [
+                    {
+                        "text": "负荷开关",
+                        "herf": "http://product.qihuiwang.com/q35836"
+                    },
+                    {
+                        "text": "微动开关",
+                        "herf": "http://product.qihuiwang.com/q35840"
+                    },
+                    {
+                        "text": "压力开关",
+                        "herf": "http://product.qihuiwang.com/q310062"
+                    },
+                    {
+                        "text": "转换开关",
+                        "herf": "http://product.qihuiwang.com/q310063"
+                    },
+                    {
+                        "text": "组合开关",
+                        "herf": "http://product.qihuiwang.com/q310064"
+                    },
+                    {
+                        "text": "真空开关",
+                        "herf": "http://product.qihuiwang.com/q310065"
+                    },
+                    {
+                        "text": "旋转开关",
+                        "herf": "http://product.qihuiwang.com/q310060"
+                    },
+                    {
+                        "text": "限位开关",
+                        "herf": "http://product.qihuiwang.com/q310059"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "饰品/礼品/工艺品",
+        "list": [
+            {
+                "type_two": "纪念收藏品",
+                "list": [
+                    {
+                        "text": "徽章、纪念章",
+                        "herf": "http://product.qihuiwang.com/q37945"
+                    },
+                    {
+                        "text": "奇石",
+                        "herf": "http://product.qihuiwang.com/q37947"
+                    },
+                    {
+                        "text": "钱币",
+                        "herf": "http://product.qihuiwang.com/q37949"
+                    },
+                    {
+                        "text": "印玺、印章",
+                        "herf": "http://product.qihuiwang.com/q37951"
+                    },
+                    {
+                        "text": "邮票",
+                        "herf": "http://product.qihuiwang.com/q37950"
+                    },
+                    {
+                        "text": "古玩",
+                        "herf": "http://product.qihuiwang.com/q37948"
+                    }
+                ]
+            },
+            {
+                "type_two": "民间工艺品",
+                "list": [
+                    {
+                        "text": "灯笼",
+                        "herf": "http://product.qihuiwang.com/q37953"
+                    },
+                    {
+                        "text": "脸谱",
+                        "herf": "http://product.qihuiwang.com/q37956"
+                    },
+                    {
+                        "text": "中国结",
+                        "herf": "http://product.qihuiwang.com/q37958"
+                    },
+                    {
+                        "text": "木偶",
+                        "herf": "http://product.qihuiwang.com/q37955"
+                    },
+                    {
+                        "text": "风筝",
+                        "herf": "http://product.qihuiwang.com/q37954"
+                    }
+                ]
+            },
+            {
+                "type_two": "手机饰品",
+                "list": [
+                    {
+                        "text": "手机绳",
+                        "herf": "http://product.qihuiwang.com/q37962"
+                    },
+                    {
+                        "text": "手机挂件",
+                        "herf": "http://product.qihuiwang.com/q37965"
+                    },
+                    {
+                        "text": "其它手机饰品",
+                        "herf": "http://product.qihuiwang.com/q37966"
+                    }
+                ]
+            },
+            {
+                "type_two": "节日礼品",
+                "list": [
+                    {
+                        "text": "生日用品",
+                        "herf": "http://product.qihuiwang.com/q37970"
+                    },
+                    {
+                        "text": "万圣节用品",
+                        "herf": "http://product.qihuiwang.com/q37971"
+                    },
+                    {
+                        "text": "情人节用品",
+                        "herf": "http://product.qihuiwang.com/q37972"
+                    },
+                    {
+                        "text": "圣诞用品",
+                        "herf": "http://product.qihuiwang.com/q37973"
+                    },
+                    {
+                        "text": "复活节用品",
+                        "herf": "http://product.qihuiwang.com/q37974"
+                    },
+                    {
+                        "text": "其它节日礼品",
+                        "herf": "http://product.qihuiwang.com/q37975"
+                    }
+                ]
+            },
+            {
+                "type_two": "饰品",
+                "list": [
+                    {
+                        "text": "头饰",
+                        "herf": "http://product.qihuiwang.com/q37976"
+                    },
+                    {
+                        "text": "穿刺饰",
+                        "herf": "http://product.qihuiwang.com/q37978"
+                    },
+                    {
+                        "text": "脚饰",
+                        "herf": "http://product.qihuiwang.com/q37980"
+                    },
+                    {
+                        "text": "衣饰",
+                        "herf": "http://product.qihuiwang.com/q37982"
+                    },
+                    {
+                        "text": "钥匙配饰",
+                        "herf": "http://product.qihuiwang.com/q37981"
+                    },
+                    {
+                        "text": "耳饰",
+                        "herf": "http://product.qihuiwang.com/q37985"
+                    }
+                ]
+            },
+            {
+                "type_two": "婚庆用品",
+                "list": [
+                    {
+                        "text": "场地布置道具",
+                        "herf": "http://product.qihuiwang.com/q38009"
+                    },
+                    {
+                        "text": "婚庆灯饰",
+                        "herf": "http://product.qihuiwang.com/q38011"
+                    },
+                    {
+                        "text": "婚庆服饰道具",
+                        "herf": "http://product.qihuiwang.com/q38010"
+                    },
+                    {
+                        "text": "烟花鞭炮",
+                        "herf": "http://product.qihuiwang.com/q38013"
+                    },
+                    {
+                        "text": "请柬",
+                        "herf": "http://product.qihuiwang.com/q38015"
+                    },
+                    {
+                        "text": "贺卡",
+                        "herf": "http://product.qihuiwang.com/q38016"
+                    },
+                    {
+                        "text": "对联",
+                        "herf": "http://product.qihuiwang.com/q38017"
+                    },
+                    {
+                        "text": "其它婚庆用品",
+                        "herf": "http://product.qihuiwang.com/q38018"
+                    },
+                    {
+                        "text": "红包",
+                        "herf": "http://product.qihuiwang.com/q38014"
+                    }
+                ]
+            },
+            {
+                "type_two": "装饰植物",
+                "list": [
+                    {
+                        "text": "装饰植物",
+                        "herf": "http://product.qihuiwang.com/q38061"
+                    }
+                ]
+            },
+            {
+                "type_two": "殡葬用品",
+                "list": [
+                    {
+                        "text": "棺材",
+                        "herf": "http://product.qihuiwang.com/q37987"
+                    },
+                    {
+                        "text": "骨灰盒",
+                        "herf": "http://product.qihuiwang.com/q37988"
+                    },
+                    {
+                        "text": "其它殡葬用品",
+                        "herf": "http://product.qihuiwang.com/q37989"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "汽车/保养/维修",
+        "list": [
+            {
+                "type_two": "汽车维护工具",
+                "list": [
+                    {
+                        "text": "洗车工具",
+                        "herf": "http://product.qihuiwang.com/q38664"
+                    },
+                    {
+                        "text": "打蜡机",
+                        "herf": "http://product.qihuiwang.com/q38665"
+                    },
+                    {
+                        "text": "工具套件",
+                        "herf": "http://product.qihuiwang.com/q38666"
+                    },
+                    {
+                        "text": "胎压计",
+                        "herf": "http://product.qihuiwang.com/q38667"
+                    },
+                    {
+                        "text": "绞盘",
+                        "herf": "http://product.qihuiwang.com/q38670"
+                    },
+                    {
+                        "text": "其它维护工具",
+                        "herf": "http://product.qihuiwang.com/q38671"
+                    },
+                    {
+                        "text": "拖车绳",
+                        "herf": "http://product.qihuiwang.com/q38668"
+                    }
+                ]
+            },
+            {
+                "type_two": "防护保养品",
+                "list": [
+                    {
+                        "text": "修补漆、汽车漆",
+                        "herf": "http://product.qihuiwang.com/q38672"
+                    },
+                    {
+                        "text": "玻璃防雾剂",
+                        "herf": "http://product.qihuiwang.com/q38679"
+                    },
+                    {
+                        "text": "釉",
+                        "herf": "http://product.qihuiwang.com/q38681"
+                    },
+                    {
+                        "text": "车蜡、光亮剂",
+                        "herf": "http://product.qihuiwang.com/q310142"
+                    },
+                    {
+                        "text": "电瓶水",
+                        "herf": "http://product.qihuiwang.com/q310143"
+                    },
+                    {
+                        "text": "改进剂",
+                        "herf": "http://product.qihuiwang.com/q310147"
+                    },
+                    {
+                        "text": "擦布麂皮",
+                        "herf": "http://product.qihuiwang.com/q310141"
+                    }
+                ]
+            },
+            {
+                "type_two": "汽车安全用品",
+                "list": [
+                    {
+                        "text": "汽车锁",
+                        "herf": "http://product.qihuiwang.com/q38683"
+                    },
+                    {
+                        "text": "安全气囊",
+                        "herf": "http://product.qihuiwang.com/q38686"
+                    },
+                    {
+                        "text": "轮胎压力检测系统",
+                        "herf": "http://product.qihuiwang.com/q38688"
+                    },
+                    {
+                        "text": "防盗器",
+                        "herf": "http://product.qihuiwang.com/q38689"
+                    },
+                    {
+                        "text": "倒车雷达",
+                        "herf": "http://product.qihuiwang.com/q38690"
+                    },
+                    {
+                        "text": "警示牌",
+                        "herf": "http://product.qihuiwang.com/q38695"
+                    },
+                    {
+                        "text": "车轮锁",
+                        "herf": "http://product.qihuiwang.com/q310178"
+                    },
+                    {
+                        "text": "防滑链",
+                        "herf": "http://product.qihuiwang.com/q310182"
+                    }
+                ]
+            },
+            {
+                "type_two": "车身及附件",
+                "list": [
+                    {
+                        "text": "车牌架",
+                        "herf": "http://product.qihuiwang.com/q38709"
+                    },
+                    {
+                        "text": "雨刮器",
+                        "herf": "http://product.qihuiwang.com/q38712"
+                    },
+                    {
+                        "text": "车壳",
+                        "herf": "http://product.qihuiwang.com/q38715"
+                    },
+                    {
+                        "text": "车镜",
+                        "herf": "http://product.qihuiwang.com/q38716"
+                    },
+                    {
+                        "text": "车载卫生间及配件",
+                        "herf": "http://product.qihuiwang.com/q310209"
+                    },
+                    {
+                        "text": "电磁离合器",
+                        "herf": "http://product.qihuiwang.com/q310210"
+                    },
+                    {
+                        "text": "雨刮器及配件",
+                        "herf": "http://product.qihuiwang.com/q310218"
+                    },
+                    {
+                        "text": "油管、胶管",
+                        "herf": "http://product.qihuiwang.com/q310219"
+                    },
+                    {
+                        "text": "其他车身及附件",
+                        "herf": "http://product.qihuiwang.com/q310217"
+                    }
+                ]
+            },
+            {
+                "type_two": "摩托车配附件",
+                "list": [
+                    {
+                        "text": "摩托车发动机及配件",
+                        "herf": "http://product.qihuiwang.com/q38734"
+                    },
+                    {
+                        "text": "摩托车安全用品",
+                        "herf": "http://product.qihuiwang.com/q38737"
+                    },
+                    {
+                        "text": "摩托车通用件",
+                        "herf": "http://product.qihuiwang.com/q38739"
+                    },
+                    {
+                        "text": "摩托车电器与仪表",
+                        "herf": "http://product.qihuiwang.com/q38740"
+                    },
+                    {
+                        "text": "摩托车行走系统零件",
+                        "herf": "http://product.qihuiwang.com/q38738"
+                    }
+                ]
+            },
+            {
+                "type_two": "商用车",
+                "list": [
+                    {
+                        "text": "货车",
+                        "herf": "http://product.qihuiwang.com/q38742"
+                    },
+                    {
+                        "text": "货车非完整车辆",
+                        "herf": "http://product.qihuiwang.com/q38745"
+                    },
+                    {
+                        "text": "其它商用车",
+                        "herf": "http://product.qihuiwang.com/q38747"
+                    },
+                    {
+                        "text": "其他运输车",
+                        "herf": "http://product.qihuiwang.com/q310286"
+                    },
+                    {
+                        "text": "危险品运输车",
+                        "herf": "http://product.qihuiwang.com/q310287"
+                    },
+                    {
+                        "text": "冷藏货车",
+                        "herf": "http://product.qihuiwang.com/q310285"
+                    }
+                ]
+            },
+            {
+                "type_two": "冷却系统",
+                "list": [
+                    {
+                        "text": "水泵、风扇、散热器",
+                        "herf": "http://product.qihuiwang.com/q38775"
+                    },
+                    {
+                        "text": "汽车水管",
+                        "herf": "http://product.qihuiwang.com/q38776"
+                    },
+                    {
+                        "text": "节温器",
+                        "herf": "http://product.qihuiwang.com/q38774"
+                    },
+                    {
+                        "text": "水箱",
+                        "herf": "http://product.qihuiwang.com/q38777"
+                    },
+                    {
+                        "text": "其它冷却系统",
+                        "herf": "http://product.qihuiwang.com/q38778"
+                    }
+                ]
+            },
+            {
+                "type_two": "传动系统",
+                "list": [
+                    {
+                        "text": "离合器",
+                        "herf": "http://product.qihuiwang.com/q38787"
+                    },
+                    {
+                        "text": "分动器",
+                        "herf": "http://product.qihuiwang.com/q38789"
+                    },
+                    {
+                        "text": "变速器",
+                        "herf": "http://product.qihuiwang.com/q38790"
+                    },
+                    {
+                        "text": "取力器",
+                        "herf": "http://product.qihuiwang.com/q38792"
+                    },
+                    {
+                        "text": "同步器",
+                        "herf": "http://product.qihuiwang.com/q38793"
+                    },
+                    {
+                        "text": "差速器总成",
+                        "herf": "http://product.qihuiwang.com/q38794"
+                    },
+                    {
+                        "text": "球笼万向节",
+                        "herf": "http://product.qihuiwang.com/q310304"
+                    },
+                    {
+                        "text": "轴配件",
+                        "herf": "http://product.qihuiwang.com/q310305"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "交通运输/配件",
+        "list": [
+            {
+                "type_two": "载货车",
+                "list": [
+                    {
+                        "text": "拖车",
+                        "herf": "http://product.qihuiwang.com/q36851"
+                    },
+                    {
+                        "text": "手推车",
+                        "herf": "http://product.qihuiwang.com/q36852"
+                    },
+                    {
+                        "text": "搬运车",
+                        "herf": "http://product.qihuiwang.com/q36853"
+                    },
+                    {
+                        "text": "其它载货车",
+                        "herf": "http://product.qihuiwang.com/q36854"
+                    }
+                ]
+            },
+            {
+                "type_two": "拖拉机",
+                "list": [
+                    {
+                        "text": "轮式拖拉机",
+                        "herf": "http://product.qihuiwang.com/q36862"
+                    },
+                    {
+                        "text": "履带式拖拉机",
+                        "herf": "http://product.qihuiwang.com/q36863"
+                    },
+                    {
+                        "text": "手扶拖拉机",
+                        "herf": "http://product.qihuiwang.com/q36864"
+                    },
+                    {
+                        "text": "其它拖拉机",
+                        "herf": "http://product.qihuiwang.com/q36865"
+                    }
+                ]
+            },
+            {
+                "type_two": "非机动车配件",
+                "list": [
+                    {
+                        "text": "脚蹬",
+                        "herf": "http://product.qihuiwang.com/q36870"
+                    },
+                    {
+                        "text": "车刹",
+                        "herf": "http://product.qihuiwang.com/q36873"
+                    },
+                    {
+                        "text": "电动车电机",
+                        "herf": "http://product.qihuiwang.com/q36876"
+                    },
+                    {
+                        "text": "车轴",
+                        "herf": "http://product.qihuiwang.com/q36883"
+                    },
+                    {
+                        "text": "飞轮",
+                        "herf": "http://product.qihuiwang.com/q36885"
+                    },
+                    {
+                        "text": "车圈",
+                        "herf": "http://product.qihuiwang.com/q36889"
+                    },
+                    {
+                        "text": "闸把",
+                        "herf": "http://product.qihuiwang.com/q36888"
+                    },
+                    {
+                        "text": "前叉",
+                        "herf": "http://product.qihuiwang.com/q36887"
+                    },
+                    {
+                        "text": "车架",
+                        "herf": "http://product.qihuiwang.com/q36890"
+                    },
+                    {
+                        "text": "车篮",
+                        "herf": "http://product.qihuiwang.com/q36884"
+                    },
+                    {
+                        "text": "反光镜",
+                        "herf": "http://product.qihuiwang.com/q36882"
+                    }
+                ]
+            },
+            {
+                "type_two": "加油站设备",
+                "list": [
+                    {
+                        "text": "加油站设备",
+                        "herf": "http://product.qihuiwang.com/q36966"
+                    }
+                ]
+            },
+            {
+                "type_two": "轨道交通设备器材",
+                "list": [
+                    {
+                        "text": "轨道交通设备器材",
+                        "herf": "http://product.qihuiwang.com/q36963"
+                    }
+                ]
+            },
+            {
+                "type_two": "运输搬运设备",
+                "list": [
+                    {
+                        "text": "物流台车",
+                        "herf": "http://product.qihuiwang.com/q36920"
+                    },
+                    {
+                        "text": "工具车",
+                        "herf": "http://product.qihuiwang.com/q36922"
+                    },
+                    {
+                        "text": "堆垛搬运机械",
+                        "herf": "http://product.qihuiwang.com/q36924"
+                    },
+                    {
+                        "text": "堆高车",
+                        "herf": "http://product.qihuiwang.com/q36923"
+                    },
+                    {
+                        "text": "其它运输搬运设备",
+                        "herf": "http://product.qihuiwang.com/q36925"
+                    },
+                    {
+                        "text": "叉车",
+                        "herf": "http://product.qihuiwang.com/q36919"
+                    },
+                    {
+                        "text": "物流手推车",
+                        "herf": "http://product.qihuiwang.com/q36921"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "物流/运输/货运",
+        "list": [
+            {
+                "type_two": "起重设备工具",
+                "list": [
+                    {
+                        "text": "吊滑车",
+                        "herf": "http://product.qihuiwang.com/q36941"
+                    },
+                    {
+                        "text": "钢丝绳",
+                        "herf": "http://product.qihuiwang.com/q36942"
+                    },
+                    {
+                        "text": "起重滑车",
+                        "herf": "http://product.qihuiwang.com/q36943"
+                    },
+                    {
+                        "text": "起重钳",
+                        "herf": "http://product.qihuiwang.com/q36944"
+                    },
+                    {
+                        "text": "吊车配件",
+                        "herf": "http://product.qihuiwang.com/q36945"
+                    },
+                    {
+                        "text": "其它起重设备工具",
+                        "herf": "http://product.qihuiwang.com/q36946"
+                    }
+                ]
+            },
+            {
+                "type_two": "集装整理设备",
+                "list": [
+                    {
+                        "text": "集装箱",
+                        "herf": "http://product.qihuiwang.com/q36936"
+                    },
+                    {
+                        "text": "集装袋",
+                        "herf": "http://product.qihuiwang.com/q36937"
+                    },
+                    {
+                        "text": "集装桶",
+                        "herf": "http://product.qihuiwang.com/q36938"
+                    },
+                    {
+                        "text": "周转箱",
+                        "herf": "http://product.qihuiwang.com/q36939"
+                    },
+                    {
+                        "text": "其它集装整理设备",
+                        "herf": "http://product.qihuiwang.com/q36940"
+                    }
+                ]
+            },
+            {
+                "type_two": "运输搬运设备",
+                "list": [
+                    {
+                        "text": "叉车",
+                        "herf": "http://product.qihuiwang.com/q36919"
+                    },
+                    {
+                        "text": "物流台车",
+                        "herf": "http://product.qihuiwang.com/q36920"
+                    },
+                    {
+                        "text": "物流手推车",
+                        "herf": "http://product.qihuiwang.com/q36921"
+                    },
+                    {
+                        "text": "工具车",
+                        "herf": "http://product.qihuiwang.com/q36922"
+                    },
+                    {
+                        "text": "堆高车",
+                        "herf": "http://product.qihuiwang.com/q36923"
+                    },
+                    {
+                        "text": "堆垛搬运机械",
+                        "herf": "http://product.qihuiwang.com/q36924"
+                    },
+                    {
+                        "text": "其它运输搬运设备",
+                        "herf": "http://product.qihuiwang.com/q36925"
+                    }
+                ]
+            },
+            {
+                "type_two": "安全和防护产品",
+                "list": [
+                    {
+                        "text": "安全网",
+                        "herf": "http://product.qihuiwang.com/q36998"
+                    },
+                    {
+                        "text": "防护服",
+                        "herf": "http://product.qihuiwang.com/q36999"
+                    },
+                    {
+                        "text": "防护口罩",
+                        "herf": "http://product.qihuiwang.com/q37000"
+                    },
+                    {
+                        "text": "防护手套",
+                        "herf": "http://product.qihuiwang.com/q37001"
+                    },
+                    {
+                        "text": "防护鞋",
+                        "herf": "http://product.qihuiwang.com/q37002"
+                    },
+                    {
+                        "text": "防护帽",
+                        "herf": "http://product.qihuiwang.com/q37003"
+                    },
+                    {
+                        "text": "安全带、安全绳",
+                        "herf": "http://product.qihuiwang.com/q37006"
+                    }
+                ]
+            },
+            {
+                "type_two": "安全、防护用品加工",
+                "list": [
+                    {
+                        "text": "安全、防护用品加工",
+                        "herf": "http://product.qihuiwang.com/q37080"
+                    }
+                ]
+            },
+            {
+                "type_two": "物流服务",
+                "list": [
+                    {
+                        "text": "仓储",
+                        "herf": "http://product.qihuiwang.com/q38313"
+                    },
+                    {
+                        "text": "特种运输",
+                        "herf": "http://product.qihuiwang.com/q38312"
+                    },
+                    {
+                        "text": "货代",
+                        "herf": "http://product.qihuiwang.com/q38311"
+                    },
+                    {
+                        "text": "第三方物流",
+                        "herf": "http://product.qihuiwang.com/q38310"
+                    },
+                    {
+                        "text": "配送",
+                        "herf": "http://product.qihuiwang.com/q38309"
+                    },
+                    {
+                        "text": "海运",
+                        "herf": "http://product.qihuiwang.com/q38307"
+                    },
+                    {
+                        "text": "铁运",
+                        "herf": "http://product.qihuiwang.com/q38306"
+                    },
+                    {
+                        "text": "陆运",
+                        "herf": "http://product.qihuiwang.com/q38305"
+                    },
+                    {
+                        "text": "水运",
+                        "herf": "http://product.qihuiwang.com/q38304"
+                    }
+                ]
+            },
+            {
+                "type_two": "会议、展览服务",
+                "list": [
+                    {
+                        "text": "会议、会务",
+                        "herf": "http://product.qihuiwang.com/q38379"
+                    },
+                    {
+                        "text": "展览设计制作",
+                        "herf": "http://product.qihuiwang.com/q38380"
+                    },
+                    {
+                        "text": "展台设计搭建",
+                        "herf": "http://product.qihuiwang.com/q38381"
+                    },
+                    {
+                        "text": "展览馆",
+                        "herf": "http://product.qihuiwang.com/q38382"
+                    },
+                    {
+                        "text": "展览会招展",
+                        "herf": "http://product.qihuiwang.com/q38383"
+                    },
+                    {
+                        "text": "其它会议、展览服务",
+                        "herf": "http://product.qihuiwang.com/q38384"
+                    }
+                ]
+            },
+            {
+                "type_two": "商业合作",
+                "list": [
+                    {
+                        "text": "商业合作",
+                        "herf": "http://product.qihuiwang.com/q38474"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type_one": "网站/广告/服务",
+        "list": [
+            {
+                "type_two": "休闲娱乐",
+                "list": [
+                    {
+                        "text": "其他休闲娱乐",
+                        "herf": "http://product.qihuiwang.com/q38550"
+                    },
+                    {
+                        "text": "电影院",
+                        "herf": "http://product.qihuiwang.com/q38549"
+                    },
+                    {
+                        "text": "洗浴中心",
+                        "herf": "http://product.qihuiwang.com/q38548"
+                    },
+                    {
+                        "text": "酒吧",
+                        "herf": "http://product.qihuiwang.com/q38546"
+                    },
+                    {
+                        "text": "舞厅",
+                        "herf": "http://product.qihuiwang.com/q38545"
+                    },
+                    {
+                        "text": "迪厅",
+                        "herf": "http://product.qihuiwang.com/q38544"
+                    },
+                    {
+                        "text": "KTV",
+                        "herf": "http://product.qihuiwang.com/q38543"
+                    }
+                ]
+            },
+            {
+                "type_two": "家政服务",
+                "list": [
+                    {
+                        "text": "月嫂",
+                        "herf": "http://product.qihuiwang.com/q38558"
+                    },
+                    {
+                        "text": "保姆",
+                        "herf": "http://product.qihuiwang.com/q38560"
+                    },
+                    {
+                        "text": "钟点工",
+                        "herf": "http://product.qihuiwang.com/q38562"
+                    },
+                    {
+                        "text": "其它家政服务",
+                        "herf": "http://product.qihuiwang.com/q38564"
+                    }
+                ]
+            },
+            {
+                "type_two": "美容美体",
+                "list": [
+                    {
+                        "text": "面部美容",
+                        "herf": "http://product.qihuiwang.com/q38577"
+                    },
+                    {
+                        "text": "皮肤护理",
+                        "herf": "http://product.qihuiwang.com/q38576"
+                    },
+                    {
+                        "text": "眼部护理",
+                        "herf": "http://product.qihuiwang.com/q38575"
+                    },
+                    {
+                        "text": "植发",
+                        "herf": "http://product.qihuiwang.com/q38574"
+                    },
+                    {
+                        "text": "足疗",
+                        "herf": "http://product.qihuiwang.com/q38573"
+                    },
+                    {
+                        "text": "美甲",
+                        "herf": "http://product.qihuiwang.com/q38567"
+                    },
+                    {
+                        "text": "美体塑身",
+                        "herf": "http://product.qihuiwang.com/q38565"
+                    }
+                ]
+            },
+            {
+                "type_two": "搬家服务",
+                "list": [
+                    {
+                        "text": "个人搬家",
+                        "herf": "http://product.qihuiwang.com/q38579"
+                    },
+                    {
+                        "text": "公司搬家",
+                        "herf": "http://product.qihuiwang.com/q38580"
+                    },
+                    {
+                        "text": "钢琴搬运",
+                        "herf": "http://product.qihuiwang.com/q38581"
+                    },
+                    {
+                        "text": "调移机维修",
+                        "herf": "http://product.qihuiwang.com/q38583"
+                    },
+                    {
+                        "text": "贵重物品搬运",
+                        "herf": "http://product.qihuiwang.com/q38584"
+                    },
+                    {
+                        "text": "设备搬迁",
+                        "herf": "http://product.qihuiwang.com/q38585"
+                    }
+                ]
+            },
+            {
+                "type_two": "清洗、保洁服务",
+                "list": [
+                    {
+                        "text": "家庭保洁",
+                        "herf": "http://product.qihuiwang.com/q38587"
+                    },
+                    {
+                        "text": "地毯清洗",
+                        "herf": "http://product.qihuiwang.com/q38589"
+                    },
+                    {
+                        "text": "地板打蜡",
+                        "herf": "http://product.qihuiwang.com/q38590"
+                    },
+                    {
+                        "text": "空调清洗",
+                        "herf": "http://product.qihuiwang.com/q38591"
+                    },
+                    {
+                        "text": "其它清洗、保洁服务",
+                        "herf": "http://product.qihuiwang.com/q38593"
+                    },
+                    {
+                        "text": "瓷砖美缝",
+                        "herf": "http://product.qihuiwang.com/q311593"
+                    }
+                ]
+            },
+            {
+                "type_two": "票务/卡券",
+                "list": [
+                    {
+                        "text": "演唱会门票",
+                        "herf": "http://product.qihuiwang.com/q38643"
+                    },
+                    {
+                        "text": "电影票",
+                        "herf": "http://product.qihuiwang.com/q38644"
+                    },
+                    {
+                        "text": "健身卡",
+                        "herf": "http://product.qihuiwang.com/q38645"
+                    },
+                    {
+                        "text": "其他票务与卡券",
+                        "herf": "http://product.qihuiwang.com/q38649"
+                    }
+                ]
+            },
+            {
+                "type_two": "运动健身",
+                "list": [
+                    {
+                        "text": "体育馆",
+                        "herf": "http://product.qihuiwang.com/q38623"
+                    },
+                    {
+                        "text": "舞蹈",
+                        "herf": "http://product.qihuiwang.com/q38624"
+                    },
+                    {
+                        "text": "瑜伽馆",
+                        "herf": "http://product.qihuiwang.com/q38625"
+                    },
+                    {
+                        "text": "游泳馆",
+                        "herf": "http://product.qihuiwang.com/q38626"
+                    },
+                    {
+                        "text": "跆拳道馆",
+                        "herf": "http://product.qihuiwang.com/q38627"
+                    },
+                    {
+                        "text": "武术馆",
+                        "herf": "http://product.qihuiwang.com/q38628"
+                    },
+                    {
+                        "text": "台球厅",
+                        "herf": "http://product.qihuiwang.com/q38629"
+                    }
+                ]
+            },
+            {
+                "type_two": "超市、百货、便利店",
+                "list": [
+                    {
+                        "text": "超市",
+                        "herf": "http://product.qihuiwang.com/q38651"
+                    },
+                    {
+                        "text": "百货",
+                        "herf": "http://product.qihuiwang.com/q38652"
+                    },
+                    {
+                        "text": "便利店",
+                        "herf": "http://product.qihuiwang.com/q38653"
+                    }
+                ]
+            },
+            {
+                "type_two": "房屋信息",
+                "list": [
+                    {
+                        "text": "其他房屋信息",
+                        "herf": "http://product.qihuiwang.com/q38557"
+                    },
+                    {
+                        "text": "店面|商铺转让",
+                        "herf": "http://product.qihuiwang.com/q38555"
+                    },
+                    {
+                        "text": "写字楼|商铺出租",
+                        "herf": "http://product.qihuiwang.com/q38554"
+                    },
+                    {
+                        "text": "房屋求租",
+                        "herf": "http://product.qihuiwang.com/q38552"
+                    },
+                    {
+                        "text": "房屋交易",
+                        "herf": "http://product.qihuiwang.com/q38553"
+                    },
+                    {
+                        "text": "房屋出租",
+                        "herf": "http://product.qihuiwang.com/q38551"
+                    },
+                    {
+                        "text": "厂房/土地租售",
+                        "herf": "http://product.qihuiwang.com/q38556"
+                    }
+                ]
+            }
+        ]
+    }
+]

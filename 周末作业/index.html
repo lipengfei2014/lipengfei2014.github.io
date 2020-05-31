@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/dataList.json"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #app {
+            margin-top: 100px;
+        }
+
+        #sideNavigation {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #sideNavigationRight {
+            width: 30%;
+            height: auto;
+            background-color: rgb(62, 162, 131);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #sideNavigation>div:nth-child(2) {
+            width: 60%;
+            height: 500px;
+        }
+
+        .title {
+            box-sizing: border-box;
+            margin: 0 auto;
+            width: 80%;
+            height: 49px;
+            text-align: center;
+            line-height: 49px;
+            color: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(206, 199, 199);
+            cursor: pointer;
+        }
+
+        .titleclicked {
+            color: rgb(62, 162, 131);
+            background-color: #fff;
+        }
+
+        /* 右侧 */
+        #sideNavigationLeft {
+            width: 0;
+            height: 500px;
+            background-image: url(./1.jpg);
+            background-position: 100% auto;
+            overflow: hidden;
+            transition: width 1s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            transform: width 1s;
+        }
+
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 500px;
+            opacity: 0;
+        }
+
+        .page>div {
+            width: 851px;
+            height: 50px;
+        }
+
+        .pageShow {
+            opacity: 1;
+        }
+
+        p {
+            width: 95%;
+            border-bottom: 1px solid #000;
+            margin: 0;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .aText a {
+            color: white;
+            text-decoration: none;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="sideNavigation" @mouseleave="fun3">
+            <div id="sideNavigationRight">
+                <div v-for="(i,index) in list" class="title" :class="{titleclicked:index==num}" :key="index"
+                    @mouseenter="fun2(index,$event)">{{i.type_one|fun}} </div>
+            </div>
+            <div>
+                <div id="sideNavigationLeft">
+                    <div class="page" :class="{pageShow:index==num}" v-for="(i,index) in list" :key="index">
+                        <div v-for="(i,index) in i.list" :key="index">
+                            <span
+                                style="display: inline-block;width: 10px;height: 10px;background-color: black;border-radius: 50%;overflow: hidden;"></span>
+                            <p style="display: inline-block;"> {{i.type_two}} </p>
+                            <div class="aText">
+                                <a v-for="(i,index) in i.list" i :key="index" :href="i.herf">{{i.text}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    console.log(d)
+    var app = new Vue({
+        el: "#app",
+        data: {
+            list: d,
+            num: null
+        },
+        filters: {
+            fun(value) {
+                var a = value.substring(1)
+                return a
+            }
+        },
+        methods: {
+            fun2(index, event) {
+                this.num = index
+                $("#sideNavigationLeft").css("width","100%")
+                console.log(this.boller)
+            },
+            fun3(e) {
+                this.num = null
+                $("#sideNavigationLeft").css("width","0")
+                console.log(this.boller)
+            }
+        },
+    })
+</script>
+
+</html>
