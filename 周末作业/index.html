@@ -100,6 +100,13 @@
             margin-left: 5px;
             margin-right: 5px;
         }
+        .fade-enter,.fade-leave-to{
+            opacity: 0;
+            width: 0;
+        }
+        .fade-enter-active,.fade-leave-active{
+            transition: all 2s;
+        }
     </style>
 </head>
 
@@ -108,12 +115,12 @@
         <div id="sideNavigation" @mouseleave="fun3">
             <div id="sideNavigationRight">
                 <div v-for="(i,index) in list" class="title" :class="{titleclicked:index==num}" :key="index"
-                    @mouseenter="fun2(index,$event)">{{i.type_one|fun}} </div>
+                    @mouseenter="fun2(index,$event)" @mouseleave="fun4" >{{i.type_one|fun}} </div>
             </div>
             <div>
                 <div id="sideNavigationLeft">
-                    <div class="page" :class="{pageShow:index==num}" v-for="(i,index) in list" :key="index">
-                        <div v-for="(i,index) in i.list" :key="index">
+                    <transition-group tag="div" name="fade" class="page" :class="{pageShow:index==num}" v-for="(i,index) in list" :key="index">
+                        <div v-for="(i,index) in i.list" :key="index" v-show="boller" >
                             <span
                                 style="display: inline-block;width: 10px;height: 10px;background-color: black;border-radius: 50%;overflow: hidden;"></span>
                             <p style="display: inline-block;"> {{i.type_two}} </p>
@@ -121,7 +128,7 @@
                                 <a v-for="(i,index) in i.list" i :key="index" :href="i.herf">{{i.text}}</a>
                             </div>
                         </div>
-                    </div>
+                    </transition-group>
                 </div>
             </div>
         </div>
@@ -133,7 +140,9 @@
         el: "#app",
         data: {
             list: d,
-            num: null
+            num: null,
+            num1:0,
+            boller:false
         },
         filters: {
             fun(value) {
@@ -143,13 +152,20 @@
         },
         methods: {
             fun2(index, event) {
+                this.num1++
                 this.num = index
                 $("#sideNavigationLeft").css("width","100%")
+                this.boller=!this.boller
                 console.log(this.boller)
             },
             fun3(e) {
                 this.num = null
+                this.boller=false
                 $("#sideNavigationLeft").css("width","0")
+                console.log(this.boller)
+            },
+            fun4(){
+                this.boller=!this.boller  
                 console.log(this.boller)
             }
         },
