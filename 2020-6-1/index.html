@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/area.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #app {
+            position: relative;
+        }
+
+        #top {
+            width: 100%;
+            height: 35px;
+        }
+
+        #topCenter {
+            width: 80%;
+            height: 35px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            line-height: 35px;
+            background-color: rgb(245, 245, 245);
+        }
+
+        #divSelect {
+            width: 30%;
+            height: 35px;
+
+        }
+
+        #topRight {
+            width: 60%;
+            height: 35px;
+        }
+
+        #moveIngBorder {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #moveIngCenter {
+            width: 60vw;
+            height: auto;
+            background-color: white;
+            margin: 25vh auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .title {
+            display: inline-block;
+        }
+
+
+        .span:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #btn {
+            display: inline-block;
+            font-size: 30PX;
+            cursor: pointer;
+            border: solid 1px grey;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            margin-top: 35px;
+            color: white;
+            background-color: rgb(12, 137, 209);
+        }
+
+        #moveIngCenterTop {
+            width: 60vw;
+            height: 100px;
+            border-bottom: solid 1px black;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 100px;
+        }
+        #moveIngCenterBody{
+            width: 60vw;
+            height: 300px  ;
+        }
+        
+        #moveIngCenterBody>div{
+            height: 100px;
+            border-bottom: solid 1px black;
+           
+            
+        }
+        #moveIngCenterBody>div>span{
+            margin: 5px;
+            cursor: pointer;
+        }
+        em{
+            display: block;
+            color: rgb(12, 137, 209);
+        }
+        .showed{
+            color: white;
+            background-color: rgb(12, 137, 209);
+        }
+        #moveIngCenterFooter{
+            width: 60vw;
+            height: 100px ;
+        }
+        #maxbtn{
+            margin: 0 auto;
+            width: 200px;
+            height:50px;
+           text-align: center; 
+           font-size: 30px;
+           line-height: 50px;;
+           background-color: rgb(12, 137, 209);
+           color: white;
+           border-radius: 10px;
+           overflow: hidden;
+           cursor: pointer;
+        }
+        .pae-enter,
+        .pae-leave-to {
+            opacity: 0;
+        }
+
+        .pae-enter-active,
+        .pae-leave-active {
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="top">
+            <div id="topCenter">
+                <div id="divSelect">
+                    <div id="area">
+                        <span>{{countyName}}</span> <span>{{cityName}} </span><span class="span" @click="bollern=!bollern"> [切换]
+                        </span>
+                    </div>
+                </div>
+                <div id="topRight">
+
+                </div>
+            </div>
+        </div>
+        <transition name="pae">
+            <div id="moveIngBorder" v-show="bollern">
+                <div id="moveIngCenter">
+                    <div id="moveIngCenterTop">
+                        <div class="title">县域商城，一键直达；本地企业，最近服务；同城保障，放心消费！</div>
+                        <span @click="bollern=!bollern" id="btn">X</span>
+                    </div>
+                    <div id="moveIngCenterBody" >
+                         <div id="provinceArea">
+                             <em>省份:</em>
+                             <span v-for="(i,index) in arr" :key="index" :value="i" @click="fun(i)" :class="{showed:province==i }" > {{i}} </span>
+                         </div>
+                         <div id="cityArea">
+                            <em>城市:</em>
+                            <span v-for="(val,key,i) in area[province][0]" :class="{showed:city==key }" @click="fun2(key)"> {{key}} </span>
+                         </div>
+                         <div id="countyArea" v-show="area[province][0][city]" >
+                            <em>区域:</em>
+                            <span v-for="(val,key) in area[province][0][city]" @click="fun3($event,key)" :class="{showed:num==key }"  > {{val|fun1}} </span>
+                         </div>
+                    </div>
+                    <div id="moveIngCenterFooter" >
+                        <div>已选择：{{county}}---{{city}}</div>
+                         <div id="maxbtn"  @click="fun4()" > 确定 </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+
+    </div>
+</body>
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            area: area,
+            arr:[],
+            province: "河南省",
+            city: "郑州市",
+            county: "中原区",
+            cityName:"郑州市",
+            countyName:"中原区",
+            name:"中原区",
+            bollern: false,
+            num:0
+        },
+        mounted() {
+            Object.keys(this.area).forEach((i=>{
+                this.arr.push(i)
+            }))
+            console.log(this.area['河南省'][0]["郑州市"])
+        },
+        methods: {
+            fun(value){
+                this.province=value
+                this.city="郑州市"
+                this.county="中原区"
+                this.num=0
+            },
+            fun2(key){
+                this.city=key
+                this.county="中原区"
+                this.num=0
+            },
+            fun3(event,key){
+                console.log(event.target)
+                this.county=event.target.innerHTML
+                this.num=key
+            },
+            fun4(){
+                this.cityName=this.city
+                this.countyName=this.county
+                this.bollern=!this.bollern
+            }
+        
+        },
+        filters:{
+           fun1:function(value){
+               
+            Object.keys(value).forEach(function(i){
+               this.name=i
+                
+            })
+            return this.name
+           }
+        }
+    })
+</script>
+
+</html>
