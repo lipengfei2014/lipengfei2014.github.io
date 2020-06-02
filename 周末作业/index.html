@@ -88,7 +88,7 @@
 
         p {
             width: 95%;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid rgb(62, 162, 131);
             margin: 0;
             margin-top: 5px;
             margin-bottom: 5px;
@@ -100,11 +100,15 @@
             margin-left: 5px;
             margin-right: 5px;
         }
-        .fade-enter,.fade-leave-to{
+
+        .fade-enter,
+        .fade-leave-to {
             opacity: 0;
             width: 0;
         }
-        .fade-enter-active,.fade-leave-active{
+
+        .fade-enter-active,
+        .fade-leave-active {
             transition: all 2s;
         }
     </style>
@@ -115,14 +119,15 @@
         <div id="sideNavigation" @mouseleave="fun3">
             <div id="sideNavigationRight">
                 <div v-for="(i,index) in list" class="title" :class="{titleclicked:index==num}" :key="index"
-                    @mouseenter="fun2(index,$event)" @mouseleave="fun4" >{{i.type_one|fun}} </div>
+                    @mouseenter="fun2(index,$event)">{{i.type_one|fun}} </div>
             </div>
             <div>
                 <div id="sideNavigationLeft">
-                    <transition-group tag="div" name="fade" class="page" :class="{pageShow:index==num}" v-for="(i,index) in list" :key="index">
-                        <div v-for="(i,index) in i.list" :key="index" v-show="boller" >
+                    <transition-group tag="div" name="fade" class="page" :class="{pageShow:index==num}"
+                        v-for="(i,index) in list" :key="index">
+                        <div v-for="(i,index) in i.list" :key="index" v-show="boller">
                             <span
-                                style="display: inline-block;width: 10px;height: 10px;background-color: black;border-radius: 50%;overflow: hidden;"></span>
+                                style="display: inline-block;width: 10px;height: 10px;background-color: rgb(62, 162, 131);border-radius: 50%;overflow: hidden;"></span>
                             <p style="display: inline-block;"> {{i.type_two}} </p>
                             <div class="aText">
                                 <a v-for="(i,index) in i.list" i :key="index" :href="i.herf">{{i.text}}</a>
@@ -141,8 +146,8 @@
         data: {
             list: d,
             num: null,
-            num1:0,
-            boller:false
+            num1: 0,
+            boller: false
         },
         filters: {
             fun(value) {
@@ -154,18 +159,14 @@
             fun2(index, event) {
                 this.num1++
                 this.num = index
-                $("#sideNavigationLeft").css("width","100%")
-                this.boller=!this.boller
+                $("#sideNavigationLeft").css("width", "100%")
+                this.boller = true
                 console.log(this.boller)
             },
             fun3(e) {
                 this.num = null
-                this.boller=false
-                $("#sideNavigationLeft").css("width","0")
-                console.log(this.boller)
-            },
-            fun4(){
-                this.boller=!this.boller  
+                this.boller = false
+                $("#sideNavigationLeft").css("width", "0")
                 console.log(this.boller)
             }
         },

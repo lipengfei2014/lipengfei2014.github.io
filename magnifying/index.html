@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #app {
+            position: relative;
+        }
+
+        #imgMoveing {
+            width: 400px;
+            height: 200px;
+            display: flex;
+            margin: 0;
+            margin: 0 auto;
+            margin-top: 200px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #imgMoveingLeft>img {
+            width: 200px;
+            height: 200px;
+        }
+
+        #imgMoveing>div {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        #imgMoveingright{
+            display: none;
+            position: absolute;
+        }
+        #IMg{
+            width:400px;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+        }
+        #IMg>img{
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div ref="box" id="imgMoveing" @mouseleave="fun1">
+            <div ref="img" id="imgMoveingLeft" @mousemove="fun">
+                <img :src="src" alt="">
+            </div>
+            <div id="imgMoveingright" ref="img1"  >
+            </div>
+        </div>
+        <div id="IMg">
+            <img  v-for="(i,key) in list" :key="key" :src="i" alt="" @click="fun2(i)" >
+        </div>
+    </div>
+</body>
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            src:"img/1.jpg",
+            list:["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg",]
+        },
+        mounted() {
+            console.log(this.src)
+            this.fun2(this.src)
+        },
+        methods: {
+            fun(e) {
+                this.$refs.img1.style.display="block"
+                this.$refs.img1.style.top=e.offsetY+10+"px"
+                this.$refs.img1.style.left=e.offsetX+10+"px"
+                this.$refs.img1.style.backgroundPositionY=-(e.offsetY)*((this.$refs.img.children[0].naturalWidth-this.$refs.img.offsetWidth)/this.$refs.img.offsetWidth)+"px"
+                this.$refs.img1.style.backgroundPositionX=-(e.offsetX)*((this.$refs.img.children[0].naturalHeight-this.$refs.img.offsetHeight)/this.$refs.img.offsetHeight)+"px"
+            },
+            fun1() {
+                this.$refs.img1.style.display="none"
+            },
+            fun2(i){
+                this.src=i
+                this.$refs.img1.style.backgroundImage= "url("+i+")"
+            }
+        }
+    })
+</script>
+
+</html>
