@@ -11,63 +11,120 @@
             margin: 0;
         }
 
-        .div {
+        .floor {
             width: 100%;
             height: 50vh;
+            font-size: 50px;
+        }
+
+        #app>ul {
+            position: fixed;
+            top: 20vh;
+        }
+
+        #app>ul>li {
+            width: 20px;
+            height: 20px;
+            list-style: none;
+            margin: 20px;
+            padding: 0;
+            text-align: center;
+            background-color: black;
+            font-size: 20px;
             color: white;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <div class="div" v-scroll style="background-color: blue;">1</div>
-        <div class="div" v-scroll style="background-color: red;">2</div>
-        <div class="div" v-scroll style="background-color: black;">3</div>
-        <div class="div" v-scroll style="background-color: orangered">4</div>
-        <div class="div" v-scroll style="background-color: green;">5</div>
+        <div class="floor" v-for="i,index of foolNumber ">
+            {{index}}
+        </div>
+        <ul>
+            <li v-for="i,index of foolNumber " v-scroll="index">
+                {{index}}
+            </li>
+        </ul>
     </div>
 </body>
 <script>
+    // 楼层加上floorclass名 
     Vue.directive("scroll", {
         inserted: function (el, binding) {
-            var a
-            function fun() {
-               
-                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-                var offsetTop = el.offsetTop;
-                if (offsetTop < scrollTop) {
-                    a = setInterval(function () {
-                        document.body.scrollTop--
-                        document.documentElement.scrollTop--
-                    }, 16.7)
-                } else if (offsetTop > scrollTop) {
-                    a = setInterval(function () {
-                        document.body.scrollTop++
-                        document.documentElement.scrollTop++
-                    }, 16.7)
-                }
-            }
-            function fun2() {
-                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-                var offsetTop = el.offsetTop;
-                console.log("1")
-                if (offsetTop == scrollTop) {
-                    clearInterval(a)
-                    a = null
-                }
-            }
-            window.addEventListener("scroll", fun2)
             el.onclick = function () {
-                console.log(el)
-                fun()
-            }
+                var arr = document.getElementsByClassName("floor")
+                var a = document.documentElement.scrollTop || document.body.scrollTop;
+                var b = arr[binding.value].offsetTop
+                if (a > b) {
+                    var timer = setInterval(function () {
+                        a-=10;
+                        if (a <= b) {
+                            a = b;
+                            clearInterval(timer);
+                            timer=null
+                            console.log("清除成功！！！")
+                        }
+                        document.documentElement.scrollTop = document.body.scrollTop = a;
+                        console.log(a)
+                        
+                    }, 16.7)
+                }else{
+                    var timer = setInterval(function () {
+                        a+=10;
+                        console.log(a)
+                        if (a >= b) {
+                            a = b;
+                            clearInterval(timer);
+                            timer=null
+                            console.log("清除成功！！！")
+                        }
+                         document.documentElement.scrollTop = document.body.scrollTop = a;
+                    }, 16.7)
+                }
+                console.log(el, binding.value, arr[binding.value].offsetTop)
+            } 
+        },
+        update:function(el,binding){//当前节点绑定的值发生变化时
+            el.onclick = function () {
+                var arr = document.getElementsByClassName("floor")
+                var a = document.documentElement.scrollTop || document.body.scrollTop;
+                var b = arr[binding.value].offsetTop
+                if (a > b) {
+                    var timer = setInterval(function () {
+                        a-=10;
+                        if (a <= b) {
+                            a = b;
+                            clearInterval(timer);
+                            timer=null
+                            console.log("清除成功！！！")
+                        }
+                        document.documentElement.scrollTop = document.body.scrollTop = a;
+                        console.log(a)
+                        
+                    }, 16.7)
+                }else{
+                    var timer = setInterval(function () {
+                        a+=10;
+                        console.log(a)
+                        if (a >= b) {
+                            a = b;
+                            clearInterval(timer);
+                            timer=null
+                            console.log("清除成功！！！")
+                        }
+                         document.documentElement.scrollTop = document.body.scrollTop = a;
+                    }, 16.7)
+                }
+                console.log(el, binding.value, arr[binding.value].offsetTop)
+            } 
         }
     })
     var app = new Vue({
         el: "#app",
         data: {
-
+            foolNumber: 10
         },
         methods: {
 
@@ -76,3 +133,32 @@
 </script>
 
 </html>
+<!--  // var a
+            // var scrollTop
+            // var offsetTop
+            // function fun() {
+            //     scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            //     offsetTop = el.offsetTop;
+            //     if (offsetTop < scrollTop) {
+            //         a = setInterval(function () {
+            //             document.body.scrollTop--
+            //             document.documentElement.scrollTop--
+            //         }, 16.7)
+            //     } else if (offsetTop > scrollTop) {
+            //         a = setInterval(function () {
+            //             document.body.scrollTop++
+            //             document.documentElement.scrollTop++
+            //         }, 16.7)
+            //     }
+            // }
+            // function fun2() {
+            //      scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            //      offsetTop = el.offsetTop;
+            //     console.log(offsetTop, scrollTop)
+            //     if (offsetTop == scrollTop) {
+            //         console.log("已取消")
+            //         clearInterval(a)
+            //         a = null
+            //     }
+            // }
+            // window.addEventListener("scroll", fun2) -->

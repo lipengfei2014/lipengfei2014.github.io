@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .changedImg {
+            margin: 0 auto;
+            display: flex;
+            width: 60%;
+            height: 120px;
+            align-items: center;
+        }
+
+        .changedImg:nth-of-type(1) {
+
+            justify-content: space-around;
+        }
+
+        .boder {
+            border: solid 2px gray;
+            box-shadow: 1px 1px 5px 5px gray;
+        }
+
+        .changedImg:nth-of-type(2) {
+
+            justify-content: start;
+        }
+
+        .changedImg img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #autoplay {
+            display: flex;
+        }
+
+        #showed {
+            width: 500px;
+            height: 300px;
+            border: solid 1px black;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #showed img{
+            width: 500px;
+            height: 300px;
+            position: absolute;
+        }
+        #showed>button{
+            position: absolute;
+            top:50%
+        }
+        #showed>button:nth-of-type(2){
+            left: 91%;
+        }
+        .next-enter,.prev-leave-to{
+            margin-left:500px;
+        }
+        .next-leave-to,.prev-enter{
+            margin-left:-500px;
+        }
+        .next-enter-active,.next-leave-active,.prev-enter-active,.prev-leave-active{
+            transition: all .5s;
+        }
+        .con{
+            background: black;
+            color:white
+        }
+        .btns{
+            position: absolute;
+            left: 40%;
+            top:80%
+        }
+    </style>
+</head>
+<script src="./js/vue.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
+
+<body>
+    <div id="app">
+        <h4>选择图片：</h4>
+        <hr>
+        <div class="changedImg">
+            <img v-for="(i,ind) in imgList" :key="ind" :src="'images/'+i.url" alt="" @click="fun(i,ind,$event)">
+        </div>
+        <hr>
+        <!-- v-show="arr.length>0" -->
+        <div>
+            <div id="autoplay">
+                <h4>是否自动播放：</h4>
+                <h4><input type="checkbox" v-model="showed">开启</h4>
+            </div>
+            <div class="changedImg">
+                <img v-for="(i,index) in arr" :key="index" :src="'images/'+i.url" alt="">
+            </div>
+            <!-- 轮播图 v-show="arr.length>2"--> 
+            <div id="showed" v-show="arr.length>2" >
+                <transition :name="type" v-for="(i,index) in arr" :key="index">
+                    <img :src="'images/'+i.url" v-show="index==imgIndex" alt="">
+                </transition>
+                <div class="btns">
+                    <button :class="{con:imgIndex==x-1}" v-for="x in arr.length" @click="imgIndex=x-1" >{{x}}</button>
+                </div>
+                <button @click="prev">prev</button>
+                <button @click="next">next</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            imgList: [{ url: "a.jpg" }, { url: "b.jpg" }, { url: "c.jpg" }, { url: "d.jpg" }, { url: "e.jpg" },],
+            arr: [],
+            bollern: false,
+            showed: false,
+            a: 0,
+            type: "next",
+            imgIndex: 0,
+            audio:null
+        },
+        mounted() {
+            this.imgList.forEach(element => {
+                element.count = 0
+            });
+        },
+        watch: {
+            showed:function(){
+                if(this.showed){
+                    this.fun3()
+                }else{
+                    this.fun2()
+                }
+            }
+        },
+        methods: {
+            fun(i, index, event) {
+                i.count++
+                $(".changedImg:nth-of-type(1)>img").eq(index).addClass("boder")
+                if (i.count <= 1) {
+                    this.arr.push(this.imgList[index])
+                } else {
+                    if (this.arr.length > 3) {
+                        this.arr = this.arr.filter(function (obj) {
+                            return obj.url !== i.url && obj.count !== 0;
+                        });
+                        i.count = 0
+                        $(".changedImg:nth-of-type(1)>img").eq(index).removeClass("boder")
+                    } else {
+                        alert("图片不能少于3张")
+                    }
+                }
+
+
+                console.log("删除" + i.url, this.arr)
+            },
+            next: function () {
+                this.type = 'next';
+                this.imgIndex++;
+                if (this.imgIndex > this.arr.length - 1) {
+                    this.imgIndex = 0;
+                }
+            },
+            prev: function () {
+                this.type = "prev"
+                this.imgIndex--;
+                if (this.imgIndex < 0) {
+                    this.imgIndex = this.arr.length - 1
+                }
+            },
+            fun3(){
+                this.audio=setInterval(function(){
+                    this.next()
+                }.bind(this),3000)
+            },
+            fun2(){
+                console.log(2)
+                clearInterval(this.audio)
+                this.audio=null
+            }
+        },
+    })
+</script>
+
+</html>
