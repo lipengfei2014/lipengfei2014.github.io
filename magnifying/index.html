@@ -6,102 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./js/vue.js"></script>
-
     <style>
-        body {
-            margin: 0;
-        }
-
-        #app {
-            position: relative;
-        }
-
-        #imgMoveing {
-            width: 400px;
-            height: 200px;
-            display: flex;
-            margin: 0;
+        #content {
+            width: 640px;
+            height: 440px;
             margin: 0 auto;
             margin-top: 200px;
-            cursor: pointer;
-            position: relative;
         }
 
-        #imgMoveingLeft>img {
-            width: 200px;
-            height: 200px;
+        #contentTop {
+            display: flex;
+            justify-content: space-around;
         }
 
-        #imgMoveing>div {
-            width: 200px;
-            height: 200px;
-            background-color: aqua;
-            border-radius: 5px;
+        #content>div:nth-child(1) {
+            width: 640px;
+            height: 320px;
+            border-radius: 25px;
             overflow: hidden;
         }
-        #imgMoveingright{
-            display: none;
-            position: absolute;
+
+        #bigImg,
+        #magnifyingImg {
+            width: 320PX;
+            height: 320px;
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            cursor: crosshair;
         }
-        #IMg{
-            width:400px;
-            height: 100px;
+
+        #magnifyingImg>img {
+            position: absolute
+        }
+
+        #bigImg>img {
+            width: 320PX;
+            height: 320px;
+        }
+
+        #moveimg {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        #content>div:nth-child(2) {
+            margin-top: 10px;
+            width: 640px;
+            height: 120px;
+        }
+        #contentBotton{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 0 auto;
         }
-        #IMg>img{
-            width: 70px;
-            height: 70px;
-            border-radius: 5px;
-            overflow: hidden;
+        #contentBotton>img{
+            width: 110px;
+            height: 110px;
+            border-radius: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <div ref="box" id="imgMoveing" @mouseleave="fun1">
-            <div ref="img" id="imgMoveingLeft" @mousemove="fun">
-                <img :src="src" alt="">
+        <div ref="content" id="content">
+            <div ref="contentTop" id="contentTop" @mouseleave="fun1">
+                <div ref="bigImg" id="bigImg" @mouseover="fun" @mousemove="move">
+                    <img :src="'img/'+list[index]" alt="">
+                    <div id="moveimg" v-show="boller" ref="moveimg" :style="{left:w+'px',top:h+'px'}">
+
+                    </div>
+                </div>
+                <div id="magnifyingImg" ref="magnifyingImg">
+                    <img v-show="boller" :src="'img/'+list[index]" :style="{left:bgw+'px',top:bgh+'px'}" alt="">
+                </div>
             </div>
-            <div id="imgMoveingright" ref="img1"  >
+            <div id="contentBotton">
+                <img  @click="index=inde" v-for="(item,inde) in list" :src="'img/'+item" alt="">
             </div>
-        </div>
-        <div id="IMg">
-            <img  v-for="(i,key) in list" :key="key" :src="i" alt="" @click="fun2(i)" >
         </div>
     </div>
 </body>
 <script>
-
     var app = new Vue({
         el: "#app",
         data: {
-            src:"img/1.jpg",
-            list:["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg",]
-        },
-        mounted() {
-            console.log(this.src)
-            this.fun2(this.src)
+            w: 0,
+            h: 0,
+            bgw: 0,
+            bgh: 0,
+            list: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg",],
+            index: 0,
+            boller: false
         },
         methods: {
-            fun(e) {
-                this.$refs.img1.style.display="block"
-                this.$refs.img1.style.top=e.offsetY+10+"px"
-                this.$refs.img1.style.left=e.offsetX+10+"px"
-                this.$refs.img1.style.backgroundPositionY=-(e.offsetY)*((this.$refs.img.children[0].naturalWidth-this.$refs.img.offsetWidth)/this.$refs.img.offsetWidth)+"px"
-                this.$refs.img1.style.backgroundPositionX=-(e.offsetX)*((this.$refs.img.children[0].naturalHeight-this.$refs.img.offsetHeight)/this.$refs.img.offsetHeight)+"px"
+            move(e) {
+                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                var a = e.clientX - this.$refs.bigImg.offsetLeft - (this.$refs.moveimg.offsetWidth)/2
+                var b = e.clientY - this.$refs.bigImg.offsetTop + scrollTop - (this.$refs.moveimg.offsetWidth)/2
+                if (a < 0) {
+                    a = 0
+                }
+                if (a > this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth) {
+                    a = this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth
+                }
+                this.w = a
+                this.bgw =-a * ((this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth)/this.$refs.moveimg.offsetWidth)
+                if (b < 0) {
+                    b = 0
+                }
+                if (b > this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth) {
+                    b = this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth
+                }
+                this.h = b
+                this.bgh =-b * ((this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth)/this.$refs.moveimg.offsetWidth)
+                console.log( this.$refs.bigImg.offsetWidth-this.$refs.moveimg.offsetWidth)
+            },
+            fun() {
+                this.boller = true
             },
             fun1() {
-                this.$refs.img1.style.display="none"
-            },
-            fun2(i){
-                this.src=i
-                this.$refs.img1.style.backgroundImage= "url("+i+")"
+                this.boller = false
+                console.log("1")
             }
-        }
+        },
     })
 </script>
 
