@@ -9,7 +9,8 @@
         <hr />
         <div>
           <div class="img" v-for="(i,index) in i.sub_class" :key="index">
-            <p>{{i.name}}</p>
+            <img :src=i.pic_url alt="">
+            <span>{{i.name}}</span>
           </div>
         </div>
       </div>
@@ -53,6 +54,10 @@ export default {
   display: flex;
   width: 920px;
   flex-wrap: wrap;
+}
+img{
+  width: 30px;
+  height: 30px;
 }
 .img {
   margin-left: 10px;

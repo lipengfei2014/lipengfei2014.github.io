@@ -9,7 +9,7 @@
           :key="index"
           @mouseenter="fun2(index,$event)"
         >
-          <span v-for="(i,index) in i" :key="index">{{i.class.name}}  </span>
+          <span v-for="(i,index) in i" :key="index">{{i.class.name}}<i v-show="index%2==0">/</i> </span>
         </div>
       </div>
      <sideNavigation :arr="arr" :num="num" :boller="boller" ></sideNavigation>
@@ -86,7 +86,10 @@ body {
   width: 60%;
   height: 500px;
 }
-
+i{
+  margin-right: 10px;
+  margin-left: 10px;
+}
 .title {
   box-sizing: border-box;
   margin: 0 auto;
