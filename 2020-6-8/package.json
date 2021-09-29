@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "jquery": "^3.5.1",
     "vue": "^2.5.2"
   },
